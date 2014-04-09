@@ -1,0 +1,145 @@
+(dp0
+S'os'
+p1
+S'Linux-3.7.10-1.16-desktop-x86_64-with-SuSE-12.3-x86_64'
+p2
+sS'data'
+p3
+(dp4
+S'2DFFT-OMP'
+p5
+(dp6
+S'items'
+p7
+(lp8
+S'RunF64'
+p9
+asS'ticks'
+p10
+(lp11
+I4
+aI8
+aI16
+aI32
+aI64
+aI128
+aI256
+aI512
+aI1024
+aI2048
+asS'call strings'
+p12
+(lp13
+S'Benchmarks/2DFFT-OMP/2dfft_omp 4'
+p14
+aS'Benchmarks/2DFFT-OMP/2dfft_omp 8'
+p15
+aS'Benchmarks/2DFFT-OMP/2dfft_omp 16'
+p16
+aS'Benchmarks/2DFFT-OMP/2dfft_omp 32'
+p17
+aS'Benchmarks/2DFFT-OMP/2dfft_omp 64'
+p18
+aS'Benchmarks/2DFFT-OMP/2dfft_omp 128'
+p19
+aS'Benchmarks/2DFFT-OMP/2dfft_omp 256'
+p20
+aS'Benchmarks/2DFFT-OMP/2dfft_omp 512'
+p21
+aS'Benchmarks/2DFFT-OMP/2dfft_omp 1024'
+p22
+aS'Benchmarks/2DFFT-OMP/2dfft_omp 2048'
+p23
+asS'times'
+p24
+(lp25
+(lp26
+F2.583e-05
+aa(lp27
+F3.13e-06
+aa(lp28
+F2.56e-06
+aa(lp29
+F1.468e-05
+aa(lp30
+F1.66e-05
+aa(lp31
+F8.523e-05
+aa(lp32
+F0.00079558
+aa(lp33
+F0.00330734
+aa(lp34
+F0.05528983
+aa(lp35
+F0.25819634
+aassS'2DFFT-OneThread'
+p36
+(dp37
+g7
+g8
+sg10
+g11
+sg12
+(lp38
+S'Benchmarks/2DFFT-OneThread/2dfft_onethread 4'
+p39
+aS'Benchmarks/2DFFT-OneThread/2dfft_onethread 8'
+p40
+aS'Benchmarks/2DFFT-OneThread/2dfft_onethread 16'
+p41
+aS'Benchmarks/2DFFT-OneThread/2dfft_onethread 32'
+p42
+aS'Benchmarks/2DFFT-OneThread/2dfft_onethread 64'
+p43
+aS'Benchmarks/2DFFT-OneThread/2dfft_onethread 128'
+p44
+aS'Benchmarks/2DFFT-OneThread/2dfft_onethread 256'
+p45
+aS'Benchmarks/2DFFT-OneThread/2dfft_onethread 512'
+p46
+aS'Benchmarks/2DFFT-OneThread/2dfft_onethread 1024'
+p47
+aS'Benchmarks/2DFFT-OneThread/2dfft_onethread 2048'
+p48
+asg24
+(lp49
+(lp50
+F6e-08
+aa(lp51
+F1.2e-07
+aa(lp52
+F5.2e-07
+aa(lp53
+F2.8e-06
+aa(lp54
+F1.783e-05
+aa(lp55
+F9.241e-05
+aa(lp56
+F0.00127467
+aa(lp57
+F0.00566419
+aa(lp58
+F0.06502929
+aa(lp59
+F0.32047371
+aasssS'month'
+p60
+I9
+sS'names'
+p61
+(lp62
+g36
+ag5
+asS'year'
+p63
+I2013
+sS'arch'
+p64
+S'x86_64'
+p65
+sS'day'
+p66
+I9
+s.

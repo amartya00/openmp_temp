@@ -1,0 +1,59 @@
+@COMMENT
+You can place any comments here...
+
+The following three fields are like comments but are included in the output...
+
+Input file to debug MPI tests
+
+@MACHINE 
+@NODE 
+@NETWORK 
+@USER 
+
+Your name and email address...
+
+@MEMORY 256 
+@DIMENSIONSCOUNT 4
+@MAXSTEPSDEFAULT 200
+@MAXSTEPSLIST 200 5
+@MAXREPDEFAULT 30
+@MINREPDEFAULT 10
+@STANDARDDEVIATIONDEFAULT 0.03
+@ITERSPERREPDEFAULT 30
+@VARIATIONLIST NODES LENGTH ROOT ACKER
+@MEASUREMENTS
+
+MPI_Bcast_with_Acker-ACKer-short
+{
+  Type = 46;
+}
+
+MPI_Scatter_with_Acker-ACKer-short
+{
+  Type = 49;
+}
+
+MPI_Scatterv_with_Acker-ACKer-short
+{
+  Type = 53;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,64 @@
+#
+# $log$
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .dec.guide.prun.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = guidec
+CLINKER     = guidec
+#OPTFLAGS    = -O3
+OPTFLAGS    = -g +K0
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  =  $(OPTFLAGS) -DDEC -DBUILD_MPILIB_NAME=\"DEC_PRUN_MPI\" \
+                                                -D_HAVE_OMP_ $(C_FLAGS)
+
+LIBS = -lm -lmpi -lelan -lelan3 -lrmscall -lmach -pthread
+
+DEC_GUIDE_PRUN_OBJS = ${SOURCE_FILES:.c=.dec.guide.prun.o}
+
+EXECS = dec_guide_prun_sphinx dec_guide_prun_yieldtest
+
+#for now, prun has 16 character executable name limit...
+CPEXECS = dgp_sphinx dgp_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+dec_guide_prun_sphinx: real_dec_guide_prun_sphinx
+	@-/bin/cp -f dec_guide_prun_sphinx dgp_sphinx
+
+real_dec_guide_prun_sphinx: $(DEC_GUIDE_PRUN_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o dec_guide_prun_sphinx \
+                                         $(DEC_GUIDE_PRUN_OBJS) $(LIBS)
+
+dec_guide_prun_yieldtest: real_dec_guide_prun_yieldtest
+	@-/bin/cp -f dec_guide_prun_yieldtest dgp_yieldtest
+
+real_dec_guide_prun_yieldtest: yieldtest.dec.guide.prun.o
+	$(CLINKER) $(OPTFLAGS) -o dec_guide_prun_yieldtest \
+                                     yieldtest.dec.guide.prun.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.dec.guide.prun.o *~ PI* $(EXECS) $(CPEXECS) core
+
+.c.dec.guide.prun.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

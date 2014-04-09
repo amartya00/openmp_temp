@@ -1,0 +1,2042 @@
+@COMMENT
+You can place any comments here...
+
+The following three fields are like comments but are included in the output...
+
+Input file to debug MPI tests
+
+@MACHINE 
+@NODE 
+@NETWORK 
+@USER 
+
+Your name and email address...
+
+@MEMORY 256 
+@MAXSTEPSDEFAULT 5
+@MAXREPDEFAULT 10
+@MINREPDEFAULT 4
+@STANDARDDEVIATIONDEFAULT 0.50
+@CORRECT_FOR_OVERHEAD no
+@ITERSPERREPDEFAULT 3
+@CHUNKS 10
+@MINDIST 2
+@MAXDIST 512
+@MAXOVERLAP 500
+@MEASUREMENTS
+
+MPI_Send-MPI_Recv
+{
+  Type = 1;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Send-MPI_Iprobe_Recv
+{
+  Type = 2;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;
+}  
+
+MPI_Send-MPI_Irecv
+{
+  Type = 3;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;
+}
+
+MPI_Send-MPI_Recv_with_Any_Tag
+{
+  Type = 4;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;
+}
+
+MPI_Ssend-MPI_Recv
+{
+  Type = 5;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;
+}  
+
+MPI_Isend-MPI_Recv
+{
+  Type = 6;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;
+}  
+
+MPI_Bsend-MPI_Recv
+{
+  Type = 7;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;
+}  
+
+MPI_Sendrecv
+{
+  Type = 8;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;
+  Max_Distance = 512;  
+  Standard_error = Default_Value;
+}  
+
+MPI_Sendrecv_replace
+{
+  Type = 9;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Waitsome-nodes
+{
+  Type = 10;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 10;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Waitsome-chunks
+{
+  Type = 10;
+  Variation = Chunks;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 10;
+  Default_Message_length = 256;
+  Start_Argument = 1;   
+  End_Argument = 40;  
+  Stepwidth = 2.0; 
+  Max_Steps = Default_Value;   
+  Min_Distance = 1;  
+  Max_Distance = 2;  
+  Standard_error = Default_Value;  
+}
+
+
+MPI_Waitsome-length
+{
+  Type = 10;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 10;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Waitany-length
+{
+  Type = 11;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 10;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Recv_Any_Source-length
+{
+  Type = 12;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 10;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Send-length
+{
+  Type = 13;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 10;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+ 
+MPI_Ssend-length
+{ 
+  Type = 14;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 10;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;
+}  
+
+MPI_Isend-length
+{
+  Type = 15;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 10;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Bsend-length
+{
+  Type = 16;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 1;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562; 
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Isend_Recv_overlap-length
+{
+  Type = 61;
+  Variation = Overlap;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 10;
+  End_Argument = 100;
+  Stepwidth = 10; 
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Isend_Recv_both_overlaps-length
+{
+  Type = 62;
+  Variation = Second_Overlap;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 10;
+  End_Argument = 100;
+  Stepwidth = 10; 
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Irecv_Send_overlap-length
+{
+  Type = 63;
+  Variation = Overlap;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 10;
+  End_Argument = 100;
+  Stepwidth = 10; 
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast-nodes-short
+{
+  Type = 17;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast-nodes-long
+{
+  Type = 17;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+
+MPI_Bcast-length
+{
+  Type = 17;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast_with_Acker-ACKer-short
+{
+  Type = 46;
+  Variation = Nodes ACKer;  
+  Scale = Fixed_linear Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2 Min_Value;   
+  End_Argument = Max_Value Max_Value;  
+  Stepwidth = 1.0 1.0;    
+  Max_Steps = Default_Value Default_Value;   
+  Min_Distance = 2 1;  
+  Max_Distance = 512 10;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast_with_Acker-ACKer-long
+{
+  Type = 46;
+  Variation = Nodes ACKer;  
+  Scale = Fixed_linear Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2 Min_Value;   
+  End_Argument = Max_Value Max_Value;  
+  Stepwidth = 1.0 1.0;    
+  Max_Steps = Default_Value Default_Value;   
+  Min_Distance = 2 1;  
+  Max_Distance = 512 10;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast_barrier-nodes-short
+{
+  Type = 42;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast_barrier-nodes-long
+{
+  Type = 42;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast_round-nodes-short
+{
+  Type = 44;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast_round-nodes-long
+{
+  Type = 44;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast_with_acks-nodes-short
+{
+  Type = 45;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Bcast_with_acks-nodes-long
+{
+  Type = 45;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Barrier-nodes
+{
+  Type = 18;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;
+}  
+
+MPI_Barrier_barrier-nodes
+{
+  Type = 57;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;
+}  
+
+MPI_Reduce-nodes
+{
+  Type = 19;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Reduce-length
+{
+  Type = 19;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Reduce_upper_bound-nodes
+{
+  Type = 58;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Reduce_upper_bound-length
+{
+  Type = 58;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoall-nodes-short
+{
+  Type = 20;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoall-nodes-long
+{
+  Type = 20;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoall-length
+{
+  Type = 20;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;   
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoall_barrier-nodes-short
+{
+  Type = 47;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoall_barrier-nodes-long
+{
+  Type = 47;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoall_barrier-length
+{
+  Type = 47;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;   
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Scan-nodes
+{
+  Type = 21;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;      
+  Standard_error = Default_Value;
+}  
+
+MPI_Scan-length
+{
+  Type = 21;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gather-nodes-short
+{
+  Type = 33;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gather-nodes-long
+{
+  Type = 33;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gather-length
+{
+  Type = 33;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gather_upper_bound-nodes-short
+{
+  Type = 48;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gather_upper_bound-nodes-long
+{
+  Type = 48;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gather_upper_bound-length
+{
+  Type = 48;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatter-nodes-short
+{
+  Type = 34;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatter-nodes-long
+{
+  Type = 34;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatter-length
+{
+  Type = 34;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatter_with_Acker-ACKer-short
+{
+  Type = 49;
+  Variation = Nodes ACKer;  
+  Scale = Fixed_linear Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2 Min_Value;   
+  End_Argument = Max_Value Max_Value;  
+  Stepwidth = 1.0 1.0;    
+  Max_Steps = Default_Value Default_Value;   
+  Min_Distance = 2 1;  
+  Max_Distance = 512 10;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatter_with_Acker-ACKer-long
+{
+  Type = 49;
+  Variation = Nodes ACKer;  
+  Scale = Fixed_linear Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2 Min_Value;   
+  End_Argument = Max_Value Max_Value;  
+  Stepwidth = 1.0 1.0;    
+  Max_Steps = Default_Value Default_Value;   
+  Min_Distance = 2 1;  
+  Max_Distance = 512 10;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgather-nodes-short
+{
+  Type = 35;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgather-nodes-long
+{
+  Type = 35;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgather-length
+{
+  Type = 35;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgather_barrier-nodes-short
+{
+  Type = 50;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgather_barrier-nodes-long
+{
+  Type = 50;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgather_barrier-length
+{
+  Type = 50;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allreduce-nodes-short
+{
+  Type = 36;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allreduce-nodes-long
+{
+  Type = 36;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allreduce-length
+{
+  Type = 36;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allreduce_barrier-nodes-short
+{
+  Type = 51;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allreduce_barrier-nodes-long
+{
+  Type = 51;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allreduce_barrier-length
+{
+  Type = 51;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gatherv-nodes-short
+{
+  Type = 37;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gatherv-nodes-long
+{
+  Type = 37;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gatherv-length
+{
+  Type = 37;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gatherv_upper_bound-nodes-short
+{
+  Type = 52;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gatherv-nodes_upper_bound-long
+{
+  Type = 52;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Gatherv_upper_bound-length
+{
+  Type = 52;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatterv-nodes-short
+{
+  Type = 38;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatterv-nodes-long
+{
+  Type = 38;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatterv-length
+{
+  Type = 38;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatterv_with_Acker-ACKer-short
+{
+  Type = 53;
+  Variation = Nodes ACKer;  
+  Scale = Fixed_linear Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2 Min_Value;   
+  End_Argument = Max_Value Max_Value;  
+  Stepwidth = 1.0 1.0;    
+  Max_Steps = Default_Value Default_Value;   
+  Min_Distance = 2 1;  
+  Max_Distance = 512 10;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Scatterv_with_Acker-ACKer-long
+{
+  Type = 53;
+  Variation = Nodes ACKer;  
+  Scale = Fixed_linear Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2 Min_Value;   
+  End_Argument = Max_Value Max_Value;  
+  Stepwidth = 1.0 1.0;    
+  Max_Steps = Default_Value Default_Value;   
+  Min_Distance = 2 1;  
+  Max_Distance = 512 10;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgatherv-nodes-short
+{
+  Type = 39;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgatherv-nodes-long
+{
+  Type = 39;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgatherv-length
+{
+  Type = 39;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgatherv_barrier-nodes-short
+{
+  Type = 54;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgatherv_barrier-nodes-long
+{
+  Type = 54;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Allgatherv_barrier-length
+{
+  Type = 54;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoallv-nodes-short
+{
+  Type = 40;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoallv-nodes-long
+{
+  Type = 40;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoallv-length
+{
+  Type = 40;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoallv_barrier-nodes-short
+{
+  Type = 55;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoallv_barrier-nodes-long
+{
+  Type = 55;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Alltoallv_barrier-length
+{
+  Type = 55;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Reduce_scatter-nodes-short
+{
+  Type = 41;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Reduce_scatter-nodes-long
+{
+  Type = 41;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Reduce_scatter-length
+{
+  Type = 41;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Reduce_scatter_barrier-nodes-short
+{
+  Type = 56;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Reduce_scatter_barrier-nodes-long
+{
+  Type = 56;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 65536;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Reduce_scatter_barrier-length
+{
+  Type = 56;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = Max_Value;
+  Stepwidth = 1.414213562;    
+  Max_Steps = Default_Value;     
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+MPI_Commsplit-nodes
+{
+  Type = 22;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Wtime
+{
+  Type = 24;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Commrank 
+{
+  Type = 25;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Commsize
+{
+  Type = 26;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+MPI_Iprobe 
+{
+  Type = 27;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+MPI_attach
+{ 
+  Type = 28;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+p2p_dummy
+{ 
+  Type = 29;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = 0;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+mw_dummy
+{ 
+  Type = 30;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = 0;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+col_dummy
+{ 
+  Type = 31;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = 0;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+col_over_nodes_dummy
+{ 
+  Type = 59;
+  Variation = Nodes;  
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 10;
+  Default_Message_length = 256;
+  Start_Argument = 2;   
+  End_Argument = Max_Value;  
+  Stepwidth = 1.0;    
+  Max_Steps = Default_Value;
+  Min_Distance = 2;  
+  Max_Distance = 512;  
+  Standard_error = Default_Value;  
+}
+
+simple_dummy
+{ 
+  Type = 32;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = 0;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+simple_inside_dummy
+{ 
+  Type = 131;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = 0;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+
+p2p_overlap
+{ 
+  Type = 60;
+  Variation = No_Variation;
+  Scale = Fixed_linear;  
+  Max_Repetition = Default_Value;
+  Min_Repetition = Default_Value;
+  Default_Chunks = 0;
+  Default_Message_length = 256;
+  Start_Argument = Min_Value;   
+  End_Argument = 0;  
+  Stepwidth = 1.0;    
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+  Standard_error = Default_Value;  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

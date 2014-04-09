@@ -1,0 +1,162 @@
+@COMMENT
+
+Input file for Milepost point to point tests on snow
+
+@MACHINE
+
+8-way SMP, IBM Power3 
+ 
+@NODE 
+@NETWORK 
+
+@USER 
+@MEMORY 8192
+@MAXSTEPSDEFAULT 50
+@MAXREPDEFAULT 30
+@MINREPDEFAULT 8
+@STANDARDDEVIATIONDEFAULT 0.03
+@ITERSPERREPDEFAULT 30
+@CHUNKS 10
+@MINDIST 2
+@MAXDIST 512
+@MEASUREMENTS
+
+MPI_Send-MPI_Recv
+{
+  Type = 1;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Send-MPI_Iprobe_Recv
+{
+  Type = 2;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Send-MPI_Irecv
+{
+  Type = 3;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Send-MPI_Recv_with_Any_Tag
+{
+  Type = 4;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Ssend-MPI_Recv
+{
+  Type = 5;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Isend-MPI_Recv
+{
+  Type = 6;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Bsend-MPI_Recv
+{
+  Type = 7;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Sendrecv
+{
+  Type = 8;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Sendrecv_replace
+{
+  Type = 9;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Waitsome-nodes
+{
+  Type = 10;
+  Variation = Nodes;  
+}
+
+MPI_Waitsome-chunks
+{
+  Type = 10;
+  Variation = Chunks;  
+  Start_Argument = 1;   
+  End_Argument = 40;  
+  Stepwidth = 2.0; 
+  Min_Distance = 1;  
+  Max_Distance = 2;  
+}
+
+MPI_Waitsome-length
+{
+  Type = 10;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Waitany-length
+{
+  Type = 11;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Recv_Any_Source-length
+{
+  Type = 12;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Send-length
+{
+  Type = 13;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+ 
+MPI_Ssend-length
+{ 
+  Type = 14;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Bsend-length
+{
+  Type = 16;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Default_Chunks = 1;
+  Stepwidth = 1.414213562; 
+}
+
+

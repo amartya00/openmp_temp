@@ -1,0 +1,52 @@
+#
+# $log$
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .dec.mpich.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = mpicc
+CLINKER     = mpicc
+OPTFLAGS    = -g
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS = $(OPTFLAGS) -DDEC -DBUILD_MPILIB_NAME=\\\"MPICH-ch_shmem\\\" $(C_FLAGS)
+
+LIBS = -lm -lrt -pthread -lmach
+
+DEC_MPICH_OBJS = ${SOURCE_FILES:.c=.dec.mpich.o}
+
+EXECS = dec_mpich_sphinx dec_mpich_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+dec_mpich_sphinx: $(DEC_MPICH_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o dec_mpich_sphinx $(DEC_MPICH_OBJS) $(LIBS)
+
+dec_mpich_yieldtest: yieldtest.dec.mpich.o
+	$(CLINKER) $(OPTFLAGS) -o dec_mpich_yieldtest \
+                                               yieldtest.dec.mpich.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.dec.mpich.o *~ PI* $(EXECS) core
+
+.c.dec.mpich.o:
+	$(CC) $(CFLAGS) -c -o $@ $*.c
+
+
+
+
+
+
+

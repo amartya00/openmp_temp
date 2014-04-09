@@ -1,0 +1,80 @@
+#
+# $Log: Makefile.SUN,v $
+# Revision 1.7  2000/09/15 00:04:59  bronis
+# Added assure makefiles and removed problems revealed by assure
+#
+# Revision 1.6  1999/09/21 15:59:50  bronis
+# Added make unmeasured; fixed call_*_prologue bug
+#
+# Revision 1.5  1999/09/07 17:24:37  bronis
+# Defined MPILIB_NAME in Makefile's
+#
+# Revision 1.4  1999/08/13 17:14:16  bronis
+# Added PDPTA input files
+#
+# Revision 1.3  1999/07/27 21:50:53  bronis
+# Added Makefile.SUN.MPICH
+#
+# Revision 1.2  1999/07/27 16:32:41  srtaylor
+# Moved -D flags to top level Makefile
+#
+# Revision 1.1.1.1  1999/05/11 16:50:02  srtaylor
+# CVS repository setup for sphinx
+#
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .sun.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = tmcc
+CLINKER     = tmcc
+OPTFLAGS    = -g
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS = $(OPTFLAGS) ${C_FLAGS} -DSUN -DBUILD_MPILIB_NAME=\\\"SUN_MPI\\\" \
+                                                             -xarch=v8plusa
+
+LIBS = -lm -lmpi_mt -lpthread
+
+SUN_OBJS = ${SOURCE_FILES:.c=.sun.o}
+
+EXECS = sun_sphinx sun_yieldtest
+
+PURE_EXECS = sun_pure_sphinx sun_pure_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+sun_sphinx: $(SUN_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o sun_sphinx $(SUN_OBJS) $(LIBS)
+
+sun_yieldtest: yieldtest.sun.o
+	$(CLINKER) $(OPTFLAGS) -o sun_yieldtest yieldtest.sun.o $(LIBS)
+
+sun_pure_sphinx: $(SUN_OBJS) yieldtest.sun.o
+	purify $(CLINKER) $(OPTFLAGS) -o sun_pure_sphinx $(SUN_OBJS) $(LIBS)
+	purify $(CLINKER) $(OPTFLAGS) -o sun_pure_yieldtest yieldtest.sun.o \
+	                                                             $(LIBS)
+
+clean:
+	@-/bin/rm -f *.sun.o *.sun_pure*.o *~ PI* $(EXECS) $(PURE_EXECS) core
+
+.c.sun.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

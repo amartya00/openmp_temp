@@ -1,0 +1,123 @@
+@COMMENT
+Input file for Milepost Pthreads tests on snow
+
+@MACHINE 
+IBM SP3
+@NODE 
+8-way SMP, IBM Power3 
+@NETWORK 
+@USER 
+
+Your name and email address...
+
+@MEMORY 256
+@MAXSTEPSDEFAULT 1
+@MAXREPDEFAULT 15
+@MINREPDEFAULT 8
+@STANDARDDEVIATIONDEFAULT 0.03
+@CORRECT_FOR_OVERHEAD yes
+@ITERSPERREPDEFAULT 1000
+@MEASUREMENTS
+
+simple_dummy
+{ 
+  Type = 32;
+}
+
+simple_inside_dummy
+{ 
+  Type = 131;
+}
+
+Pthread_create_detached_system
+{
+  Type = 128;
+}
+
+Pthread_create_detached_process
+{
+  Type = 109;
+}
+
+Pthread_create_undetached_system
+{
+  Type = 130;
+}
+
+Pthread_create_undetached_process
+{
+  Type = 129;
+}
+
+Pthread_yield_proxy
+{
+  Type = 127;
+}
+
+Pthread_timeslice
+{
+  Type = 108;
+}
+
+Pthread_condition_pingpong-unbound
+{
+  Type = 101;
+}
+
+Pthread_condition_pingpong-same_CPU
+{
+  Type = 101;
+  Variation = Master_Binding Slave_Binding;
+}
+
+Pthread_condition_pingpong-different_CPUs
+{
+  Type = 101;
+  Variation = Master_Binding Slave_Binding;
+  Start_Argument = 0 1;
+  End_Argument = 0 1;
+}
+
+Pthread_condition_signal
+{
+  Type = 103;
+}
+
+Pthread_condition_wait
+{
+  Type = 104;
+}
+
+Pthread_mutex_pingpong-unbound
+{
+  Type = 105;
+}
+
+Pthread_mutex_pingpong-same_CPU
+{
+  Type = 105;
+  Variation = Master_Binding Slave_Binding;
+}
+
+Pthread_mutex_pingpong-different_CPUs
+{
+  Type = 105;
+  Variation = Master_Binding Slave_Binding;
+  Start_Argument = 0 1;
+  End_Argument = 0 1;
+}
+
+Pthread_mutex_pingpong_no_contention
+{
+  Type = 106;
+}
+
+Pthread_mutex_lock_and_unlock
+{
+  Type = 107;
+}
+
+Pthread_mutex_lock_unlock
+{
+  Type = 111;
+}

@@ -1,0 +1,57 @@
+#
+# $log$
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .alpha.linux.mpich.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = mpicc
+CLINKER     = mpicc
+OPTFLAGS    = -g
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS = $(OPTFLAGS) -DLINUX -DBUILD_MPILIB_NAME=\\\"MPICH-ch_p4\\\" $(C_FLAGS)
+
+LIBS = -lm -lrt -pthread
+
+ALPHA_LINUX_MPICH_OBJS = ${SOURCE_FILES:.c=.alpha.linux.mpich.o}
+
+EXECS = alpha_linux_mpich_sphinx alpha_linux_mpich_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+alpha_linux_mpich_sphinx: $(ALPHA_LINUX_MPICH_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o alpha_linux_mpich_sphinx \
+                                           $(ALPHA_LINUX_MPICH_OBJS) $(LIBS)
+
+alpha_linux_mpich_yieldtest: yieldtest.alpha.linux.mpich.o
+	$(CLINKER) $(OPTFLAGS) -o alpha_linux_mpich_yieldtest \
+                                       yieldtest.alpha.linux.mpich.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.alpha.linux.mpich.o *~ PI* $(EXECS) core
+
+.c.alpha.linux.mpich.o:
+	$(CC) $(CFLAGS) -c -o $@ $*.c
+
+
+
+
+
+
+
+
+
+
+

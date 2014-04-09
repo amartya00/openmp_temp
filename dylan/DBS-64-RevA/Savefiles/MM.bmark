@@ -1,0 +1,271 @@
+(dp0
+S'os'
+p1
+S'Linux-3.7.10-1.16-desktop-x86_64-with-SuSE-12.3-x86_64'
+p2
+sS'data'
+p3
+(dp4
+S'MM-OpenMP'
+p5
+(dp6
+S'items'
+p7
+(lp8
+S'RunF64'
+p9
+aS'RunF32'
+p10
+aS'RunI64'
+p11
+aS'RunI32'
+p12
+asS'ticks'
+p13
+(lp14
+I4
+aI8
+aI16
+aI32
+aI64
+aI128
+aI256
+aI512
+aI1024
+asS'call strings'
+p15
+(lp16
+S'Benchmarks/MM-OMP/mm_omp 4'
+p17
+aS'Benchmarks/MM-OMP/mm_omp 8'
+p18
+aS'Benchmarks/MM-OMP/mm_omp 16'
+p19
+aS'Benchmarks/MM-OMP/mm_omp 32'
+p20
+aS'Benchmarks/MM-OMP/mm_omp 64'
+p21
+aS'Benchmarks/MM-OMP/mm_omp 128'
+p22
+aS'Benchmarks/MM-OMP/mm_omp 256'
+p23
+aS'Benchmarks/MM-OMP/mm_omp 512'
+p24
+aS'Benchmarks/MM-OMP/mm_omp 1024'
+p25
+asS'times'
+p26
+(lp27
+(lp28
+F7.3e-07
+aF7e-07
+aF7.1e-07
+aF6.6e-07
+aa(lp29
+F1.97e-06
+aF1.44e-06
+aF1.97e-06
+aF1.95e-06
+aa(lp30
+F3.02e-06
+aF2.43e-06
+aF2.18e-06
+aF2.46e-06
+aa(lp31
+F1.255e-05
+aF1.239e-05
+aF1.151e-05
+aF1.252e-05
+aa(lp32
+F9.627e-05
+aF9.277e-05
+aF0.00010202
+aF9.705e-05
+aa(lp33
+F0.00068627
+aF0.00064938
+aF0.00066071
+aF0.00069481
+aa(lp34
+F0.00612049
+aF0.005695
+aF0.00602161
+aF0.00639435
+aa(lp35
+F0.06563378
+aF0.06048389
+aF0.06833981
+aF0.06600487
+aa(lp36
+F2.60662805
+aF2.59270305
+aF2.59521797
+aF2.45929017
+aassS'MM-OneThread'
+p37
+(dp38
+g7
+g8
+sg13
+g14
+sg15
+(lp39
+S'Benchmarks/MM-OneThread/mm_onethread 4'
+p40
+aS'Benchmarks/MM-OneThread/mm_onethread 8'
+p41
+aS'Benchmarks/MM-OneThread/mm_onethread 16'
+p42
+aS'Benchmarks/MM-OneThread/mm_onethread 32'
+p43
+aS'Benchmarks/MM-OneThread/mm_onethread 64'
+p44
+aS'Benchmarks/MM-OneThread/mm_onethread 128'
+p45
+aS'Benchmarks/MM-OneThread/mm_onethread 256'
+p46
+aS'Benchmarks/MM-OneThread/mm_onethread 512'
+p47
+aS'Benchmarks/MM-OneThread/mm_onethread 1024'
+p48
+asg26
+(lp49
+(lp50
+F1.5e-07
+aF8e-08
+aF9e-08
+aF1e-07
+aa(lp51
+F5.2e-07
+aF5e-07
+aF5.4e-07
+aF5.8e-07
+aa(lp52
+F5.09e-06
+aF3.85e-06
+aF4.03e-06
+aF4.02e-06
+aa(lp53
+F3.916e-05
+aF3.244e-05
+aF2.921e-05
+aF2.949e-05
+aa(lp54
+F0.00026466
+aF0.00025041
+aF0.00024072
+aF0.0002598
+aa(lp55
+F0.00192856
+aF0.00185269
+aF0.00189172
+aF0.00191882
+aa(lp56
+F0.01721682
+aF0.01619994
+aF0.0170182
+aF0.01789682
+aa(lp57
+F0.17658453
+aF0.16097477
+aF0.17676243
+aF0.17581725
+aa(lp58
+F7.37637367
+aF7.38736313
+aF7.40860169
+aF7.09278804
+aassS'MM-Naive'
+p59
+(dp60
+g7
+g8
+sg13
+g14
+sg15
+(lp61
+S'Benchmarks/MM-Naive/mm_naive 4'
+p62
+aS'Benchmarks/MM-Naive/mm_naive 8'
+p63
+aS'Benchmarks/MM-Naive/mm_naive 16'
+p64
+aS'Benchmarks/MM-Naive/mm_naive 32'
+p65
+aS'Benchmarks/MM-Naive/mm_naive 64'
+p66
+aS'Benchmarks/MM-Naive/mm_naive 128'
+p67
+aS'Benchmarks/MM-Naive/mm_naive 256'
+p68
+aS'Benchmarks/MM-Naive/mm_naive 512'
+p69
+aS'Benchmarks/MM-Naive/mm_naive 1024'
+p70
+asg26
+(lp71
+(lp72
+F4.3e-07
+aF4.2e-07
+aF4.1e-07
+aF4.4e-07
+aa(lp73
+F3.15e-06
+aF3.09e-06
+aF3.12e-06
+aF3.03e-06
+aa(lp74
+F2.467e-05
+aF2.409e-05
+aF2.363e-05
+aF2.252e-05
+aa(lp75
+F0.00019986
+aF0.0001862
+aF0.00018112
+aF0.00018115
+aa(lp76
+F0.00152325
+aF0.00146497
+aF0.00144353
+aF0.00145966
+aa(lp77
+F0.01261091
+aF0.01204975
+aF0.011821
+aF0.01171374
+aa(lp78
+F0.10637323
+aF0.10286196
+aF0.10338577
+aF0.09949747
+aa(lp79
+F0.9588037
+aF0.91871383
+aF0.94069625
+aF0.88590614
+aa(lp80
+F13.98955851
+aF8.89037661
+aF13.322237
+aF8.51670574
+aasssS'month'
+p81
+I9
+sS'names'
+p82
+(lp83
+g59
+ag37
+ag5
+asS'year'
+p84
+I2013
+sS'arch'
+p85
+S'x86_64'
+p86
+sS'day'
+p87
+I9
+s.

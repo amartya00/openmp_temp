@@ -1,0 +1,83 @@
+#
+# $Log: Makefile.IBM.MPICH,v $
+# Revision 1.6  1999/10/25 15:55:44  bronis
+# removed -show in IBM.MPICH
+#
+# Revision 1.5  1999/09/21 15:59:49  bronis
+# Added make unmeasured; fixed call_*_prologue bug
+#
+# Revision 1.4  1999/09/15 15:52:29  bronis
+# partial fix of data_list.c
+#
+# Revision 1.3  1999/09/07 17:24:37  bronis
+# Defined MPILIB_NAME in Makefile's
+#
+# Revision 1.2  1999/09/03 16:47:58  bronis
+# Fixed IBM_MPICH clean
+#
+# Revision 1.1  1999/09/03 16:38:47  bronis
+# Added Makefile.IBM.MPICH
+#
+# Revision 1.4  1999/07/27 16:32:40  srtaylor
+# Moved -D flags to top level Makefile
+#
+# Revision 1.3  1999/07/26 23:37:09  srtaylor
+# Multiple dimensions free form input (compile with -DMULTI_DIM)
+#
+# Revision 1.2  1999/07/12 18:45:32  srtaylor
+# Bcast new default parameters
+#
+# Revision 1.1.1.1  1999/05/11 16:50:02  srtaylor
+# CVS repository setup for sphinx
+#
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .ibm.mpich.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = mpicc
+CLINKER     = mpicc
+OPTFLAGS    = -g
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  = $(OPTFLAGS) -DIBM -DBUILD_MPILIB_NAME=\\\"MPICH-ch_mpl\\\" ${C_FLAGS}
+CCFLAGS = $(CFLAGS)
+
+LIBS = -lm
+
+IBM_MPICH_OBJS = ${SOURCE_FILES:.c=.ibm.mpich.o}
+
+EXECS = ibm_mpich_sphinx ibm_mpich_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+ibm_mpich_sphinx: $(IBM_MPICH_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o ibm_mpich_sphinx $(IBM_MPICH_OBJS) $(LIBS)
+
+ibm_mpich_yieldtest: yieldtest.ibm.mpich.o
+	$(CLINKER) $(OPTFLAGS) -o ibm_mpich_yieldtest \
+                                            yieldtest.ibm.mpich.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.ibm.mpich.o *~ PI* $(EXECS) core
+
+.c.ibm.mpich.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

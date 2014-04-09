@@ -1,0 +1,71 @@
+@COMMENT
+Input file for PDPTA SGI Pthreads tests
+
+@MACHINE 
+SGI Origin 2000 cluster
+@NODE 
+Up to 128 CPUs per machine, R10000 250 MHz
+@NETWORK 
+@USER 
+
+Your name and email address...
+
+@MEMORY 256
+@MAXSTEPSDEFAULT 1
+@MAXREPDEFAULT 15
+@MINREPDEFAULT 8
+@STANDARDDEVIATIONDEFAULT 0.03
+@CORRECT_FOR_OVERHEAD yes
+@ITERSPERREPDEFAULT 1000
+@MEASUREMENTS
+
+simple_dummy
+{ 
+  Type = 32;
+}
+
+simple_inside_dummy
+{ 
+  Type = 131;
+}
+
+Pthread_create_detached_process
+{
+  Type = 109;
+}
+
+Pthread_create_undetached_process
+{
+  Type = 129;
+}
+
+Pthread_condition_pingpong-unbound
+{
+  Type = 101;
+}
+
+Pthread_condition_signal
+{
+  Type = 103;
+}
+
+Pthread_mutex_pingpong-unbound
+{
+  Type = 105;
+}
+
+Pthread_mutex_pingpong_no_contention
+{
+  Type = 106;
+}
+
+Pthread_mutex_lock_and_unlock
+{
+  Type = 107;
+}
+
+Pthread_mutex_lock_unlock
+{
+  Type = 111;
+}
+

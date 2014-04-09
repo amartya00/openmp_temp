@@ -1,0 +1,15 @@
+# September 2013 - Dylan Rudolph
+
+SHELL = /bin/sh
+
+CFLAGS = -lm -lrt -Wall -O2
+CC = gcc
+
+MAIN = mm_onethread.c
+OUT = mm_onethread
+
+all: $(MAIN)
+	$(CC) $(CFLAGS) $(MAIN) -o $(OUT)
+
+clean: 
+	rm -f $(OUT)

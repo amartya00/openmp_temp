@@ -1,0 +1,208 @@
+(dp0
+S'os'
+p1
+S'Linux-3.7.10-1.16-desktop-x86_64-with-SuSE-12.3-x86_64'
+p2
+sS'data'
+p3
+(dp4
+S'1DFFT-OneThread'
+p5
+(dp6
+S'items'
+p7
+(lp8
+S'RunF64'
+p9
+asS'ticks'
+p10
+(lp11
+I4
+aI8
+aI16
+aI32
+aI64
+aI128
+aI256
+aI512
+aI1024
+aI2048
+aI4096
+aI8192
+aI16384
+aI32768
+aI65536
+aI131072
+aI262144
+asS'call strings'
+p12
+(lp13
+S'Benchmarks/1DFFT-OneThread/1dfft_onethread 4'
+p14
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 8'
+p15
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 16'
+p16
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 32'
+p17
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 64'
+p18
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 128'
+p19
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 256'
+p20
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 512'
+p21
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 1024'
+p22
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 2048'
+p23
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 4096'
+p24
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 8192'
+p25
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 16384'
+p26
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 32768'
+p27
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 65536'
+p28
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 131072'
+p29
+aS'Benchmarks/1DFFT-OneThread/1dfft_onethread 262144'
+p30
+asS'times'
+p31
+(lp32
+(lp33
+F2e-08
+aa(lp34
+F2e-08
+aa(lp35
+F4e-08
+aa(lp36
+F9e-08
+aa(lp37
+F1.2e-07
+aa(lp38
+F2.7e-07
+aa(lp39
+F6.3e-07
+aa(lp40
+F1.24e-06
+aa(lp41
+F3.16e-06
+aa(lp42
+F8.18e-06
+aa(lp43
+F2.333e-05
+aa(lp44
+F5.315e-05
+aa(lp45
+F0.00011477
+aa(lp46
+F0.00027256
+aa(lp47
+F0.00058903
+aa(lp48
+F0.00140348
+aa(lp49
+F0.00328776
+aassS'1DFFT-OMP'
+p50
+(dp51
+g7
+g8
+sg10
+g11
+sg12
+(lp52
+S'Benchmarks/1DFFT-OMP/1dfft_omp 4'
+p53
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 8'
+p54
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 16'
+p55
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 32'
+p56
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 64'
+p57
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 128'
+p58
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 256'
+p59
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 512'
+p60
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 1024'
+p61
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 2048'
+p62
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 4096'
+p63
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 8192'
+p64
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 16384'
+p65
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 32768'
+p66
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 65536'
+p67
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 131072'
+p68
+aS'Benchmarks/1DFFT-OMP/1dfft_omp 262144'
+p69
+asg31
+(lp70
+(lp71
+F2e-08
+aa(lp72
+F2e-08
+aa(lp73
+F4e-08
+aa(lp74
+F9e-08
+aa(lp75
+F2.35e-06
+aa(lp76
+F2.16e-06
+aa(lp77
+F2.85e-06
+aa(lp78
+F5.93e-06
+aa(lp79
+F5.75e-06
+aa(lp80
+F9.53e-06
+aa(lp81
+F1.855e-05
+aa(lp82
+F3.98e-05
+aa(lp83
+F8.446e-05
+aa(lp84
+F0.00018357
+aa(lp85
+F0.00039029
+aa(lp86
+F0.00196162
+aa(lp87
+F0.0023221
+aasssS'month'
+p88
+I9
+sS'names'
+p89
+(lp90
+g5
+ag50
+asS'year'
+p91
+I2013
+sS'arch'
+p92
+S'x86_64'
+p93
+sS'day'
+p94
+I9
+s.

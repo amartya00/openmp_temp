@@ -1,0 +1,227 @@
+@COMMENT
+You can place any comments here...
+
+The following three fields are like comments but are included in the output...
+
+Input file to debug threads tests
+
+@MACHINE 
+@NODE 
+@NETWORK 
+@USER 
+
+Your name and email address...
+
+@MEMORY 256
+@MAXSTEPSDEFAULT 4
+@MAXREPDEFAULT 10
+@MINREPDEFAULT 4
+@CORRECT yes
+@STANDARDDEVIATIONDEFAULT 0.50
+@ITERSPERREPDEFAULT 3
+@MEASUREMENTS
+
+simple_dummy
+{ 
+  Type = 32;
+}
+
+simple_inside_dummy
+{ 
+  Type = 131;
+}
+
+Pthread_mutex_lock_unlock_10locks-binding
+{
+  Type = 122;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_9locks-binding
+{
+  Type = 121;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_8locks-binding
+{
+  Type = 120;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_7locks-binding
+{
+  Type = 119;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_6locks-binding
+{
+  Type = 115;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_5locks-binding
+{
+  Type = 114;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_3locks-binding
+{
+  Type = 113;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_2locks-binding
+{
+  Type = 112;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_and_unlock
+{
+  Type = 111;
+}
+
+Pthread_mutex_lock_and_unlock-binding
+{
+  Type = 111;
+  Variation = Master_Binding;
+}
+
+Pthread_condition_pingpong
+{
+  Type = 101;
+}
+
+Pthread_condition_pingpong-binding
+{
+  Type = 101;
+  Variation = Master_Binding Slave_Binding;
+}
+
+Pthread_cond_signal-binding
+{
+  Type = 102;
+  Variation = Master_Binding Slave_Binding;
+}
+
+Pthread_cond_signal_no_client-binding
+{
+  Type = 103;
+  Variation = Master_Binding;
+}
+
+Pthread_cond_wait_testcancel-binding
+{
+  Type = 104;
+  Variation = Master_Binding Slave_Binding;
+}
+
+Pthread_mutex_pingpong-binding
+{
+  Type = 105;
+  Variation = Master_Binding Slave_Binding;
+}
+
+Pthread_mutex_pingpong_no_client-binding
+{
+  Type = 106;
+  Variation = Master_Binding;
+}
+
+Pthread_mt_mutex_pingpong_no_client-binding
+{
+  Type = 118;
+  Variation = Master_Binding;
+}
+
+Pthread_mutexarray_pingpong-binding
+{
+  Type = 116;
+  Variation = Master_Binding Slave_Binding;
+}
+
+Pthread_mutexarray_pingpong_no_client-binding
+{
+  Type = 117;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock-binding
+{
+  Type = 107;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_twice-binding
+{
+  Type = 124;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_thrice-binding
+{
+  Type = 125;
+  Variation = Master_Binding;
+}
+
+Pthread_mutex_lock_unlock_4times-binding
+{
+  Type = 126;
+  Variation = Master_Binding;
+}
+
+Pthread_mt_mutex_lock_unlock-binding
+{
+  Type = 123;
+  Variation = Master_Binding;
+}
+
+Pthread_timeslice-binding
+{
+  Type = 108;
+  Variation = Master_Binding Slave_Binding;
+}
+
+Pthread_create_chain
+{
+  Type = 109;
+}
+
+Pthread_create_chain_system
+{
+  Type = 128;
+  Start_Argument = 2;
+}
+
+Pthread_create_chain_undetached
+{
+  Type = 129;
+  Start_Argument = 2;
+}
+
+Pthread_create_chain_undetached_system
+{
+  Type = 130;
+  Start_Argument = 2;
+}
+
+Pthread_yield-binding
+{
+  Type = 110;
+  Variation = Master_Binding Slave_Binding;
+}
+
+Pthread_yield_proxy-binding
+{
+  Type = 127;
+  Variation = Master_Binding Slave_Binding;
+}
+
+
+
+
+
+

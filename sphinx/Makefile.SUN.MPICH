@@ -1,0 +1,70 @@
+.SUFFIXES:
+.SUFFIXES: .c .f .sun.mpich.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = mpicc
+CLINKER     = mpicc
+OPTFLAGS    = -g
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  = $(OPTFLAGS) ${C_FLAGS} -DBUILD_MPILIB_NAME=\\\"MPICH-ch_shmem\\\" -DSUN
+
+## mpich 1.1.2 on using my version on helios.llnl.gov
+#PURE_OPTFLAGS = -DUSE_STDARG -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 \
+#                -DHAVE_UNISTD_H=1 -DHAVE_STDARG_H=1 -DUSE_STDARG=1 \
+#                -DMALLOC_RET_VOID=1 \
+#                -L/home/bronis/ASCI/newmpich/mpich/build/solaris/ch_p4/lib
+ 
+PURE_OPTFLAGS = -xildoff -L/usr/local/mpich/lib/solaris/ch_shmem
+
+LIBS = -lm -lpthread
+
+## mpich 1.1.2 on using my version on helios.llnl.gov
+#PURE_LIBS = $(LIBS) -lpmpich -lmpich -lsocket -lnsl -laio
+
+PURE_LIBS = $(LIBS) -lmpich -lthread -lnsl
+
+SUN_MPICH_OBJS = ${SOURCE_FILES:.c=.sun.mpich.o}
+
+EXECS = sun_mpich_sphinx sun_mpich_yieldtest
+
+PURE_EXECS = sun_mpich_pure_sphinx sun_mpich_pure_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+sun_mpich_sphinx: $(SUN_MPICH_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o sun_mpich_sphinx $(SUN_MPICH_OBJS) $(LIBS)
+
+sun_mpich_yieldtest: yieldtest.sun.mpich.o
+	$(CLINKER) $(OPTFLAGS) -o sun_mpich_yieldtest yieldtest.sun.mpich.o \
+	                                                             $(LIBS)
+
+sun_mpich_pure_sphinx: $(SUN_MPICH_OBJS) yieldtest.sun.mpich.o
+	purify cc $(PURE_OPTFLAGS) $(SUN_MPICH_OBJS) $(OPTFLAGS) \
+	                                 -o sun_mpich_pure_sphinx $(PURE_LIBS)
+	purify cc $(PURE_OPTFLAGS) yieldtest.sun.mpich.o $(OPTFLAGS) \
+	                              -o sun_mpich_pure_yieldtest $(PURE_LIBS)
+
+clean:
+	@-/bin/rm -f *.sun.mpich.o *.sun.mpich_pure*.o *~ PI* $(EXECS) \
+	                                                 $(PURE_EXECS) core
+
+.c.sun.mpich.o:
+	$(CC) $(CFLAGS) -c -o $@ -c $*.c
+
+
+
+
+
+
+

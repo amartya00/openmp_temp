@@ -1,0 +1,65 @@
+#
+# $Log: Makefile.SGI,v $
+# Revision 1.4  1999/09/21 15:59:50  bronis
+# Added make unmeasured; fixed call_*_prologue bug
+#
+# Revision 1.3  1999/09/07 17:24:37  bronis
+# Defined MPILIB_NAME in Makefile's
+#
+# Revision 1.2  1999/07/27 16:32:41  srtaylor
+# Moved -D flags to top level Makefile
+#
+# Revision 1.1.1.1  1999/05/11 16:50:02  srtaylor
+# CVS repository setup for sphinx
+#
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .sgi.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = cc
+CLINKER     = cc
+OPTFLAGS    = -g
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  =  $(OPTFLAGS) -DSGI -DBUILD_MPILIB_NAME=\"SGI_MPI\" ${C_FLAGS}
+
+LIBS = -lm -lmpi -lpthread
+
+SGI_OBJS = ${SOURCE_FILES:.c=.sgi.o}
+
+EXECS = sgi_sphinx sgi_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+sgi_sphinx: $(SGI_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o sgi_sphinx $(SGI_OBJS) $(LIBS)
+
+sgi_yieldtest: yieldtest.sgi.o
+	$(CLINKER) $(OPTFLAGS) -o sgi_yieldtest yieldtest.sgi.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.sgi.o *~ PI* $(EXECS) core
+
+.c.sgi.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+
+
+

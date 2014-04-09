@@ -1,0 +1,83 @@
+#
+# $Log: Makefile.IBM.MPGUIDE,v $
+# Revision 1.3  2000/09/15 00:04:59  bronis
+# Added assure makefiles and removed problems revealed by assure
+#
+# Revision 1.2  2000/08/25 23:17:15  bronis
+# Added OpenMP tests
+#
+# Revision 1.1  2000/03/16 15:48:38  bronis
+# fixed mpguidec warnings
+#
+# Revision 1.6  1999/09/21 15:59:49  bronis
+# Added make unmeasured; fixed call_*_prologue bug
+#
+# Revision 1.5  1999/09/07 17:24:37  bronis
+# Defined MPILIB_NAME in Makefile's
+#
+# Revision 1.4  1999/07/27 16:32:40  srtaylor
+# Moved -D flags to top level Makefile
+#
+# Revision 1.3  1999/07/26 23:37:09  srtaylor
+# Multiple dimensions free form input (compile with -DMULTI_DIM)
+#
+# Revision 1.2  1999/07/12 18:45:32  srtaylor
+# Bcast new default parameters
+#
+# Revision 1.1.1.1  1999/05/11 16:50:02  srtaylor
+# CVS repository setup for sphinx
+#
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .ibm.mpguide.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = mpguidec
+CLINKER     = mpguidec
+#OPTFLAGS    = -O3 -qarch=auto -qtune=auto
+OPTFLAGS    = -g +K0
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS = $(OPTFLAGS) -DIBM -DBUILD_MPILIB_NAME=\"IBM_threaded_MPI_KAI_OMP\" \
+                                             -D_HAVE_OMP_ ${C_FLAGS}
+CCFLAGS = $(CFLAGS)
+
+LIBS = -lm
+
+IBM_MPGUIDE_OBJS = ${SOURCE_FILES:.c=.ibm.mpguide.o}
+
+EXECS = ibm_mpguide_sphinx ibm_mpguide_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+ibm_mpguide_sphinx: $(IBM_MPGUIDE_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o ibm_mpguide_sphinx \
+                                          $(IBM_MPGUIDE_OBJS) $(LIBS)
+
+ibm_mpguide_yieldtest: yieldtest.ibm.mpguide.o
+	$(CLINKER) $(OPTFLAGS) -o ibm_mpguide_yieldtest \
+                                      yieldtest.ibm.mpguide.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.ibm.mpguide.o *~ PI* $(EXECS) core
+
+.c.ibm.mpguide.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

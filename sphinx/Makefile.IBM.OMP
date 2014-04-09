@@ -1,0 +1,90 @@
+#
+# $Log: Makefile.IBM.OMP,v $
+# Revision 1.4  2000/11/17 21:56:02  bronis
+# eliminated minor warnings
+#
+# Revision 1.3  2000/10/12 22:16:01  bronis
+# Fixed minor makefile bugs
+#
+# Revision 1.2  2000/09/19 16:58:47  bronis
+# Added test.sphinx.omp.real input file
+#
+# Revision 1.1  2000/08/25 23:17:15  bronis
+# Added OpenMP tests
+#
+# Revision 1.1  2000/03/16 15:48:38  bronis
+# fixed mpguidec warnings
+#
+# Revision 1.6  1999/09/21 15:59:49  bronis
+# Added make unmeasured; fixed call_*_prologue bug
+#
+# Revision 1.5  1999/09/07 17:24:37  bronis
+# Defined MPILIB_NAME in Makefile's
+#
+# Revision 1.4  1999/07/27 16:32:40  srtaylor
+# Moved -D flags to top level Makefile
+#
+# Revision 1.3  1999/07/26 23:37:09  srtaylor
+# Multiple dimensions free form input (compile with -DMULTI_DIM)
+#
+# Revision 1.2  1999/07/12 18:45:32  srtaylor
+# Bcast new default parameters
+#
+# Revision 1.1.1.1  1999/05/11 16:50:02  srtaylor
+# CVS repository setup for sphinx
+#
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .ibm.omp.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = newmpxlc_r
+CLINKER     = newmpxlc_r
+#OPTFLAGS    = -O3 -qsmp=omp -qstrict -qarch=auto -qtune=auto -bmaxdata:0x70000000
+#OPTFLAGS    = -O3 -qsmp=omp -qarch=auto -qtune=auto -bmaxdata:0x70000000
+OPTFLAGS    = -g -qsmp=omp -bmaxdata:0x70000000
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS = $(OPTFLAGS) -DIBM -DBUILD_MPILIB_NAME=\"IBM_threaded_MPI_IBM_OMP\" \
+                                             -D_HAVE_OMP_ ${C_FLAGS}
+CCFLAGS = $(CFLAGS)
+
+LIBS = -lm
+
+IBM_OMP_OBJS = ${SOURCE_FILES:.c=.ibm.omp.o}
+
+EXECS = ibm_omp_sphinx ibm_omp_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+ibm_omp_sphinx: $(IBM_OMP_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o ibm_omp_sphinx \
+                                          $(IBM_OMP_OBJS) $(LIBS)
+
+ibm_omp_yieldtest: yieldtest.ibm.omp.o
+	$(CLINKER) $(OPTFLAGS) -o ibm_omp_yieldtest \
+                                      yieldtest.ibm.omp.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.ibm.omp.o *~ PI* $(EXECS) core
+
+.c.ibm.omp.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

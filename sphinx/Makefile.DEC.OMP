@@ -1,0 +1,58 @@
+#
+# $log$
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .dec.omp.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = cc
+CLINKER     = cc
+OPTFLAGS    = -g -omp
+#OPTFLAGS    = -O3 -omp
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  =  $(OPTFLAGS) -DDEC -DBUILD_MPILIB_NAME=\"DEC_MPI\" \
+                                                -D_HAVE_OMP_ $(C_FLAGS)
+
+LIBS = -lm -lmpi -lrt -lmach
+
+DEC_OMP_OBJS = ${SOURCE_FILES:.c=.dec.omp.o}
+
+EXECS = dec_omp_sphinx dec_omp_yieldtest dec_omp_bug
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+dec_omp_sphinx: $(DEC_OMP_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o dec_omp_sphinx $(DEC_OMP_OBJS) $(LIBS)
+
+dec_omp_yieldtest: yieldtest.dec.omp.o
+	$(CLINKER) $(OPTFLAGS) -o dec_omp_yieldtest \
+                                             yieldtest.dec.omp.o $(LIBS)
+
+dec_omp_bug: dec_omp_bug.dec.omp.o
+	$(CLINKER) $(OPTFLAGS) -o dec_omp_bug \
+                                             dec_omp_bug.dec.omp.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.dec.omp.o *~ PI* $(EXECS) core
+
+.c.dec.omp.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

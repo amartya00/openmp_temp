@@ -1,0 +1,3978 @@
+%!PS-Adobe-3.0
+%%BoundingBox: (atend)
+%%Pages: (atend)
+%%PageOrder: (atend)
+%%DocumentFonts: (atend)
+%%Creator: Frame 5.0
+%%DocumentData: Clean7Bit
+%%EndComments
+%%BeginProlog
+%
+% Frame ps_prolog 5.0, for use with Frame 5.0 products
+% This ps_prolog file is Copyright (c) 1986-1995 Frame Technology
+% Corporation.  All rights reserved.  This ps_prolog file may be
+% freely copied and distributed in conjunction with documents created
+% using FrameMaker, FrameMaker/SGML and FrameViewer as long as this 
+% copyright notice is preserved.
+%
+% FrameMaker users specify the proper paper size for each print job in the
+% "Print" dialog's "Printer Paper Size" "Width" and "Height~ fields.  If the
+% printer that the PS file is sent to does not support the requested paper
+% size, or if there is no paper tray of the proper size currently installed, 
+% then the job will not be printed.  The following flag, if set to true, will
+% cause the job to print on the default paper in such cases.
+/FMAllowPaperSizeMismatch            false def
+%
+% Frame products normally print colors as their true color on a color printer
+% or as shades of gray, based on luminance, on a black-and white printer. The
+% following flag, if set to true, forces all non-white colors to print as pure
+% black. This has no effect on bitmap images.
+/FMPrintAllColorsAsBlack             false def
+%
+% Frame products can either set their own line screens or use a printer's 
+% default settings. Three flags below control this separately for no 
+% separations, spot separations and process separations. If a flag
+% is true, then the default printer settings will not be changed. If it is
+% false, Frame products will use their own settings from a table based on
+% the printer's resolution.
+/FMUseDefaultNoSeparationScreen      true  def
+/FMUseDefaultSpotSeparationScreen    true  def
+/FMUseDefaultProcessSeparationScreen false def
+%
+% For any given PostScript printer resolution, Frame products have two sets of 
+% screen angles and frequencies for printing process separations, which are 
+% recomended by Adobe. The following variable chooses the higher frequencies
+% when set to true or the lower frequencies when set to false. This is only
+% effective if the appropriate FMUseDefault...SeparationScreen flag is false.
+/FMUseHighFrequencyScreens true def
+%
+% The following is a set of predefined optimal frequencies and angles for various
+% common dpi settings. This is taken from "Advances in Color Separation Using
+% PostScript Software Technology," from Adobe Systems (3/13/89 P.N. LPS 0043)
+% and corrolated with information which is in various PPD (4.0) files.
+%
+% The "dpiranges" figure is the minimum dots per inch device resolution which
+% can support this setting. The "low" and "high" values are controlled by the
+% setting of the FMUseHighFrequencyScreens flag above. The "TDot" flags control
+% the use of the "Yellow Triple Dot" feature whereby the frequency id divided by
+% three, but the dot function is "trippled" giving a block of 3x3 dots per cell.
+%
+% PatFreq is a compromise pattern frequency for ps Level 2 printers which is close
+% to the ideal WYSIWYG pattern frequency of 9 repetitions/inch but does not beat
+% (too badly) against the screen frequencies of any separations for that DPI.
+/dpiranges   [  2540    2400    1693     1270    1200     635      600      0      ] def
+/CMLowFreqs  [ 100.402  94.8683 89.2289 100.402  94.8683  66.9349  63.2456 47.4342 ] def
+/YLowFreqs   [  95.25   90.0    84.65    95.25   90.0     70.5556  66.6667 50.0    ] def
+/KLowFreqs   [  89.8026 84.8528 79.8088  89.8026 84.8528  74.8355  70.7107 53.033  ] def
+/CLowAngles  [  71.5651 71.5651 71.5651 71.5651  71.5651  71.5651  71.5651 71.5651 ] def
+/MLowAngles  [  18.4349 18.4349 18.4349 18.4349  18.4349  18.4349  18.4349 18.4349 ] def
+/YLowTDot    [  true    true    false    true    true     false    false   false   ] def
+/CMHighFreqs [ 133.87  126.491 133.843  108.503 102.523  100.402   94.8683 63.2456 ] def
+/YHighFreqs  [ 127.0   120.0   126.975  115.455 109.091   95.25    90.0    60.0    ] def
+/KHighFreqs  [ 119.737 113.137 119.713  128.289 121.218   89.8026  84.8528 63.6395 ] def
+/CHighAngles [  71.5651 71.5651 71.5651  70.0169 70.0169  71.5651  71.5651 71.5651 ] def
+/MHighAngles [  18.4349 18.4349 18.4349  19.9831 19.9831  18.4349  18.4349 18.4349 ] def
+/YHighTDot   [  false   false   true     false   false    true     true    false   ] def
+/PatFreq     [	10.5833 10.0     9.4055  10.5833 10.0	  10.5833  10.0	   9.375   ] def
+%
+% PostScript Level 2 printers contain an "Accurate Screens" feature which can
+% improve process separation rendering at the expense of compute time. This 
+% flag is ignored by PostScript Level 1 printers.
+/FMUseAcccurateScreens true def
+%
+% The following PostScript procedure defines the spot function that Frame
+% products will use for process separations. You may un-comment-out one of
+% the alternative functions below, or use your own.
+%
+% Dot function
+/FMSpotFunction {abs exch abs 2 copy add 1 gt 
+		{1 sub dup mul exch 1 sub dup mul add 1 sub }
+		{dup mul exch dup mul add 1 exch sub }ifelse } def
+%
+% Line function
+% /FMSpotFunction { pop } def
+%
+% Elipse function
+% /FMSpotFunction { dup 5 mul 8 div mul exch dup mul exch add 
+%		sqrt 1 exch sub } def
+%
+%
+/FMversion (5.0) def 
+/fMLevel1 /languagelevel where {pop languagelevel} {1} ifelse 2 lt def
+/FMPColor
+	fMLevel1 {
+		false
+		/colorimage where {pop pop true} if
+	} {
+		true
+	} ifelse
+def
+/FrameDict 400 dict def 
+systemdict /errordict known not {/errordict 10 dict def
+		errordict /rangecheck {stop} put} if
+% The readline in PS 23.0 doesn't recognize cr's as nl's on AppleTalk
+FrameDict /tmprangecheck errordict /rangecheck get put 
+errordict /rangecheck {FrameDict /bug true put} put 
+FrameDict /bug false put 
+mark 
+% Some PS machines read past the CR, so keep the following 3 lines together!
+currentfile 5 string readline
+00
+0000000000
+cleartomark 
+errordict /rangecheck FrameDict /tmprangecheck get put 
+FrameDict /bug get { 
+	/readline {
+		/gstring exch def
+		/gfile exch def
+		/gindex 0 def
+		{
+			gfile read pop 
+			dup 10 eq {exit} if 
+			dup 13 eq {exit} if 
+			gstring exch gindex exch put 
+			/gindex gindex 1 add def 
+		} loop
+		pop 
+		gstring 0 gindex getinterval true 
+		} bind def
+	} if
+/FMshowpage /showpage load def
+/FMquit /quit load def
+/FMFAILURE { 
+	dup = flush 
+	FMshowpage 
+	/Helvetica findfont 12 scalefont setfont
+	72 200 moveto show
+	72 220 moveto show
+	FMshowpage 
+	FMquit 
+	} def 
+/FMVERSION {
+	FMversion ne {
+		(Frame product version does not match ps_prolog!  Check installation;)
+		(also check ~/fminit and ./fminit for old versions) FMFAILURE
+		} if
+	} def 
+/FMBADEPSF { 
+	(Adobe's PostScript Language Reference Manual, 2nd Edition, section H.2.4)
+	(says your EPS file is not valid, as it calls X              )
+	dup dup (X) search pop exch pop exch pop length 
+	5 -1 roll 
+	putinterval 
+	FMFAILURE
+	} def
+/fmConcatProcs
+	{
+	/proc2 exch cvlit def/proc1 exch cvlit def/newproc proc1 length proc2 length add array def
+	newproc 0 proc1 putinterval newproc proc1 length proc2 putinterval newproc cvx
+}def
+FrameDict begin [
+	/ALDsave
+	/FMdicttop
+	/FMoptop
+	/FMpointsize
+	/FMsaveobject
+	/b
+	/bitmapsave
+	/blut
+	/bpside
+	/bs
+	/bstring
+	/bwidth
+	/c
+	/cf
+	/cs
+	/cynu
+	/depth
+	/edown
+	/fh
+	/fillvals
+	/fw
+	/fx
+	/fy
+	/g
+	/gfile
+	/gindex
+	/grnt
+	/gryt
+	/gstring
+	/height
+	/hh
+	/i
+	/im
+	/indx
+	/is
+	/k
+	/kk
+	/landscape
+	/lb
+	/len
+	/llx
+	/lly
+	/m
+	/magu
+	/manualfeed
+	/n
+	/offbits
+	/onbits
+	/organgle
+	/orgbangle
+	/orgbfreq
+	/orgbproc
+	/orgbxfer
+	/orgfreq
+	/orggangle
+	/orggfreq
+	/orggproc
+	/orggxfer
+	/orgmatrix
+	/orgproc
+	/orgrangle
+	/orgrfreq
+	/orgrproc
+	/orgrxfer
+	/orgxfer
+	/pagesave
+	/paperheight
+	/papersizedict
+	/paperwidth
+	/pos
+	/pwid
+	/r
+	/rad
+	/redt
+	/sl
+	/str
+	/tran
+	/u
+	/urx
+	/ury
+	/val
+	/width
+	/width
+	/ws
+	/ww
+	/x
+	/x1
+	/x2
+	/xindex
+	/xpoint
+	/xscale
+	/xx
+	/y
+	/y1
+	/y2
+	/yelu
+	/yindex
+	/ypoint
+	/yscale
+	/yy
+] { 0 def } forall
+/FmBD {bind def} bind def
+systemdict /pdfmark known {
+	/fMAcrobat true def
+	
+	/FmPD /pdfmark load def
+	
+	
+	/FmPT /show load def
+	
+	
+	currentdistillerparams /CoreDistVersion get 2000 ge {
+	
+		
+		/FmPD2 /pdfmark load def
+		
+		
+		
+		
+		
+		/FmPA { mark exch /Dest exch 5 3 roll 
+				/View [ /XYZ null 6 -2 roll FmDC exch pop null] /DEST FmPD 
+		}FmBD
+	} {
+		
+		/FmPD2 /cleartomark load def
+		/FmPA {pop pop pop}FmBD
+	} ifelse
+} {
+	
+	/fMAcrobat false def
+	/FmPD /cleartomark load def
+	/FmPD2 /cleartomark load def
+	/FmPT /pop load def
+	/FmPA {pop pop pop}FmBD
+} ifelse
+/FmDC {
+	transform fMDefaultMatrix itransform cvi exch cvi exch
+}FmBD
+/FmBx {
+	dup 3 index lt {3 1 roll exch} if 
+	1 index 4 index lt {4 -1 roll 3 1 roll exch 4 1 roll} if
+}FmBD
+/FMnone 0 def
+/FMcyan 1 def
+/FMmagenta 2 def
+/FMyellow 3 def
+/FMblack 4 def
+/FMcustom 5 def
+/fMNegative false def 
+/FrameSepIs FMnone def 
+/FrameSepBlack 0 def
+/FrameSepYellow 0 def
+/FrameSepMagenta 0 def
+/FrameSepCyan 0 def
+/FrameSepRed 1 def
+/FrameSepGreen 1 def
+/FrameSepBlue 1 def
+/FrameCurGray 1 def
+/FrameCurPat null def
+/FrameCurColors [ 0 0 0 1 0 0 0 ] def 
+/FrameColorEpsilon .001 def	
+/eqepsilon {		
+	sub dup 0 lt {neg} if
+	FrameColorEpsilon le
+} bind def
+/FrameCmpColorsCMYK { 
+	2 copy 0 get exch 0 get eqepsilon {
+		2 copy 1 get exch 1 get eqepsilon {
+			2 copy 2 get exch 2 get eqepsilon {
+				3 get exch 3 get eqepsilon
+			} {pop pop false} ifelse
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/FrameCmpColorsRGB { 
+	2 copy 4 get exch 0 get eqepsilon {
+		2 copy 5 get exch 1 get eqepsilon {
+			6 get exch 2 get eqepsilon
+		}{pop pop false} ifelse
+	} {pop pop false} ifelse
+} bind def
+/RGBtoCMYK { 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	1 exch sub 
+	3 1 roll 
+	3 copy 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	2 copy 
+	le { pop } { exch pop } ifelse 
+	dup dup dup 
+	6 1 roll 
+	4 1 roll 
+	7 1 roll 
+	sub 
+	6 1 roll 
+	sub 
+	5 1 roll 
+	sub 
+	4 1 roll 
+} bind def
+/CMYKtoRGB { 
+	dup dup 4 -1 roll add 						  
+	5 1 roll 3 -1 roll add 						  
+	4 1 roll add 								  
+	1 exch sub dup 0 lt {pop 0} if 3 1 roll 	  
+	1 exch sub dup 0 lt {pop 0} if exch 	      
+	1 exch sub dup 0 lt {pop 0} if exch	  		  
+} bind def
+/FrameSepInit {
+	1.0 RealSetgray
+} bind def
+/FrameSetSepColor { 
+	/FrameSepBlue exch def
+	/FrameSepGreen exch def
+	/FrameSepRed exch def
+	/FrameSepBlack exch def
+	/FrameSepYellow exch def
+	/FrameSepMagenta exch def
+	/FrameSepCyan exch def
+	/FrameSepIs FMcustom def
+	setCurrentScreen	
+} bind def
+/FrameSetCyan {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 1.0 def
+	/FrameSepIs FMcyan def
+	setCurrentScreen	
+} bind def
+ 
+/FrameSetMagenta {
+	/FrameSepBlue 1.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 1.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMmagenta def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetYellow {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 1.0 def
+	/FrameSepRed 1.0 def
+	/FrameSepBlack 0.0 def
+	/FrameSepYellow 1.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMyellow def
+	setCurrentScreen
+} bind def
+ 
+/FrameSetBlack {
+	/FrameSepBlue 0.0 def
+	/FrameSepGreen 0.0 def
+	/FrameSepRed 0.0 def
+	/FrameSepBlack 1.0 def
+	/FrameSepYellow 0.0 def
+	/FrameSepMagenta 0.0 def
+	/FrameSepCyan 0.0 def
+	/FrameSepIs FMblack def
+	setCurrentScreen
+} bind def
+ 
+/FrameNoSep { 
+	/FrameSepIs FMnone def
+	setCurrentScreen
+} bind def
+/FrameSetSepColors { 
+	FrameDict begin
+	[ exch 1 add 1 roll ]
+	/FrameSepColors  
+	exch def end
+	} bind def
+/FrameColorInSepListCMYK { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsCMYK 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/FrameColorInSepListRGB { 
+	FrameSepColors {  
+       		exch dup 3 -1 roll 
+       		FrameCmpColorsRGB 
+       		{ pop true exit } if
+    	} forall 
+	dup true ne {pop false} if
+	} bind def
+/RealSetgray /setgray load def
+/RealSetrgbcolor /setrgbcolor load def
+/RealSethsbcolor /sethsbcolor load def
+end 
+/setgray { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+		{ RealSetgray } 
+		{ 
+		FrameSepIs FMblack eq 
+			{ RealSetgray } 
+			{ FrameSepIs FMcustom eq 
+			  FrameSepRed 0 eq and
+			  FrameSepGreen 0 eq and
+			  FrameSepBlue 0 eq and {
+			  	RealSetgray
+			  } {
+				1 RealSetgray pop 
+			  } ifelse
+			} ifelse
+		} ifelse
+	end
+} bind def
+/setrgbcolor { 
+	FrameDict begin
+	FrameSepIs FMnone eq
+	{  RealSetrgbcolor }
+	{
+		3 copy [ 4 1 roll ] 
+		FrameColorInSepListRGB
+		{
+				FrameSepBlue eq exch 
+			 	FrameSepGreen eq and exch 
+			 	FrameSepRed eq and
+			 	{ 0 } { 1 } ifelse
+		}
+		{
+			FMPColor {
+				RealSetrgbcolor
+				currentcmykcolor
+			} {
+				RGBtoCMYK
+			} ifelse
+			FrameSepIs FMblack eq
+			{1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		RealSetgray
+	} 
+	ifelse
+	end
+} bind def
+/sethsbcolor {
+	FrameDict begin
+	FrameSepIs FMnone eq 
+	{ RealSethsbcolor } 
+	{
+		RealSethsbcolor 
+		currentrgbcolor  
+		setrgbcolor 
+	} 
+	ifelse
+	end
+} bind def
+FrameDict begin
+/setcmykcolor where {
+	pop /RealSetcmykcolor /setcmykcolor load def
+} {
+	/RealSetcmykcolor {
+		4 1 roll
+		3 { 3 index add 0 max 1 min 1 exch sub 3 1 roll} repeat 
+		RealSetrgbcolor pop
+	} bind def
+} ifelse
+userdict /setcmykcolor { 
+		FrameDict begin
+		FrameSepIs FMnone eq
+		{ RealSetcmykcolor } 
+		{
+			4 copy [ 5 1 roll ]
+			FrameColorInSepListCMYK
+			{
+				FrameSepBlack eq exch 
+				FrameSepYellow eq and exch 
+				FrameSepMagenta eq and exch 
+				FrameSepCyan eq and 
+				{ 0 } { 1 } ifelse
+			}
+			{
+				FrameSepIs FMblack eq
+				{1.0 exch sub 4 1 roll pop pop pop} {
+				FrameSepIs FMyellow eq
+				{pop 1.0 exch sub 3 1 roll pop pop} {
+				FrameSepIs FMmagenta eq
+				{pop pop 1.0 exch sub exch pop } {
+				FrameSepIs FMcyan eq
+				{pop pop pop 1.0 exch sub } 
+				{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+			} ifelse
+			RealSetgray
+		}
+		ifelse
+		end
+	} bind put
+fMLevel1 { 
+	
+	
+	
+	/patScreenDict 7 dict dup begin
+		<0f1e3c78f0e1c387> [ 45  { pop } {exch pop} 		.5   2 sqrt] FmBD
+		<0f87c3e1f0783c1e> [ 135 { pop } {exch pop}			.5   2 sqrt] FmBD
+		<cccccccccccccccc> [ 0   { pop } dup				.5   2	   ] FmBD
+		<ffff0000ffff0000> [ 90  { pop } dup				.5   2	   ] FmBD
+		<8142241818244281> [ 45  { 2 copy lt {exch} if pop}	dup .75  2 sqrt] FmBD
+		<03060c183060c081> [ 45  { pop } {exch pop}			.875 2 sqrt] FmBD
+		<8040201008040201> [ 135 { pop } {exch pop}			.875 2 sqrt] FmBD
+	end def
+} { 
+	
+	/patProcDict 5 dict dup begin
+		<0f1e3c78f0e1c387> { 3 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<0f87c3e1f0783c1e> { 3 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+		<8142241818244281> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke
+											-1 -1 moveto 9 9 lineto stroke } bind def
+		<03060c183060c081> { 1 setlinewidth -1 -1 moveto 9 9 lineto stroke 
+											4 -4 moveto 12 4 lineto stroke
+											-4 4 moveto 4 12 lineto stroke} bind def
+		<8040201008040201> { 1 setlinewidth -1 9 moveto 9 -1 lineto stroke 
+											-4 4 moveto 4 -4 lineto stroke
+											4 12 moveto 12 4 lineto stroke} bind def
+	end def
+	/patDict 15 dict dup begin
+		/PatternType 1 def		
+		/PaintType 2 def		
+		/TilingType 3 def		
+		/BBox [ 0 0 8 8 ] def 	
+		/XStep 8 def			
+		/YStep 8 def			
+		/PaintProc {
+			begin
+			patProcDict bstring known {
+				patProcDict bstring get exec
+			} {
+				8 8 true [1 0 0 -1 0 8] bstring imagemask
+			} ifelse
+			end
+		} bind def
+	end def
+} ifelse
+/combineColor {
+    FrameSepIs FMnone eq
+	{
+		graymode fMLevel1 or not {
+			
+			[/Pattern [/DeviceCMYK]] setcolorspace
+			FrameCurColors 0 4 getinterval aload pop FrameCurPat setcolor
+		} {
+			FrameCurColors 3 get 1.0 ge {
+				FrameCurGray RealSetgray
+			} {
+				fMAcrobat not FMPColor graymode and and {
+					0 1 3 { 
+						FrameCurColors exch get
+						1 FrameCurGray sub mul
+					} for
+					RealSetcmykcolor
+				} {
+					4 1 6 {
+						FrameCurColors exch get
+						graymode {
+							1 exch sub 1 FrameCurGray sub mul 1 exch sub
+						} {
+							1.0 lt {FrameCurGray} {1} ifelse
+						} ifelse
+					} for
+					RealSetrgbcolor
+				} ifelse
+			} ifelse
+		} ifelse
+	} { 
+		FrameCurColors 0 4 getinterval aload
+		FrameColorInSepListCMYK {
+			FrameSepBlack eq exch 
+			FrameSepYellow eq and exch 
+			FrameSepMagenta eq and exch 
+			FrameSepCyan eq and
+			FrameSepIs FMcustom eq and
+			{ FrameCurGray } { 1 } ifelse
+		} {
+			FrameSepIs FMblack eq
+			{FrameCurGray 1.0 exch sub mul 1.0 exch sub 4 1 roll pop pop pop} {
+			FrameSepIs FMyellow eq
+			{pop FrameCurGray 1.0 exch sub mul 1.0 exch sub 3 1 roll pop pop} {
+			FrameSepIs FMmagenta eq
+			{pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub exch pop } {
+			FrameSepIs FMcyan eq
+			{pop pop pop FrameCurGray 1.0 exch sub mul 1.0 exch sub } 
+			{pop pop pop pop 1} ifelse } ifelse } ifelse } ifelse 
+		} ifelse
+		graymode fMLevel1 or not {
+			
+			[/Pattern [/DeviceGray]] setcolorspace
+			FrameCurPat setcolor
+		} { 
+			graymode not fMLevel1 and {
+				
+				dup 1 lt {pop FrameCurGray} if
+			} if
+			RealSetgray
+		} ifelse
+	} ifelse
+} bind def
+/savematrix {
+	orgmatrix currentmatrix pop
+	} bind def
+/restorematrix {
+	orgmatrix setmatrix
+	} bind def
+/fMDefaultMatrix matrix defaultmatrix def
+/fMatrix2 matrix def
+/dpi    72 0 fMDefaultMatrix dtransform
+    dup mul exch   dup mul add   sqrt def
+	
+/freq dpi dup 72 div round dup 0 eq {pop 1} if 8 mul div def
+/sangle 1 0 fMDefaultMatrix dtransform exch atan def
+	sangle fMatrix2 rotate 
+	fMDefaultMatrix fMatrix2 concatmatrix 
+	dup 0 get /sflipx exch def
+	    3 get /sflipy exch def
+/screenIndex {
+	0 1 dpiranges length 1 sub { dup dpiranges exch get 1 sub dpi le {exit} {pop} ifelse } for
+} bind def
+/getCyanScreen {
+	FMUseHighFrequencyScreens { CHighAngles CMHighFreqs} {CLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getMagentaScreen {
+	FMUseHighFrequencyScreens { MHighAngles CMHighFreqs } {MLowAngles CMLowFreqs} ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get /FMSpotFunction load
+} bind def
+/getYellowScreen {
+	FMUseHighFrequencyScreens { YHighTDot YHighFreqs} { YLowTDot YLowFreqs } ifelse
+		screenIndex dup 3 1 roll get 3 1 roll get { 3 div
+			{2 { 1 add 2 div 3 mul dup floor sub 2 mul 1 sub exch} repeat
+			FMSpotFunction } } {/FMSpotFunction load } ifelse
+			0.0 exch
+} bind def
+/getBlackScreen  {
+	FMUseHighFrequencyScreens { KHighFreqs } { KLowFreqs } ifelse
+		screenIndex get 45.0 /FMSpotFunction load 
+} bind def
+/getSpotScreen {
+	getBlackScreen
+} bind def
+/getCompositeScreen {
+	getBlackScreen
+} bind def
+/FMSetScreen 
+	fMLevel1 { /setscreen load 
+	}{ {
+		8 dict begin
+		/HalftoneType 1 def
+		/SpotFunction exch def
+		/Angle exch def
+		/Frequency exch def
+		/AccurateScreens FMUseAcccurateScreens def
+		currentdict end sethalftone
+	} bind } ifelse
+def
+/setDefaultScreen {
+	FMPColor {
+		orgrxfer cvx orggxfer cvx orgbxfer cvx orgxfer cvx setcolortransfer
+	}
+	{
+		orgxfer cvx settransfer
+	} ifelse
+	orgfreq organgle orgproc cvx setscreen
+} bind def
+/setCurrentScreen {
+	FrameSepIs FMnone eq {
+		FMUseDefaultNoSeparationScreen {
+			setDefaultScreen
+		} {
+			getCompositeScreen FMSetScreen
+		} ifelse
+	} {
+		FrameSepIs FMcustom eq {
+			FMUseDefaultSpotSeparationScreen {
+				setDefaultScreen
+			} {
+				getSpotScreen FMSetScreen
+			} ifelse
+		} {
+			FMUseDefaultProcessSeparationScreen {
+				setDefaultScreen
+			} {
+				FrameSepIs FMcyan eq {
+					getCyanScreen FMSetScreen
+				} {
+					FrameSepIs FMmagenta eq {
+						getMagentaScreen FMSetScreen
+					} {
+						FrameSepIs FMyellow eq {
+							getYellowScreen FMSetScreen
+						} {
+							getBlackScreen FMSetScreen
+						} ifelse
+					} ifelse
+				} ifelse
+			} ifelse
+		} ifelse
+	} ifelse 
+} bind def
+end
+	
+/FMDOCUMENT { 
+	array /FMfonts exch def 
+	/#copies exch def
+	FrameDict begin
+	0 ne /manualfeed exch def
+	/paperheight exch def
+	/paperwidth exch def
+	0 ne /fMNegative exch def 
+	0 ne /edown exch def 
+	/yscale exch def
+	/xscale exch def
+	fMLevel1 {
+		manualfeed {setmanualfeed} if
+		/FMdicttop countdictstack 1 add def 
+		/FMoptop count def 
+		setpapername 
+		manualfeed {true} {papersize} ifelse 
+		{manualpapersize} {false} ifelse 
+		{desperatepapersize} {false} ifelse 
+		{papersizefailure} if
+		count -1 FMoptop {pop pop} for
+		countdictstack -1 FMdicttop {pop end} for 
+		}
+		{2 dict
+		 dup /PageSize [paperwidth paperheight] put
+		 manualfeed {dup /ManualFeed manualfeed put} if
+		 {setpagedevice} stopped {papersizefailure} if
+		}
+	ifelse 
+	
+	FMPColor {
+		currentcolorscreen
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+			cvlit /orgbproc exch def
+				  /orgbangle exch def 
+				  /orgbfreq exch def
+			cvlit /orggproc exch def
+				  /orggangle exch def 
+				  /orggfreq exch def
+			cvlit /orgrproc exch def
+				  /orgrangle exch def 
+				  /orgrfreq exch def
+			currentcolortransfer 
+			fMNegative {
+				1 1 4 { 
+					pop { 1 exch sub } fmConcatProcs 4 1 roll
+				} for
+				4 copy
+				setcolortransfer
+			} if
+			cvlit /orgxfer exch def
+			cvlit /orgbxfer exch def
+			cvlit /orggxfer exch def
+			cvlit /orgrxfer exch def
+	} {
+		currentscreen 
+			cvlit /orgproc exch def
+				  /organgle exch def 
+				  /orgfreq exch def
+				  
+		currenttransfer 
+		fMNegative {
+			{ 1 exch sub } fmConcatProcs
+			dup settransfer
+		} if 
+		cvlit /orgxfer exch def
+	} ifelse
+	end 
+} def 
+/FMBEGINPAGE { 
+	FrameDict begin 
+	/pagesave save def
+	3.86 setmiterlimit
+	/landscape exch 0 ne def
+	landscape { 
+		90 rotate 0 exch dup /pwid exch def neg translate pop 
+	}{
+		pop /pwid exch def
+	} ifelse
+	edown { [-1 0 0 1 pwid 0] concat } if
+	0 0 moveto paperwidth 0 lineto paperwidth paperheight lineto 
+	0 paperheight lineto 0 0 lineto 1 setgray fill
+	xscale yscale scale
+	/orgmatrix matrix def
+	gsave 
+} def 
+/FMENDPAGE {
+	grestore 
+	pagesave restore
+	end 
+	showpage
+	} def 
+/FMFONTDEFINE { 
+	FrameDict begin
+	findfont 
+	ReEncode 
+	1 index exch 
+	definefont 
+	FMfonts 3 1 roll 
+	put
+	end 
+	} def 
+/FMFILLS {
+	FrameDict begin dup
+	array /fillvals exch def
+	dict /patCache exch def
+	end 
+	} def 
+/FMFILL {
+	FrameDict begin
+	 fillvals 3 1 roll put
+	end 
+	} def 
+/FMNORMALIZEGRAPHICS { 
+	newpath
+	1 setlinewidth
+	0 setlinecap
+	0 0 0 sethsbcolor
+	0 setgray 
+	} bind def
+/FMBEGINEPSF { 
+	end 
+	/FMEPSF save def 
+	/showpage {} def 
+% See Adobe's "PostScript Language Reference Manual, 2nd Edition", page 714.
+% "...the following operators MUST NOT be used in an EPS file:" (emphasis ours)
+	/banddevice {(banddevice) FMBADEPSF} def
+	/clear {(clear) FMBADEPSF} def
+	/cleardictstack {(cleardictstack) FMBADEPSF} def 
+	/copypage {(copypage) FMBADEPSF} def
+	/erasepage {(erasepage) FMBADEPSF} def
+	/exitserver {(exitserver) FMBADEPSF} def
+	/framedevice {(framedevice) FMBADEPSF} def
+	/grestoreall {(grestoreall) FMBADEPSF} def
+	/initclip {(initclip) FMBADEPSF} def
+	/initgraphics {(initgraphics) FMBADEPSF} def
+	/quit {(quit) FMBADEPSF} def
+	/renderbands {(renderbands) FMBADEPSF} def
+	/setglobal {(setglobal) FMBADEPSF} def
+	/setpagedevice {(setpagedevice) FMBADEPSF} def
+	/setshared {(setshared) FMBADEPSF} def
+	/startjob {(startjob) FMBADEPSF} def
+	/lettertray {(lettertray) FMBADEPSF} def
+	/letter {(letter) FMBADEPSF} def
+	/lettersmall {(lettersmall) FMBADEPSF} def
+	/11x17tray {(11x17tray) FMBADEPSF} def
+	/11x17 {(11x17) FMBADEPSF} def
+	/ledgertray {(ledgertray) FMBADEPSF} def
+	/ledger {(ledger) FMBADEPSF} def
+	/legaltray {(legaltray) FMBADEPSF} def
+	/legal {(legal) FMBADEPSF} def
+	/statementtray {(statementtray) FMBADEPSF} def
+	/statement {(statement) FMBADEPSF} def
+	/executivetray {(executivetray) FMBADEPSF} def
+	/executive {(executive) FMBADEPSF} def
+	/a3tray {(a3tray) FMBADEPSF} def
+	/a3 {(a3) FMBADEPSF} def
+	/a4tray {(a4tray) FMBADEPSF} def
+	/a4 {(a4) FMBADEPSF} def
+	/a4small {(a4small) FMBADEPSF} def
+	/b4tray {(b4tray) FMBADEPSF} def
+	/b4 {(b4) FMBADEPSF} def
+	/b5tray {(b5tray) FMBADEPSF} def
+	/b5 {(b5) FMBADEPSF} def
+	FMNORMALIZEGRAPHICS 
+	[/fy /fx /fh /fw /ury /urx /lly /llx] {exch def} forall 
+	fx fw 2 div add fy fh 2 div add  translate
+	rotate
+	fw 2 div neg fh 2 div neg translate
+	fw urx llx sub div fh ury lly sub div scale 
+	llx neg lly neg translate 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count def 
+	} bind def
+/FMENDEPSF {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMEPSF restore
+	FrameDict begin 
+	} bind def
+FrameDict begin 
+/setmanualfeed {
+%%BeginFeature *ManualFeed True
+	 statusdict /manualfeed true put
+%%EndFeature
+	} bind def
+/max {2 copy lt {exch} if pop} bind def
+/min {2 copy gt {exch} if pop} bind def
+/inch {72 mul} def
+/pagedimen { 
+	paperheight sub abs 16 lt exch 
+	paperwidth sub abs 16 lt and
+	{/papername exch def} {pop} ifelse
+	} bind def
+/setpapername { 
+	/papersizedict 14 dict def 
+	papersizedict begin
+	/papername /unknown def 
+		/Letter 8.5 inch 11.0 inch pagedimen
+		/LetterSmall 7.68 inch 10.16 inch pagedimen
+		/Tabloid 11.0 inch 17.0 inch pagedimen
+		/Ledger 17.0 inch 11.0 inch pagedimen
+		/Legal 8.5 inch 14.0 inch pagedimen
+		/Statement 5.5 inch 8.5 inch pagedimen
+		/Executive 7.5 inch 10.0 inch pagedimen
+		/A3 11.69 inch 16.5 inch pagedimen
+		/A4 8.26 inch 11.69 inch pagedimen
+		/A4Small 7.47 inch 10.85 inch pagedimen
+		/B4 10.125 inch 14.33 inch pagedimen
+		/B5 7.16 inch 10.125 inch pagedimen
+	end
+	} bind def
+/papersize {
+	papersizedict begin
+		/Letter {lettertray letter} def
+		/LetterSmall {lettertray lettersmall} def
+		/Tabloid {11x17tray 11x17} def
+		/Ledger {ledgertray ledger} def
+		/Legal {legaltray legal} def
+		/Statement {statementtray statement} def
+		/Executive {executivetray executive} def
+		/A3 {a3tray a3} def
+		/A4 {a4tray a4} def
+		/A4Small {a4tray a4small} def
+		/B4 {b4tray b4} def
+		/B5 {b5tray b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	statusdict begin stopped end 
+	} bind def
+/manualpapersize {
+	papersizedict begin
+		/Letter {letter} def
+		/LetterSmall {lettersmall} def
+		/Tabloid {11x17} def
+		/Ledger {ledger} def
+		/Legal {legal} def
+		/Statement {statement} def
+		/Executive {executive} def
+		/A3 {a3} def
+		/A4 {a4} def
+		/A4Small {a4small} def
+		/B4 {b4} def
+		/B5 {b5} def
+		/unknown {unknown} def
+	papersizedict dup papername known {papername} {/unknown} ifelse get
+	end
+	stopped 
+	} bind def
+/desperatepapersize {
+	statusdict /setpageparams known
+		{
+		paperwidth paperheight 0 1 
+		statusdict begin
+		{setpageparams} stopped 
+		end
+		} {true} ifelse 
+	} bind def
+/papersizefailure {
+	FMAllowPaperSizeMismatch not
+		{
+(The requested paper size is not available in any currently-installed tray)
+(Edit the PS file to "FMAllowPaperSizeMismatch true" to use default tray)
+		 FMFAILURE } if
+	} def
+/DiacriticEncoding [
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /space /exclam /quotedbl
+/numbersign /dollar /percent /ampersand /quotesingle /parenleft
+/parenright /asterisk /plus /comma /hyphen /period /slash /zero /one
+/two /three /four /five /six /seven /eight /nine /colon /semicolon
+/less /equal /greater /question /at /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /bracketleft /backslash
+/bracketright /asciicircum /underscore /grave /a /b /c /d /e /f /g /h
+/i /j /k /l /m /n /o /p /q /r /s /t /u /v /w /x /y /z /braceleft /bar
+/braceright /asciitilde /.notdef /Adieresis /Aring /Ccedilla /Eacute
+/Ntilde /Odieresis /Udieresis /aacute /agrave /acircumflex /adieresis
+/atilde /aring /ccedilla /eacute /egrave /ecircumflex /edieresis
+/iacute /igrave /icircumflex /idieresis /ntilde /oacute /ograve
+/ocircumflex /odieresis /otilde /uacute /ugrave /ucircumflex
+/udieresis /dagger /.notdef /cent /sterling /section /bullet
+/paragraph /germandbls /registered /copyright /trademark /acute
+/dieresis /.notdef /AE /Oslash /.notdef /.notdef /.notdef /.notdef
+/yen /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/ordfeminine /ordmasculine /.notdef /ae /oslash /questiondown
+/exclamdown /logicalnot /.notdef /florin /.notdef /.notdef
+/guillemotleft /guillemotright /ellipsis /.notdef /Agrave /Atilde
+/Otilde /OE /oe /endash /emdash /quotedblleft /quotedblright
+/quoteleft /quoteright /.notdef /.notdef /ydieresis /Ydieresis
+/fraction /currency /guilsinglleft /guilsinglright /fi /fl /daggerdbl
+/periodcentered /quotesinglbase /quotedblbase /perthousand
+/Acircumflex /Ecircumflex /Aacute /Edieresis /Egrave /Iacute
+/Icircumflex /Idieresis /Igrave /Oacute /Ocircumflex /.notdef /Ograve
+/Uacute /Ucircumflex /Ugrave /dotlessi /circumflex /tilde /macron
+/breve /dotaccent /ring /cedilla /hungarumlaut /ogonek /caron
+] def
+/ReEncode { 
+	dup 
+	length 
+	dict begin 
+	{
+	1 index /FID ne 
+		{def} 
+		{pop pop} ifelse 
+	} forall 
+	0 eq {/Encoding DiacriticEncoding def} if 
+	currentdict 
+	end 
+	} bind def
+FMPColor 
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPCOLOR} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPCOLORc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUECOLOR } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUECOLORc } def
+	/BEGINBITMAPCMYK { 
+		BITMAPCMYK } def
+	/BEGINBITMAPCMYKc { 
+		BITMAPCMYKc } def
+	}
+	
+	{
+	/BEGINBITMAPCOLOR { 
+		BITMAPGRAY} def
+	/BEGINBITMAPCOLORc { 
+		BITMAPGRAYc} def
+	/BEGINBITMAPTRUECOLOR { 
+		BITMAPTRUEGRAY } def
+	/BEGINBITMAPTRUECOLORc { 
+		BITMAPTRUEGRAYc } def
+	/BEGINBITMAPCMYK { 
+		BITMAPCMYKGRAY } def
+	/BEGINBITMAPCMYKc { 
+		BITMAPCMYKGRAYc } def
+	}
+ifelse
+/K { 
+	FMPrintAllColorsAsBlack {
+		dup 1 eq 2 index 1 eq and 3 index 1 eq and not
+			{7 {pop} repeat 0 0 0 1 0 0 0} if
+	} if 
+	FrameCurColors astore 
+	pop combineColor
+} bind def
+/graymode true def
+fMLevel1 {
+	/fmGetFlip {
+		fMatrix2 exch get mul 0 lt { -1 } { 1 } ifelse
+	} FmBD
+} if
+/setPatternMode {
+	fMLevel1 {
+		2 index patScreenDict exch known {
+			pop pop
+			patScreenDict exch get aload pop 
+			freq 								
+			mul									
+			5 2 roll							
+			fMatrix2 currentmatrix 1 get 0 ne {
+				3 -1 roll 90 add 3 1 roll 		
+				sflipx 1 fmGetFlip sflipy 2 fmGetFlip neg mul
+			} {  								
+				sflipx 0 fmGetFlip sflipy 3 fmGetFlip mul 
+			} ifelse
+			0 lt {exch pop} {pop} ifelse 		
+			fMNegative { 
+				{neg} fmConcatProcs 			
+			} if
+			bind
+			
+			
+			
+			systemdict /setscreen get exec		
+			/FrameCurGray exch def
+		} {
+			/bwidth  exch def
+			/bpside  exch def
+			/bstring exch def
+			/onbits 0 def  /offbits 0 def
+			freq sangle landscape {90 add} if 
+				{/ypoint exch def
+				 /xpoint exch def
+				 /xindex xpoint 1 add 2 div bpside mul cvi def
+				 /yindex ypoint 1 add 2 div bpside mul cvi def
+				 bstring yindex bwidth mul xindex 8 idiv add get
+				 1 7 xindex 8 mod sub bitshift and 0 ne fMNegative {not} if
+				 {/onbits  onbits  1 add def 1}
+				 {/offbits offbits 1 add def 0}
+				 ifelse
+				}
+				setscreen
+			offbits offbits onbits add div fMNegative {1.0 exch sub} if
+			/FrameCurGray exch def
+		} ifelse
+	} { 
+		pop pop
+		dup patCache exch known {
+			patCache exch get
+		} { 
+			dup
+			patDict /bstring 3 -1 roll put
+			patDict 
+			9 PatFreq screenIndex get div dup matrix scale
+			makepattern
+			dup 
+			patCache 4 -1 roll 3 -1 roll put
+		} ifelse
+		/FrameCurGray 0 def
+		/FrameCurPat exch def
+	} ifelse
+	/graymode false def
+	combineColor
+} bind def
+/setGrayScaleMode {
+	graymode not {
+		/graymode true def
+		fMLevel1 {
+			setCurrentScreen
+		} if
+	} if
+	/FrameCurGray exch def
+	combineColor
+} bind def
+/normalize {
+	transform round exch round exch itransform
+	} bind def
+/dnormalize {
+	dtransform round exch round exch idtransform
+	} bind def
+/lnormalize { 
+	0 dtransform exch cvi 2 idiv 2 mul 1 add exch idtransform pop
+	} bind def
+/H { 
+	lnormalize setlinewidth
+	} bind def
+/Z {
+	setlinecap
+	} bind def
+	
+/PFill {
+	graymode fMLevel1 or not {
+		gsave 1 setgray eofill grestore
+	} if
+} bind def
+/PStroke {
+	graymode fMLevel1 or not {
+		gsave 1 setgray stroke grestore
+	} if
+	stroke
+} bind def
+/X { 
+	fillvals exch get
+	dup type /stringtype eq
+	{8 1 setPatternMode} 
+	{setGrayScaleMode}
+	ifelse
+	} bind def
+/V { 
+	PFill gsave eofill grestore
+	} bind def
+/Vclip {
+	clip
+	} bind def
+/Vstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/N { 
+	PStroke
+	} bind def
+/Nclip {
+	strokepath clip newpath
+	} bind def
+/Nstrk {
+	currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/M {newpath moveto} bind def
+/E {lineto} bind def
+/D {curveto} bind def
+/O {closepath} bind def
+/L { 
+ 	/n exch def
+	newpath
+	normalize
+	moveto 
+	2 1 n {pop normalize lineto} for
+	} bind def
+/Y { 
+	L 
+	closepath
+	} bind def
+/R { 
+	/y2 exch def
+	/x2 exch def
+	/y1 exch def
+	/x1 exch def
+	x1 y1
+	x2 y1
+	x2 y2
+	x1 y2
+	4 Y 
+	} bind def
+/rarc 
+	{rad 
+	 arcto
+	} bind def
+/RR { 
+	/rad exch def
+	normalize
+	/y2 exch def
+	/x2 exch def
+	normalize
+	/y1 exch def
+	/x1 exch def
+	mark
+	newpath
+	{
+	x1 y1 rad add moveto
+	x1 y2 x2 y2 rarc
+	x2 y2 x2 y1 rarc
+	x2 y1 x1 y1 rarc
+	x1 y1 x1 y2 rarc
+	closepath
+	} stopped {x1 y1 x2 y2 R} if 
+	cleartomark
+	} bind def
+/RRR { 
+	/rad exch def
+	normalize /y4 exch def /x4 exch def
+	normalize /y3 exch def /x3 exch def
+	normalize /y2 exch def /x2 exch def
+	normalize /y1 exch def /x1 exch def
+	newpath
+	normalize moveto 
+	mark
+	{
+	x2 y2 x3 y3 rarc
+	x3 y3 x4 y4 rarc
+	x4 y4 x1 y1 rarc
+	x1 y1 x2 y2 rarc
+	closepath
+	} stopped
+	 {x1 y1 x2 y2 x3 y3 x4 y4 newpath moveto lineto lineto lineto closepath} if
+	cleartomark
+	} bind def
+/C { 
+	grestore
+	gsave
+	R 
+	clip
+	setCurrentScreen
+} bind def
+/CP { 
+	grestore
+	gsave
+	Y 
+	clip
+	setCurrentScreen
+} bind def
+/F { 
+	FMfonts exch get
+	FMpointsize scalefont
+	setfont
+	} bind def
+/Q { 
+	/FMpointsize exch def
+	F 
+	} bind def
+/T { 
+	moveto show
+	} bind def
+/RF { 
+	rotate
+	0 ne {-1 1 scale} if
+	} bind def
+/TF { 
+	gsave
+	moveto 
+	RF
+	show
+	grestore
+	} bind def
+/P { 
+	moveto
+	0 32 3 2 roll widthshow
+	} bind def
+/PF { 
+	gsave
+	moveto 
+	RF
+	0 32 3 2 roll widthshow
+	grestore
+	} bind def
+/S { 
+	moveto
+	0 exch ashow
+	} bind def
+/SF { 
+	gsave
+	moveto
+	RF
+	0 exch ashow
+	grestore
+	} bind def
+/B { 
+	moveto
+	0 32 4 2 roll 0 exch awidthshow
+	} bind def
+/BF { 
+	gsave
+	moveto
+	RF
+	0 32 4 2 roll 0 exch awidthshow
+	grestore
+	} bind def
+/G { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	PFill fill
+	grestore
+	} bind def
+/Gstrk {
+	savematrix
+    newpath
+    2 index 2 div add exch 3 index 2 div sub exch 
+    normalize 2 index 2 div sub exch 3 index 2 div add exch 
+    translate
+    scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+    } bind def
+/Gclip { 
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	clip newpath
+	restorematrix
+	} bind def
+/GG { 
+	gsave
+	newpath
+	normalize translate 0.0 0.0 moveto 
+	rotate 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath
+	PFill
+	fill
+	grestore
+	} bind def
+/GGclip { 
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	clip newpath
+	restorematrix
+	} bind def
+/GGstrk { 
+	savematrix
+    newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath 
+	restorematrix
+    currentlinewidth exch setlinewidth PStroke setlinewidth
+	} bind def
+/A { 
+	gsave
+	savematrix
+	newpath
+	2 index 2 div add exch 3 index 2 div sub exch 
+	normalize 2 index 2 div sub exch 3 index 2 div add exch 
+	translate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/Aclip {
+	newpath
+	savematrix
+	normalize translate 0.0 0.0 moveto 
+	dnormalize scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	closepath 
+	strokepath clip newpath
+	restorematrix
+} bind def
+/Astrk {
+	Gstrk
+} bind def
+/AA { 
+	gsave
+	savematrix
+	newpath
+	
+	3 index 2 div add exch 4 index 2 div sub exch 
+	
+	normalize 3 index 2 div sub exch 4 index 2 div add exch
+	translate 
+	rotate 
+	scale 
+	0.0 0.0 1.0 5 3 roll arc 
+	restorematrix
+	PStroke
+	grestore
+	} bind def
+/AAclip {
+	savematrix
+	newpath
+    normalize translate 0.0 0.0 moveto 
+    rotate 
+    dnormalize scale 
+    0.0 0.0 1.0 5 3 roll arc 
+    closepath
+	strokepath clip newpath
+	restorematrix
+} bind def
+/AAstrk {
+	GGstrk
+} bind def
+/BEGINPRINTCODE { 
+	/FMdicttop countdictstack 1 add def 
+	/FMoptop count 7 sub def 
+	/FMsaveobject save def
+	userdict begin 
+	/showpage {} def 
+	FMNORMALIZEGRAPHICS 
+	3 index neg 3 index neg translate
+	} bind def
+/ENDPRINTCODE {
+	count -1 FMoptop {pop pop} for 
+	countdictstack -1 FMdicttop {pop end} for 
+	FMsaveobject restore 
+	} bind def
+/gn { 
+	0 
+	{	46 mul 
+		cf read pop 
+		32 sub 
+		dup 46 lt {exit} if 
+		46 sub add 
+		} loop
+	add 
+	} bind def
+/cfs { 
+	/str sl string def 
+	0 1 sl 1 sub {str exch val put} for 
+	str def 
+	} bind def
+/ic [ 
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0223
+	0
+	{0 hx} {1 hx} {2 hx} {3 hx} {4 hx} {5 hx} {6 hx} {7 hx} {8 hx} {9 hx}
+	{10 hx} {11 hx} {12 hx} {13 hx} {14 hx} {15 hx} {16 hx} {17 hx} {18 hx}
+	{19 hx} {gn hx} {0} {1} {2} {3} {4} {5} {6} {7} {8} {9} {10} {11} {12}
+	{13} {14} {15} {16} {17} {18} {19} {gn} {0 wh} {1 wh} {2 wh} {3 wh}
+	{4 wh} {5 wh} {6 wh} {7 wh} {8 wh} {9 wh} {10 wh} {11 wh} {12 wh}
+	{13 wh} {14 wh} {gn wh} {0 bl} {1 bl} {2 bl} {3 bl} {4 bl} {5 bl} {6 bl}
+	{7 bl} {8 bl} {9 bl} {10 bl} {11 bl} {12 bl} {13 bl} {14 bl} {gn bl}
+	{0 fl} {1 fl} {2 fl} {3 fl} {4 fl} {5 fl} {6 fl} {7 fl} {8 fl} {9 fl}
+	{10 fl} {11 fl} {12 fl} {13 fl} {14 fl} {gn fl}
+	] def
+/ms { 
+	/sl exch def 
+	/val 255 def 
+	/ws cfs 
+	/im cfs 
+	/val 0 def 
+	/bs cfs 
+	/cs cfs 
+	} bind def
+400 ms 
+/ip { 
+	is 
+	0 
+	cf cs readline pop 
+	{	ic exch get exec 
+		add 
+		} forall 
+	pop 
+	
+	} bind def
+/rip { 
+	   
+	  
+	  bis ris copy pop 
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop 
+	  ris gis copy pop 
+	  dup is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  gis bis copy pop 
+	  dup add is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+/rip4 { 
+	   
+	  
+	  kis cis copy pop 
+      is
+      0
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop 
+	  cis mis copy pop 
+	  dup is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  mis yis copy pop 
+	  dup dup add is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+	  pop pop
+	  yis kis copy pop 
+	  3 mul is exch 
+	  
+      cf cs readline pop 
+      {       ic exch get exec 
+              add 
+              } forall 
+      pop 
+      
+      } bind def
+/wh { 
+	/len exch def 
+	/pos exch def 
+	ws 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/bl { 
+	/len exch def 
+	/pos exch def 
+	bs 0 len getinterval im pos len getinterval copy pop
+	pos len 
+	} bind def
+/s1 1 string def
+/fl { 
+	/len exch def 
+	/pos exch def 
+	/val cf s1 readhexstring pop 0 get def
+	pos 1 pos len add 1 sub {im exch val put} for
+	pos len 
+	} bind def
+/hx { 
+	3 copy getinterval 
+	cf exch readhexstring pop pop 
+	} bind def
+/wbytes { 
+      dup dup
+      8 gt { pop 8 idiv mul }
+      { 8 eq {pop} {1 eq {7 add 8 idiv} {3 add 4 idiv} ifelse} ifelse } ifelse
+	} bind def
+/BEGINBITMAPBWc { 
+	1 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAPGRAYc { 
+	8 {} COMMONBITMAPc
+	} bind def
+/BEGINBITMAP2BITc { 
+	2 {} COMMONBITMAPc
+	} bind def
+/COMMONBITMAPc { 
+		 
+	/cvtProc exch def
+	/depth exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/height exch def /width exch def
+	/lb width depth wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	cvtProc                
+	/is im 0 lb getinterval def 
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	width height depth [width 0 0 height neg 0 height] 
+	{ip} image 
+	bitmapsave restore 
+	grestore
+	} bind def
+/BEGINBITMAPBW { 
+	1 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAPGRAY { 
+	8 {} COMMONBITMAP
+	} bind def
+/BEGINBITMAP2BIT { 
+	2 {} COMMONBITMAP
+	} bind def
+/COMMONBITMAP { 
+	/cvtProc exch def
+	/depth exch def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/height exch def /width exch def
+	/bitmapsave save def 
+	cvtProc              
+	/is width depth wbytes string def
+	/cf currentfile def 
+	width height depth [width 0 0 height neg 0 height] 
+	{cf is readhexstring pop} image
+	bitmapsave restore 
+	grestore
+	} bind def
+/ngrayt 256 array def
+/nredt 256 array def
+/nbluet 256 array def
+/ngreent 256 array def
+fMLevel1 {
+/colorsetup {
+	currentcolortransfer
+	/gryt exch def
+	/blut exch def
+	/grnt exch def
+	/redt exch def
+	0 1 255 {
+		/indx exch def
+		/cynu 1 red indx get 255 div sub def
+		/magu 1 green indx get 255 div sub def
+		/yelu 1 blue indx get 255 div sub def
+		/kk cynu magu min yelu min def
+		/u kk currentundercolorremoval exec def
+%		/u 0 def
+		nredt indx 1 0 cynu u sub max sub redt exec put
+		ngreent indx 1 0 magu u sub max sub grnt exec put
+		nbluet indx 1 0 yelu u sub max sub blut exec put
+		ngrayt indx 1 kk currentblackgeneration exec sub gryt exec put
+	} for
+	{255 mul cvi nredt exch get}
+	{255 mul cvi ngreent exch get}
+	{255 mul cvi nbluet exch get}
+	{255 mul cvi ngrayt exch get}
+	setcolortransfer
+	{pop 0} setundercolorremoval
+	{} setblackgeneration
+	} bind def
+}
+{
+/colorSetup2 {
+	[ /Indexed /DeviceRGB 255 
+		{dup red exch get 255 div 
+		 exch dup green exch get 255 div 
+		 exch blue exch get 255 div}
+	] setcolorspace
+} bind def
+} ifelse
+/fakecolorsetup {
+	/tran 256 string def
+	0 1 255 {/indx exch def 
+		tran indx
+		red indx get 77 mul
+		green indx get 151 mul
+		blue indx get 28 mul
+		add add 256 idiv put} for
+	currenttransfer
+	{255 mul cvi tran exch get 255.0 div}
+	exch fmConcatProcs settransfer
+} bind def
+/BITMAPCOLOR { 
+	/depth 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/height exch def /width exch def
+	/bitmapsave save def
+	fMLevel1 {	
+		colorsetup
+		/is width depth wbytes string def
+		/cf currentfile def 
+		width height depth [width 0 0 height neg 0 height] 
+		{cf is readhexstring pop} {is} {is} true 3 colorimage 
+	} {
+		colorSetup2
+		/is width depth wbytes string def
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width width def
+			/Height height def
+			/ImageMatrix [width 0 0 height neg 0 height] def
+			/DataSource {cf is readhexstring pop} bind def
+			/BitsPerComponent depth def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCOLORc { 
+	/depth 8 def
+	gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/height exch def /width exch def
+	/lb width depth wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+	fMLevel1 {	
+		colorsetup
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		width height depth [width 0 0 height neg 0 height] 
+		{ip} {is} {is} true 3 colorimage
+	} {
+		colorSetup2
+		/is im 0 lb getinterval def 
+		ws 0 lb getinterval is copy pop 
+		/cf currentfile def 
+		7 dict dup begin
+			/ImageType 1 def
+			/Width width def
+			/Height height def
+			/ImageMatrix [width 0 0 height neg 0 height] def
+			/DataSource {ip} bind def
+			/BitsPerComponent depth def
+			/Decode [0 255] def
+		end image	
+	} ifelse
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLORc { 
+	/depth 24 def
+        gsave
+ 	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/height exch def /width exch def
+	/lb width depth wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 width getinterval def	
+	/gis im width width getinterval def	
+	/bis im width 2 mul width getinterval def 
+        
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	width height 8 [width 0 0 height neg 0 height] 
+	{width rip pop ris} {gis} {bis} true 3 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPCMYKc { 
+	/depth 32 def
+        gsave
+ 	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/height exch def /width exch def
+	/lb width depth wbytes def 
+	sl lb lt {lb ms} if 
+	/bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/cis im 0 width getinterval def	
+	/mis im width width getinterval def	
+	/yis im width 2 mul width getinterval def 
+	/kis im width 3 mul width getinterval def 
+        
+	ws 0 lb getinterval is copy pop 
+	/cf currentfile def 
+	width height 8 [width 0 0 height neg 0 height] 
+	{width rip4 pop cis} {mis} {yis} {kis} true 4 colorimage
+	bitmapsave restore 
+	grestore
+	} bind def
+/BITMAPTRUECOLOR { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/height exch def /width exch def
+        /bitmapsave save def 
+        /is width string def
+        /gis width string def
+        /bis width string def
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        { cf is readhexstring pop } 
+        { cf gis readhexstring pop } 
+        { cf bis readhexstring pop } 
+        true 3 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPCMYK { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/height exch def /width exch def
+        /bitmapsave save def 
+        /is width string def
+        /mis width string def
+        /yis width string def
+        /kis width string def
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        { cf is readhexstring pop } 
+        { cf mis readhexstring pop } 
+        { cf yis readhexstring pop } 
+        { cf kis readhexstring pop } 
+        true 4 colorimage 
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPTRUEGRAYc { 
+	/depth 24 def
+        gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/height exch def /width exch def
+	/lb width depth wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/ris im 0 width getinterval def	
+	/gis im width width getinterval def	
+	/bis im width 2 mul width getinterval def 
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        {width rip pop ris gis bis width gray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPCMYKGRAYc { 
+	/depth 32 def
+        gsave
+	
+	3 index 2 div add exch	
+	4 index 2 div add exch	
+	translate		
+	rotate			
+	1 index 2 div neg	
+	1 index 2 div neg	
+	translate		
+	scale			
+	/height exch def /width exch def
+	/lb width depth wbytes def 
+	sl lb lt {lb ms} if 
+        /bitmapsave save def 
+        
+	/is im 0 lb getinterval def	
+	/cis im 0 width getinterval def	
+	/mis im width width getinterval def	
+	/yis im width 2 mul width getinterval def 
+	/kis im width 3 mul width getinterval def 
+        ws 0 lb getinterval is copy pop 
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        {width rip pop cis mis yis kis width cgray} image
+        bitmapsave restore 
+        grestore
+        } bind def
+/cgray { 
+        /ww exch def
+        /k exch def
+        /y exch def
+        /m exch def
+        /c exch def
+        0 1 ww 1 sub { /i exch def c i get m i get y i get k i get CMYKtoRGB
+				.144 mul 3 1 roll .587 mul 3 1 roll .299 mul add add
+				c i 3 -1 roll floor cvi put } for
+        c
+ 		} bind def
+/gray { 
+        /ww exch def
+        /b exch def
+        /g exch def
+        /r exch def
+        0 1 ww 1 sub { /i exch def r i get .299 mul g i get .587 mul
+			b i get .114 mul add add r i 3 -1 roll floor cvi put } for
+        r
+        } bind def
+/BITMAPTRUEGRAY { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/height exch def /width exch def
+        /bitmapsave save def 
+        /is width string def
+        /gis width string def
+        /bis width string def
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        { cf is readhexstring pop 
+          cf gis readhexstring pop 
+          cf bis readhexstring pop width gray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPCMYKGRAY { 
+        gsave
+		
+		3 index 2 div add exch	
+		4 index 2 div add exch	
+		translate		
+		rotate			
+		1 index 2 div neg	
+		1 index 2 div neg	
+		translate		
+		scale			
+		/height exch def /width exch def
+        /bitmapsave save def 
+        /is width string def
+        /yis width string def
+        /mis width string def
+        /kis width string def
+        /cf currentfile def 
+        width height 8 [width 0 0 height neg 0 height] 
+        { cf is readhexstring pop 
+          cf mis readhexstring pop 
+          cf yis readhexstring pop 
+          cf kis readhexstring pop width cgray}  image
+        bitmapsave restore 
+        grestore
+        } bind def
+/BITMAPGRAY { 
+	8 {fakecolorsetup} COMMONBITMAP
+	} bind def
+/BITMAPGRAYc { 
+	8 {fakecolorsetup} COMMONBITMAPc
+	} bind def
+/ENDBITMAP {
+	} bind def
+end 
+	/ALDmatrix matrix def ALDmatrix currentmatrix pop
+/StartALD {
+	/ALDsave save def
+	 savematrix
+	 ALDmatrix setmatrix
+	} bind def
+/InALD {
+	 restorematrix
+	} bind def
+/DoneALD {
+	 ALDsave restore
+	} bind def
+/I { setdash } bind def
+/J { [] 0 setdash } bind def
+%%EndProlog
+%%BeginSetup
+(5.0) FMVERSION
+1 1 0 0 612 792 0 1 14 FMDOCUMENT
+0 0 /Times-Roman FMFONTDEFINE
+1 0 /Times-Italic FMFONTDEFINE
+2 0 /Times-Bold FMFONTDEFINE
+3 0 /Helvetica-Bold FMFONTDEFINE
+4 0 /Courier FMFONTDEFINE
+5 1 /Symbol FMFONTDEFINE
+32 FMFILLS
+0 0 FMFILL
+1 0.1 FMFILL
+2 0.3 FMFILL
+3 0.5 FMFILL
+4 0.7 FMFILL
+5 0.9 FMFILL
+6 0.97 FMFILL
+7 1 FMFILL
+8 <0f1e3c78f0e1c387> FMFILL
+9 <0f87c3e1f0783c1e> FMFILL
+10 <cccccccccccccccc> FMFILL
+11 <ffff0000ffff0000> FMFILL
+12 <8142241818244281> FMFILL
+13 <03060c183060c081> FMFILL
+14 <8040201008040201> FMFILL
+16 1 FMFILL
+17 0.9 FMFILL
+18 0.7 FMFILL
+19 0.5 FMFILL
+20 0.3 FMFILL
+21 0.1 FMFILL
+22 0.03 FMFILL
+23 0 FMFILL
+24 <f0e1c3870f1e3c78> FMFILL
+25 <f0783c1e0f87c3e1> FMFILL
+26 <3333333333333333> FMFILL
+27 <0000ffff0000ffff> FMFILL
+28 <7ebddbe7e7dbbd7e> FMFILL
+29 <fcf9f3e7cf9f3f7e> FMFILL
+30 <7fbfdfeff7fbfdfe> FMFILL
+%%EndSetup
+%%Page: "1" 1
+%%BeginPaperSize: Letter
+%%EndPaperSize
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+J
+0 0 0 1 0 0 0 K
+0 11 Q
+0 X
+0 0 0 1 0 0 0 K
+0.74 (This w) 72 87.78 P
+0.74 (ork w) 102.88 87.78 P
+0.74 (as performed under the auspices of the U.S. Department of Ener) 128.87 87.78 P
+0.74 (gy by La) 418.34 87.78 P
+0.74 (wrence Li) 458.76 87.78 P
+0.74 (v) 503.51 87.78 P
+0.74 (ermore) 508.85 87.78 P
+(National Laboratory under contract no. W) 72 74.78 T
+(-7405-Eng-48; Release No. UCRL-JC-133263.) 256.4 74.78 T
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+1 10 Q
+0.66 (Abstr) 108 569.33 P
+0.66 (act: The importance of the performance) 129.52 569.33 P
+1.84 (of thr) 72 557.33 P
+1.84 (eads libr) 95.42 557.33 P
+1.84 (aries is gr) 132.38 557.33 P
+1.84 (owing as cluster) 176.17 557.33 P
+1.84 (s of shar) 245.3 557.33 P
+1.84 (ed) 283.06 557.33 P
+6.59 (memory mac) 72 545.33 P
+6.59 (hines become mor) 129.81 545.33 P
+6.59 (e popular) 215.39 545.33 P
+6.59 (. P) 259.49 545.33 P
+6.59 (osix) 276.39 545.33 P
+2.43 (thr) 72 533.33 P
+2.43 (eads, or Pthr) 83.3 533.33 P
+2.43 (eads, is an industry thr) 140.3 533.33 P
+2.43 (eads libr) 241.61 533.33 P
+2.43 (ary) 279.17 533.33 P
+3.76 (standar) 72 521.33 P
+3.76 (d. W) 102.19 521.33 P
+3.76 (e have implemented the \336r) 123.36 521.33 P
+3.76 (st Pthr) 243.83 521.33 P
+3.76 (eads) 274.17 521.33 P
+-0.15 (benc) 72 509.33 P
+-0.15 (hmark suite) 90.73 509.33 P
+-0.15 (. In addition to measuring basic thr) 137.37 509.33 P
+-0.15 (ead) 278.06 509.33 P
+0.74 (functions, suc) 72 497.33 P
+0.74 (h as thr) 127.59 497.33 P
+0.74 (ead cr) 159.27 497.33 P
+0.74 (eation, we apply the Lo) 184.91 497.33 P
+0.74 (gP) 281.39 497.33 P
+2.78 (model to standar) 72 485.33 P
+2.78 (d Pthr) 144.97 485.33 P
+2.78 (eads communication mec) 172.67 485.33 P
+2.78 (ha-) 279.17 485.33 P
+1.51 (nisms. W) 72 473.33 P
+1.51 (e pr) 108.7 473.33 P
+1.51 (esent the r) 125.67 473.33 P
+1.51 (esults of our tests for se) 169.98 473.33 P
+1.51 (ver) 272.1 473.33 P
+1.51 (al) 284.72 473.33 P
+-0.03 (har) 72 461.33 P
+-0.03 (dwar) 85.52 461.33 P
+-0.03 (e platforms. These r) 105.71 461.33 P
+-0.03 (esults demonstr) 185.24 461.33 P
+-0.03 (ate that the) 247.56 461.33 P
+-0.06 (performance of e) 72 449.33 P
+-0.06 (xisting Pthr) 140 449.33 P
+-0.06 (eads implementations var-) 186.52 449.33 P
+0.13 (ies widely; parts of nearly all of these implementations) 72 437.33 P
+(could be further optimized.) 72 425.33 T
+2 14 Q
+(1. Intr) 72 394.67 T
+(oduction) 109.86 394.67 T
+0 12 Q
+8.82 (W) 108 372 P
+8.82 (ith the gro) 118.85 372 P
+8.82 (wing popularity of) 185.53 372 P
+10.17 (symmetric multiprocessors \050SMPs\051, the) 72 358 P
+2.98 (importance of the performance of Pthreads) 72 344 P
+1.36 (libraries is increasing. Ho) 72 330 P
+1.36 (we) 199.09 330 P
+1.36 (v) 212.79 330 P
+1.36 (er) 218.61 330 P
+1.36 (, no Pthreads) 227.45 330 P
+5.14 (benchmark suite currently e) 72 316 P
+5.14 (xists. W) 220.87 316 P
+5.14 (e are) 264.38 316 P
+-0.29 (de) 72 302 P
+-0.29 (v) 83.03 302 P
+-0.29 (eloping a benchmark suite that will \336ll this) 88.85 302 P
+-0.28 (v) 72 288 P
+-0.28 (oid. This tool will be useful in predicting and) 77.76 288 P
+3.3 (identifying performance problems of codes) 72 274 P
+(that use Pthreads.) 72 260 T
+0.34 (W) 108 246 P
+0.34 (e are modifying a publicly a) 118.37 246 P
+0.34 (v) 254.81 246 P
+0.34 (ailable) 260.51 246 P
+3.53 (MPI benchmark suite in order to measure) 72 232 P
+4.89 (Pthreads performance. This approach will) 72 218 P
+1.92 (allo) 72 204 P
+1.92 (w us e) 89.7 204 P
+1.92 (v) 123.89 204 P
+1.92 (entually to pro) 129.71 204 P
+1.92 (vide a benchmark) 203.36 204 P
+0.12 (suite for measuring the performance of mix) 72 190 P
+0.12 (ed) 281.17 190 P
+3.23 (programming models for clusters of SMPs) 72 176 P
+2.59 (that use both threads and message passing.) 72 162 P
+0.94 (Our initial results from se) 72 148 P
+0.94 (v) 198.79 148 P
+0.94 (eral SMP systems) 204.61 148 P
+3.95 (demonstrate signi\336cant performance dif) 72 134 P
+3.95 (fer-) 275.18 134 P
+0.51 (ences between e) 72 120 P
+0.51 (xisting Pthreads implementa-) 150.81 120 P
+0.33 (tions. Since hardw) 319.5 568 P
+0.33 (are dif) 409.03 568 P
+0.33 (ferences do not fully) 440.04 568 P
+0.67 (e) 319.5 554 P
+0.67 (xplain these performance v) 324.65 554 P
+0.67 (ariations, optimi-) 456.66 554 P
+(zations could impro) 319.5 540 T
+(v) 414.65 540 T
+(e the implementations.) 420.47 540 T
+2 14 Q
+(2. Incor) 319.5 508.67 T
+(porating Thr) 366.02 508.67 T
+(eads Bench-) 443.95 508.67 T
+(marks into SKaMPI) 319.5 492.67 T
+0 12 Q
+2.17 (SKaMPI is an MPI benchmark suite) 355.5 470 P
+0.53 (that pro) 319.5 456 P
+0.53 (vides a general frame) 356.85 456 P
+0.53 (w) 461.1 456 P
+0.53 (ork for perfor-) 469.64 456 P
+-0.16 (mance analysis [7]. SKaMPI does not e) 319.5 442 P
+-0.16 (xhaus-) 508.01 442 P
+5.83 (ti) 319.5 428 P
+5.83 (v) 325.87 428 P
+5.83 (ely test the MPI standard. Instead, it) 331.69 428 P
+4.24 (pro) 319.5 414 P
+4.24 (vides a simple interf) 335.32 414 P
+4.24 (ace to incorporate) 445.56 414 P
+9.55 (additional measurements. This interf) 319.5 400 P
+9.55 (ace) 524.02 400 P
+11.87 (pro) 319.5 386 P
+11.87 (vides e) 335.32 386 P
+11.87 (xtensi) 380.67 386 P
+11.87 (v) 409.04 386 P
+11.87 (e f) 414.86 386 P
+11.87 (acilities for data) 438.94 386 P
+5.57 (collection and test management, such as) 319.5 372 P
+4.38 (dynamic selection of independent v) 319.5 358 P
+4.38 (ariable) 507.35 358 P
+-0.02 (v) 319.5 344 P
+-0.02 (alues and of the number of trials to obtain an) 325.2 344 P
+5.41 (accurate measurement at an) 319.5 330 P
+5.41 (y single data) 468.51 330 P
+1.23 (point. Thus, SKaMPI is an e) 319.5 316 P
+1.23 (xcellent starting) 461.78 316 P
+11.46 (point for implementing our Pthreads) 319.5 302 P
+(benchmark suite.) 319.5 288 T
+11.9 (Nonetheless, se) 355.5 274 P
+11.9 (v) 441.75 274 P
+11.9 (eral aspects of) 447.57 274 P
+4.84 (SKaMPI are inappropriate for a Pthreads) 319.5 260 P
+6.05 (benchmark suite. Since clock granularity) 319.5 246 P
+3.5 (v) 319.5 232 P
+3.5 (aries widely across systems, most bench-) 325.2 232 P
+4.05 (marks time repeated measurement actions,) 319.5 218 P
+0.69 (such as locking a mute) 319.5 204 P
+0.69 (x, and use the a) 431.38 204 P
+0.69 (v) 508.2 204 P
+0.69 (erage) 514.02 204 P
+0.23 (time per iteration to estimate the time that the) 319.5 190 P
+3.72 (action tak) 319.5 176 P
+3.72 (es. SKaMPI does not; instead it) 370.09 176 P
+0.02 (assumes that the duration of an action is suf) 319.5 162 P
+0.02 (\336-) 529.33 162 P
+4.99 (ciently long to be measured indi) 319.5 148 P
+4.99 (vidually) 498.44 148 P
+4.99 (.) 537 148 P
+0.44 (Since this assumption is clearly inappropriate) 319.5 134 P
+3.8 (for se) 319.5 120 P
+3.8 (v) 349.99 120 P
+3.8 (eral important Pthreads actions, we) 355.81 120 P
+3 20 Q
+(Benc) 127.66 706.67 T
+(hmarking Pthreads P) 176.36 706.67 T
+(erf) 375.82 706.67 T
+(ormance) 400.98 706.67 T
+1 12 Q
+(Br) 130.85 663.04 T
+(onis R. de Supinski) 142.31 663.04 T
+(Center for Applied Scienti\336c Computing) 85.58 649.04 T
+(Lawr) 81.28 635.04 T
+(ence Livermor) 106.18 635.04 T
+(e National Labor) 175.39 635.04 T
+(atory) 257.89 635.04 T
+(Livermor) 130.37 621.04 T
+(e) 174.59 621.04 T
+(, CA 94551) 179.8 621.04 T
+(br) 143.56 607.04 T
+(onis@llnl.go) 153.68 607.04 T
+(v) 215.62 607.04 T
+(J) 406.07 663.04 T
+(ohn May) 411.1 663.04 T
+(Center for Applied Scienti\336c Computing) 333.08 649.04 T
+(Lawr) 328.78 635.04 T
+(ence Livermor) 353.68 635.04 T
+(e National Labor) 422.89 635.04 T
+(atory) 505.39 635.04 T
+(Livermor) 377.87 621.04 T
+(e) 422.09 621.04 T
+(, CA 94551) 427.3 621.04 T
+(johnmay@llnl.go) 385.46 607.04 T
+(v) 468.71 607.04 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "1" 1
+%%Page: "2" 2
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+0 X
+0 0 0 1 0 0 0 K
+6.57 (ha) 72 712 P
+6.57 (v) 83.09 712 P
+6.57 (e modi\336ed SKaMPI\325) 88.91 712 P
+6.57 (s data collection) 201.38 712 P
+1.1 (f) 72 698 P
+1.1 (acilities to support multiple iterations of the) 75.88 698 P
+(measurement action per timing.) 72 684 T
+0.86 (The number of timings per data point) 108 670 P
+-0.25 (v) 72 656 P
+-0.25 (aries in SKaMPI. A measurement is repeated) 77.7 656 P
+1.29 (until either a user) 72 642 P
+1.29 (-de\336ned maximum number) 159.27 642 P
+2.05 (of timings or the standard de) 72 628 P
+2.05 (viation) 219.6 628 P
+0 9.6 Q
+1.64 (1) 252.94 632.8 P
+0 12 Q
+2.05 ( of the) 257.74 628 P
+0.57 (timings is less than a user) 72 614 P
+0.57 (-de\336ned percentage) 197.63 614 P
+4.46 (of their mean. The mean is the reported) 72 600 P
+12.17 (measurement. This simple mechanism) 72 586 P
+0.32 (ensures data points are a good estimate of the) 72 572 P
+6.66 (a) 72 558 P
+6.66 (v) 77.09 558 P
+6.66 (erage time to complete the measured) 82.91 558 P
+7.81 (action. Se) 72 544 P
+7.81 (v) 126.83 544 P
+7.81 (eral of our benchmarks are) 132.65 544 P
+6.24 (symmetric. Most of these tests measure) 72 530 P
+6.47 (synchronization or other shared memory) 72 516 P
+-0.17 (communication mechanisms; the rest allo) 72 502 P
+-0.17 (w us) 270.34 502 P
+5.89 (to deduce the quantities lik) 72 488 P
+5.89 (e the thread) 224.75 488 P
+0.62 (conte) 72 474 P
+0.62 (xt switch time by binding the threads to) 97.81 474 P
+1.57 (the same CPU. Thus, the main thread and a) 72 460 P
+0.98 (client thread both repeatedly perform \050essen-) 72 446 P
+1.94 (tially\051 the same action in these tests. All of) 72 432 P
+1.2 (our benchmarks measure the elapsed time in) 72 418 P
+0.84 (the main SKaMPI thread. In order to accom-) 72 404 P
+2.2 (modate the dynamic number of timings per) 72 390 P
+-0.02 (data point, we terminate the client thread with) 72 376 P
+4 F
+2.58 (pthread_cancel) 72 362 P
+0 F
+1.08 ( in these tests instead of) 172.8 362 P
+-0.06 (e) 72 348 P
+-0.06 (xiting after a \336x) 77.15 348 P
+-0.06 (ed number of iterations. This) 153.77 348 P
+0.68 (cancellation mechanism introduces v) 72 334 P
+0.68 (ery little) 251.49 334 P
+2.79 (o) 72 320 P
+2.79 (v) 77.82 320 P
+2.79 (erhead into the tests. If the client action) 83.64 320 P
+4.64 (does not include a cancellation point \050as) 72 306 P
+9.31 (de\336ned by Pthreads\051, the client calls) 72 292 P
+4 F
+2.89 (pthread_test_cancel) 72 278 P
+0 F
+1.2 ( after some lar) 208.8 278 P
+1.2 (ge) 281.17 278 P
+1.26 (number of repetitions. The main thread does) 72 264 P
+0.15 (not start the ne) 72 250 P
+0.15 (xt measurement until the client) 143.25 250 P
+(ackno) 72 236 T
+(wledges the cancel.) 100.36 236 T
+5.13 (A signi\336cant f) 108 222 P
+5.13 (actor in the perfor-) 186.81 222 P
+0.34 (mance of man) 72 208 P
+0.34 (y Pthreads functions is whether) 140.48 208 P
+0.03 (or not the threads being measured are running) 72 194 P
+72 168 292.5 183 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+81 181 225 181 2 L
+0.5 H
+2 Z
+0 X
+0 0 0 1 0 0 0 K
+N
+0 0 612 792 C
+0 10 Q
+0 X
+0 0 0 1 0 0 0 K
+(1.) 90 161.33 T
+5.8 (SKaMPI actually uses standard error) 102 161.33 P
+5.8 (,) 272 161.33 P
+0.6 (which is the standard de) 102 149.33 P
+0.6 (viation di) 200.78 149.33 P
+0.6 (vided by) 239.18 149.33 P
+1.23 (the square root of the number of timings,) 102 137.33 P
+3.04 (for the cutof) 102 125.33 P
+3.04 (f. Standard error con) 157.26 125.33 P
+3.04 (v) 248.73 125.33 P
+3.04 (er) 253.58 125.33 P
+3.04 (ges) 261.17 125.33 P
+-0.18 (e) 102 113.33 P
+-0.18 (v) 106.19 113.33 P
+-0.18 (en when the standard de) 111.04 113.33 P
+-0.18 (viation lar) 206.7 113.33 P
+-0.18 (ge. W) 247.16 113.33 P
+-0.18 (e) 270.06 113.33 P
+1.41 (use standard de) 102 101.33 P
+1.41 (viation since it pro) 166.23 101.33 P
+1.41 (vides a) 245.04 101.33 P
+1.59 (stricter test and the number of timings is) 102 89.33 P
+(already limited.) 102 77.33 T
+0 12 Q
+2.67 (on the same CPU. Most v) 319.5 712 P
+2.67 (endors include a) 456.01 712 P
+-0.23 (mechanism to bind a thread to a speci\336c CPU.) 319.5 698 P
+-0.03 (W) 319.5 684 P
+-0.03 (e implemented a set of macros that allo) 329.87 684 P
+-0.03 (w us) 517.69 684 P
+0.26 (to v) 319.5 670 P
+0.26 (ary the CPU binding of each participating) 337.8 670 P
+(thread in each benchmark.) 319.5 656 T
+4.04 (Clock granularity moti) 355.5 642 P
+4.04 (v) 472.61 642 P
+4.04 (ates another) 478.31 642 P
+0.26 (change to SKaMPI. Since SKaMPI is an MPI) 319.5 628 P
+3.94 (benchmark suite, it uses the) 319.5 614 P
+4 F
+9.46 (MPI_Wtime) 475.2 614 P
+0 F
+3.76 (f) 319.5 600 P
+3.76 (acility for its timings. Ho) 323.38 600 P
+3.76 (we) 459.12 600 P
+3.76 (v) 472.82 600 P
+3.76 (er) 478.64 600 P
+3.76 (, the MPI) 487.48 600 P
+2.15 (standard does not require that) 319.5 586 P
+4 F
+5.15 (MPI_Wtime) 475.2 586 P
+0 F
+-0.13 (use the best a) 319.5 572 P
+-0.13 (v) 383.18 572 P
+-0.13 (ailable clock; on some systems,) 388.88 572 P
+2.07 (its resolution is as high as one millisecond.) 319.5 558 P
+4.14 (System resources can se) 319.5 544 P
+4.14 (v) 447.92 544 P
+4.14 (erely restrict the) 453.74 544 P
+4.2 (number of iterations per timing for some) 319.5 530 P
+1.37 (Pthreads calls. F) 319.5 516 P
+1.37 (or e) 401.06 516 P
+1.37 (xample, the thread table) 420.58 516 P
+-0.29 (limits the number of pthread_create iterations.) 319.5 502 P
+5.03 (Therefore, we are replacing) 319.5 488 P
+4 F
+12.06 (MPI_Wtime) 475.2 488 P
+0 F
+1.78 (with macro-based calls to more \336ne-grained) 319.5 474 P
+0.1 (clocks, which on man) 319.5 460 P
+0.1 (y systems are the UNIX) 424.28 460 P
+4 F
+2.57 (gettimeofday) 319.5 446 P
+0 F
+1.07 ( f) 405.9 446 P
+1.07 (acility) 413.85 446 P
+1.07 (. Ho) 443.07 446 P
+1.07 (we) 464.5 446 P
+1.07 (v) 478.19 446 P
+1.07 (er) 484.01 446 P
+1.07 (, on DEC) 492.86 446 P
+6.91 (Alpha systems, we are implementing a) 319.5 432 P
+4.06 (rollo) 319.5 418 P
+4.06 (v) 341.99 418 P
+4.06 (er) 347.81 418 P
+4.06 (-safe clock based on the hardw) 356.89 418 P
+4.06 (are) 525.35 418 P
+(c) 319.5 404 T
+(ycle counter) 324.65 404 T
+(.) 382.97 404 T
+1.75 (W) 355.5 390 P
+1.75 (e ha) 365.87 390 P
+1.75 (v) 387.04 390 P
+1.75 (e made se) 392.86 390 P
+1.75 (v) 443.38 390 P
+1.75 (eral other changes) 449.2 390 P
+7.38 (to the SKaMPI infrastructure, including) 319.5 376 P
+2.54 (se) 319.5 362 P
+2.54 (v) 329.2 362 P
+2.54 (eral b) 335.02 362 P
+2.54 (ug \336x) 364.3 362 P
+2.54 (es to its data point selection) 394.33 362 P
+6.17 (and test restart f) 319.5 348 P
+6.17 (acilities. W) 414.88 348 P
+6.17 (e ha) 474.76 348 P
+6.17 (v) 500.35 348 P
+6.17 (e also) 506.17 348 P
+7.45 (e) 319.5 334 P
+7.45 (xtended it to support more than one) 324.65 334 P
+0.55 (independent v) 319.5 320 P
+0.55 (ariable per data point, a f) 387.41 320 P
+0.55 (acility) 510 320 P
+1.15 (that we use to ensure threads are running on) 319.5 306 P
+-0.2 (dif) 319.5 292 P
+-0.2 (ferent CPUs. W) 332.53 292 P
+-0.2 (e plan e) 407.49 292 P
+-0.2 (v) 444.1 292 P
+-0.2 (entually to pro) 449.92 292 P
+-0.2 (vide) 519.34 292 P
+0.88 (a compiler switch that eliminates the need to) 319.5 278 P
+0.22 (link with an MPI library; currently we simply) 319.5 264 P
+3.64 (run our threads tests within a single MPI) 319.5 250 P
+1.07 (process. Ho) 319.5 236 P
+1.07 (we) 376.92 236 P
+1.07 (v) 390.61 236 P
+1.07 (er) 396.43 236 P
+1.07 (, we plan to retain the MPI) 405.28 236 P
+0.4 (tests, as our o) 319.5 222 P
+0.4 (v) 385.86 222 P
+0.4 (erall goal is a benchmark suite) 391.68 222 P
+-0.21 (for an emer) 319.5 208 P
+-0.21 (ging programming model for SMP) 374.17 208 P
+2.12 (clusters in which threads on the same node) 319.5 194 P
+-0.23 (communicate through shared memory and use) 319.5 180 P
+5.8 (message passing for internode communi-) 319.5 166 P
+(cation [5].) 319.5 152 T
+2 14 Q
+(3. The Benchmarks) 319.5 120.67 T
+0 12 Q
+8.46 (Our benchmarks measure se) 355.5 98 P
+8.46 (v) 516.19 98 P
+8.46 (eral) 522.01 98 P
+3.97 (signi\336cant components of Pthreads perfor-) 319.5 84 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "2" 2
+%%Page: "3" 3
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+0 X
+0 0 0 1 0 0 0 K
+12.22 (mance. Some measure basic system) 72 712 P
+0.13 (properties such as the time for thread creation) 72 698 P
+-0.01 (or the length of a time slice. The remainder of) 72 684 P
+1.24 (our tests measure thread communication and) 72 670 P
+13.51 (synchronization mechanisms, such as) 72 656 P
+0.3 (condition v) 72 642 P
+0.3 (ariables and mute) 126.34 642 P
+0.3 (x) 211.4 642 P
+0.3 (es. W) 217.22 642 P
+0.3 (e describe) 243.89 642 P
+(each benchmark in detail.) 72 628 T
+2.86 (Our) 108 614 P
+4 F
+6.87 (pthread_create) 132.52 614 P
+0 F
+2.86 ( benchmark) 233.32 614 P
+3.51 (measures the time to recursi) 72 600 P
+3.51 (v) 220.36 600 P
+3.51 (ely create) 226.18 600 P
+1 F
+3.51 (M) 282.5 600 P
+0 F
+2.35 (threads, where) 72 586 P
+1 F
+2.35 (M) 149.67 586 P
+0 F
+2.35 ( is some lar) 159.66 586 P
+2.35 (ge number) 221.48 586 P
+2.35 (. In) 274.16 586 P
+0.36 (this benchmark, the main thread sets a shared) 72 572 P
+1.99 (iteration count to zero, creates a thread and) 72 558 P
+3.38 (w) 72 544 P
+3.38 (aits on a condition v) 80.54 544 P
+3.38 (ariable. Each ne) 191.08 544 P
+3.38 (wly) 274.5 544 P
+1.38 (created thread increments the iteration count) 72 530 P
+1.32 (and compares it to) 72 516 P
+1 F
+1.32 (M) 168.6 516 P
+0 F
+1.32 (. If the count is) 178.6 516 P
+1 F
+1.32 (M) 260.52 516 P
+0 F
+1.32 (, the) 270.52 516 P
+0.09 (thread signals the main thread. Otherwise, the) 72 502 P
+-0.22 (thread creates another thread and immediately) 72 488 P
+5.82 (calls) 72 474 P
+4 F
+13.97 (pthread_exit) 102.82 474 P
+0 F
+5.82 (. The measurement) 189.22 474 P
+0.71 (reported for this benchmark is the time tak) 72 460 P
+0.71 (en) 281.17 460 P
+1.35 (by the main thread di) 72 446 P
+1.35 (vided by) 179.09 446 P
+1 F
+1.35 (M) 226.45 446 P
+0 F
+1.35 (. W) 236.45 446 P
+1.35 (e report) 254.17 446 P
+0.32 (results for when the threads are created either) 72 432 P
+0.54 (detached or undetached with either system or) 72 418 P
+(process scope.) 72 404 T
+6.04 (Our thread yield test attempts to) 108 390 P
+5.34 (measure the time required for a conte) 72 376 P
+5.34 (xt) 283.16 376 P
+0.55 (switch, similarly to one of the tests described) 72 362 P
+4.71 (by Mueller [6]. In this test, tw) 72 348 P
+4.71 (o threads) 244.13 348 P
+34 (repeatedly call) 72 334 P
+4 F
+81.59 (sched_yield) 213.3 334 P
+0 F
+1.94 (\050) 72 320 P
+4 F
+4.67 (thr_yield) 76 320 P
+0 F
+1.94 ( on Sun platforms\051. When the) 140.8 320 P
+4.46 (threads are bound to the same CPU, we) 72 306 P
+0.63 (e) 72 292 P
+0.63 (xpect the threads to alternate using the CPU) 77.15 292 P
+5.21 (and, thus, the total time di) 72 278 P
+5.21 (vided by the) 222.75 278 P
+4.17 (number of yields approximates the thread) 72 264 P
+2.99 (conte) 72 250 P
+2.99 (xt switch time. Ho) 97.81 250 P
+2.99 (we) 195.17 250 P
+2.99 (v) 208.86 250 P
+2.99 (er) 214.68 250 P
+2.99 (, an auxiliary) 223.52 250 P
+1.75 (program re) 72 236 P
+1.75 (v) 126.43 236 P
+1.75 (ealed that this is not al) 132.25 236 P
+1.75 (w) 248.55 236 P
+1.75 (ays the) 257.09 236 P
+-0.06 (case under IBM\325) 72 222 P
+-0.06 (s AIX. Under AIX, the initial) 151.85 222 P
+1.21 (thread does not re) 72 208 P
+1.21 (g) 161.08 208 P
+1.21 (ain the processor until its) 167.02 208 P
+8.5 (child thread has completed its yields.) 72 194 P
+0.41 (Therefore, on the IBM platform, this test \336rst) 72 180 P
+4.76 (creates a proxy thread that measures the) 72 166 P
+-0.25 (conte) 72 152 P
+-0.25 (xt switch time. W) 97.81 152 P
+-0.25 (ith this mechanism, the) 181.91 152 P
+(threads alternate using the CPU as desired.) 72 138 T
+0.85 (W) 108 124 P
+0.85 (e also bind tw) 118.37 124 P
+0.85 (o threads to the same) 187.79 124 P
+2.65 (CPU in order to determine the length of a) 72 110 P
+0.91 (time slice. In this test, the main thread sets a) 72 96 P
+3.02 (shared v) 72 82 P
+3.02 (ariable to zero and spins until the) 115.04 82 P
+4.82 (v) 319.5 712 P
+4.82 (ariable is not zero. Similarly) 325.2 712 P
+4.82 (, the client) 480.03 712 P
+0.6 (thread sets the v) 319.5 698 P
+0.6 (ariable to one and spins until) 398.66 698 P
+-0.03 (it is not one. Both threads repeat this beha) 319.5 684 P
+-0.03 (vior) 520.67 684 P
+1 F
+0.71 (M) 319.5 670 P
+0 F
+0.71 ( times. Each thread be) 329.5 670 P
+0.71 (gins its time slice by) 438.47 670 P
+1.5 (setting the shared v) 319.5 656 P
+1.5 (ariable and then e) 416.7 656 P
+1.5 (xpends) 506 656 P
+1.73 (the rest of its time slice spinning. Thus, the) 319.5 642 P
+0.52 (length of a time slice is the total time for this) 319.5 628 P
+(test di) 319.5 614 T
+(vided by 2) 348.2 614 T
+1 F
+(M) 398.87 614 T
+0 F
+(.) 408.86 614 T
+4.63 (The Pthreads API pro) 355.5 600 P
+4.63 (vides se) 473.53 600 P
+4.63 (v) 516.19 600 P
+4.63 (eral) 522.01 600 P
+7.84 (mechanisms for communication between) 319.5 586 P
+1.33 (threads. Our original intent w) 319.5 572 P
+1.33 (as to apply the) 466.35 572 P
+0.17 (LogP model to each of these mechanisms [2].) 319.5 558 P
+5.46 (LogP models message passing communi-) 319.5 544 P
+-0.05 (cation costs with four parameters: latenc) 319.5 530 P
+-0.05 (y \050) 513.38 530 P
+1 F
+-0.05 (L) 526.33 530 P
+0 F
+-0.05 (\051,) 533 530 P
+3.76 (which equals the time a message actually) 319.5 516 P
+-0.03 (spends in transit; the o) 319.5 502 P
+-0.03 (v) 427.18 502 P
+-0.03 (erhead of sending \050) 433 502 P
+1 F
+-0.03 (o) 525.2 502 P
+1 9.6 Q
+-0.03 (S) 531.2 499 P
+0 12 Q
+-0.03 (\051) 536 502 P
+-0.04 (or recei) 319.5 485.8 P
+-0.04 (ving \050) 355.48 485.8 P
+1 F
+-0.04 (o) 383.77 485.8 P
+1 9.6 Q
+-0.03 (R) 389.77 482.8 P
+0 12 Q
+-0.04 (\051 a message; the g) 395.64 485.8 P
+-0.04 (ap,) 481.42 485.8 P
+1 F
+-0.04 (g) 498.71 485.8 P
+0 F
+-0.04 (, which) 504.71 485.8 P
+3.83 (is the minimum interv) 319.5 469.6 P
+3.83 (al between message) 437.04 469.6 P
+6.17 (sends \050or recei) 319.5 455.6 P
+6.17 (v) 401.52 455.6 P
+6.17 (es\051; and the number of) 407.34 455.6 P
+3.3 (processors,) 319.5 441.6 P
+1 F
+3.3 (P) 379.45 441.6 P
+0 F
+3.3 (. W) 385.45 441.6 P
+3.3 (e present benchmarks that) 405.12 441.6 P
+0.4 (measure the round trip time \0502*\050) 319.5 427.6 P
+1 F
+0.4 (o) 477.14 427.6 P
+1 9.6 Q
+0.32 (S) 483.14 424.6 P
+0 12 Q
+0.4 (+) 490.93 427.6 P
+1 F
+0.4 (L) 500.7 427.6 P
+0 F
+0.4 (+) 510.37 427.6 P
+1 F
+0.4 (o) 520.14 427.6 P
+1 9.6 Q
+0.32 (R) 526.14 424.6 P
+0 12 Q
+0.4 (\051\051) 532.01 427.6 P
+4.11 (and the o) 319.5 411.4 P
+4.11 (v) 371.54 411.4 P
+4.11 (erheads for Pthreads communi-) 377.36 411.4 P
+3.04 (cation through both mute) 319.5 397.4 P
+3.04 (x) 449.44 397.4 P
+3.04 (es and condition) 455.26 397.4 P
+5.25 (v) 319.5 383.4 P
+5.25 (ariables. Our initial tests, based on the) 325.2 383.4 P
+1.37 (method for measuring message passing send) 319.5 369.4 P
+0.61 (o) 319.5 355.4 P
+0.61 (v) 325.32 355.4 P
+0.61 (erheads [3], indicates that the g) 331.14 355.4 P
+0.61 (ap does not) 484.11 355.4 P
+5.22 (e) 319.5 341.4 P
+5.22 (xceed the \322send\323 o) 324.65 341.4 P
+5.22 (v) 430.43 341.4 P
+5.22 (erhead for Pthreads) 436.26 341.4 P
+0.97 (communication mechanisms. W) 319.5 327.4 P
+0.97 (e lea) 474.8 327.4 P
+0.97 (v) 497.86 327.4 P
+0.97 (e lo) 503.68 327.4 P
+0.97 (wer) 522.01 327.4 P
+0.79 (le) 319.5 313.4 P
+0.79 (v) 327.86 313.4 P
+0.79 (el tests that might re) 333.68 313.4 P
+0.79 (v) 433.88 313.4 P
+0.79 (eal e) 439.7 313.4 P
+0.79 (xcess c) 462.63 313.4 P
+0.79 (ycles for) 497.56 313.4 P
+(future w) 319.5 299.4 T
+(ork.) 359.7 299.4 T
+12.22 (Condition v) 355.5 285.4 P
+12.22 (ariables pro) 424.43 285.4 P
+12.22 (vide an) 492.79 285.4 P
+4.88 (ef) 319.5 271.4 P
+4.88 (\336cient mechanism for thread synchroni-) 328.52 271.4 P
+0.12 (zation. A thread that is w) 319.5 257.4 P
+0.12 (aiting on a condition) 440.64 257.4 P
+1.48 (v) 319.5 243.4 P
+1.48 (ariable can be suspended until it recei) 325.2 243.4 P
+1.48 (v) 514.38 243.4 P
+1.48 (es a) 520.2 243.4 P
+0.08 (signal of the condition. A thread must acquire) 319.5 229.4 P
+3.45 (a mute) 319.5 215.4 P
+3.45 (x that protects the condition before) 355.1 215.4 P
+-0.27 (w) 319.5 201.4 P
+-0.27 (aiting on it. The mute) 328.04 201.4 P
+-0.27 (x is released within the) 430.44 201.4 P
+1.36 (call to) 319.5 187.4 P
+4 F
+3.25 (pthread_condition_wait) 354.88 187.4 P
+0 F
+1.36 (; it is) 513.28 187.4 P
+0.87 (reacquired before the thread returns from the) 319.5 173.4 P
+2.7 (call, b) 319.5 159.4 P
+2.7 (ut after the signal is recei) 351.29 159.4 P
+2.7 (v) 485.49 159.4 P
+2.7 (ed. These) 491.31 159.4 P
+3.59 (semantics mak) 319.5 145.4 P
+3.59 (e a condition v) 393.96 145.4 P
+3.59 (ariable ping-) 475.43 145.4 P
+2.07 (pong test straightforw) 319.5 131.4 P
+2.07 (ard: each thread alter-) 428.84 131.4 P
+2.11 (nates between w) 319.5 117.4 P
+2.11 (aiting on the condition and) 402.9 117.4 P
+1.02 (signaling it. Since a thread can send a signal) 319.5 103.4 P
+0.09 (e) 319.5 89.4 P
+0.09 (v) 324.53 89.4 P
+0.09 (en when no other thread is w) 330.35 89.4 P
+0.09 (aiting for it \050in) 469.4 89.4 P
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "3" 3
+%%Page: "4" 4
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+0 X
+0 0 0 1 0 0 0 K
+1.32 (which case the signal is discarded\051, the time) 72 552.34 P
+25.52 (to call) 72 538.34 P
+4 F
+61.24 (pthread_cond_signal) 155.7 538.34 P
+0 F
+0.6 (repeatedly in one thread measures the cost of) 72 524.34 P
+3.36 (signaling a condition, which is the \322send\323) 72 510.34 P
+1.97 (o) 72 496.34 P
+1.97 (v) 77.82 496.34 P
+1.97 (erhead of this communication. Potentially) 83.64 496.34 P
+2.9 (we could measure the recei) 72 482.34 P
+2.9 (v) 213.93 482.34 P
+2.9 (e o) 219.75 482.34 P
+2.9 (v) 236.8 482.34 P
+2.9 (erhead by) 242.62 482.34 P
+1.28 (w) 72 468.34 P
+1.28 (aiting on a condition that another thread is) 80.54 468.34 P
+6.79 (continually signaling since the signaling) 72 454.34 P
+1 (thread does not need to o) 72 440.34 P
+1 (wn the mute) 197.01 440.34 P
+1 (x. This) 258.16 440.34 P
+5.26 (mechanism requires that the w) 72 426.34 P
+5.26 (aiting and) 239.57 426.34 P
+0.14 (signaling threads be bound to dif) 72 412.34 P
+0.14 (ferent CPUs;) 230.04 412.34 P
+0.31 (otherwise the test tends to measure the length) 72 398.34 P
+9.4 (of a time slice. Unfortunately) 72 384.34 P
+9.4 (, cache) 249.79 384.34 P
+8.86 (coherence and memory b) 72 370.34 P
+8.86 (us contention) 219.31 370.34 P
+1.38 (o) 72 356.34 P
+1.38 (v) 77.82 356.34 P
+1.38 (erheads can increase the time required for) 83.64 356.34 P
+2.98 (recei) 72 342.34 P
+2.98 (ving the signal, as the results that we) 95.02 342.34 P
+3.08 (present for the IBM platform indicate. W) 72 328.34 P
+3.08 (e) 287.17 328.34 P
+0.74 (lea) 72 314.34 P
+0.74 (v) 85.75 314.34 P
+0.74 (e in) 91.57 314.34 P
+0.74 (v) 109.5 314.34 P
+0.74 (estig) 115.32 314.34 P
+0.74 (ating these o) 137.93 314.34 P
+0.74 (v) 199.9 314.34 P
+0.74 (erheads for future) 205.72 314.34 P
+(w) 72 300.34 T
+(ork.) 80.54 300.34 T
+3.78 (W) 108 286.34 P
+3.78 (e ha) 118.37 286.34 P
+3.78 (v) 141.57 286.34 P
+3.78 (e also implemented a ping-) 147.39 286.34 P
+0.62 (pong test for mute) 72 272.34 P
+0.62 (x v) 161.36 272.34 P
+0.62 (ariables. In this test, we) 176.68 272.34 P
+0.69 (create four mute) 72 258.34 P
+0.69 (x v) 151.84 258.34 P
+0.69 (ariables, using the def) 167.23 258.34 P
+0.69 (ault) 274.5 258.34 P
+1.66 (protocol. Initially) 72 244.34 P
+1.66 (, the main thread holds the) 156.88 244.34 P
+-0.09 (e) 72 230.34 P
+-0.09 (v) 77.03 230.34 P
+-0.09 (en inde) 82.85 230.34 P
+-0.09 (x) 117.57 230.34 P
+-0.09 (ed locks; the client the odd inde) 123.39 230.34 P
+-0.09 (x) 275.35 230.34 P
+-0.09 (ed) 281.17 230.34 P
+0.81 (ones. W) 72 216.34 P
+0.81 (e ensure the main thread be) 111.18 216.34 P
+0.81 (gins each) 246.7 216.34 P
+0.09 (ping-pong and that each pair of actions lea) 72 202.34 P
+0.09 (v) 276.68 202.34 P
+0.09 (es) 282.5 202.34 P
+0.4 (the locks in their initial states by ordering the) 72 188.34 P
+6.23 (unlock/lock operations as sho) 72 174.34 P
+6.23 (wn by the) 232.71 174.34 P
+-0.25 (arro) 72 160.34 P
+-0.25 (ws in Figure 1. Thus, the time for a pair of) 91.02 160.34 P
+0.19 (actions di) 72 146.34 P
+0.19 (vided by four is the time required to) 118.22 146.34 P
+(perform one mute) 72 132.34 T
+(x ping-pong.) 157.8 132.34 T
+4.27 (W) 108 118.34 P
+4.27 (e ha) 118.37 118.34 P
+4.27 (v) 142.05 118.34 P
+4.27 (e implemented se) 147.87 118.34 P
+4.27 (v) 240.09 118.34 P
+4.27 (eral tests) 245.91 118.34 P
+4.51 (that measure the o) 72 104.34 P
+4.51 (v) 173.01 104.34 P
+4.51 (erheads of the mute) 178.83 104.34 P
+4.51 (x) 286.5 104.34 P
+0.01 (operations. First, we ran our mute) 72 90.34 P
+0.01 (x ping-pong) 234.16 90.34 P
+12.29 (test with the lock/unlock operations) 72 76.34 P
+1.98 (performed only in the main thread. This no) 319.5 552.34 P
+0.08 (contention test pro) 319.5 538.34 P
+0.08 (vides a reasonable estimate) 408.8 538.34 P
+2.55 (of the sum of the o) 319.5 524.34 P
+2.55 (v) 422.4 524.34 P
+2.55 (erheads for the mute) 428.22 524.34 P
+2.55 (x) 534 524.34 P
+5.5 (operations. Similarly to Mueller [6], our) 319.5 510.34 P
+0.65 (mute) 319.5 496.34 P
+0.65 (x lock and unlock test pro) 343.32 496.34 P
+0.65 (vides an alter-) 470.72 496.34 P
+2.47 (nati) 319.5 482.34 P
+2.47 (v) 337.2 482.34 P
+2.47 (e estimate of this sum by successi) 343.02 482.34 P
+2.47 (v) 519.52 482.34 P
+2.47 (ely) 525.34 482.34 P
+0.72 (locking and unlocking the same mute) 319.5 468.34 P
+0.72 (x in the) 502.56 468.34 P
+8.97 (main thread; our results indicate that) 319.5 454.34 P
+1.74 (instruction le) 319.5 440.34 P
+1.74 (v) 383.94 440.34 P
+1.74 (el parallelism \050ILP\051 can cause) 389.76 440.34 P
+1.51 (the no contention approach to underestimate) 319.5 426.34 P
+6.94 (the o) 319.5 412.34 P
+6.94 (v) 349.92 412.34 P
+6.94 (erheads. Finally) 355.74 412.34 P
+6.94 (, we measure the) 438.55 412.34 P
+2.7 (indi) 319.5 398.34 P
+2.7 (vidual o) 337.87 398.34 P
+2.7 (v) 379.39 398.34 P
+2.7 (erheads by \336rst measuring the) 385.21 398.34 P
+0.09 (time to lock a lar) 319.5 384.34 P
+0.09 (ge array of mute) 400.96 384.34 P
+0.09 (x) 480.02 384.34 P
+0.09 (es and then) 485.84 384.34 P
+1.56 (the time to unlock the same mute) 319.5 370.34 P
+1.56 (x array) 488.01 370.34 P
+1.56 (. In) 522.44 370.34 P
+7.81 (this test, the array inde) 319.5 356.34 P
+7.81 (xing o) 459.56 356.34 P
+7.81 (v) 497.53 356.34 P
+7.81 (erheads) 503.35 356.34 P
+0.15 (counteract the ILP bene\336ts. The o) 319.5 342.34 P
+0.15 (v) 482.7 342.34 P
+0.15 (erall ef) 488.52 342.34 P
+0.15 (fect) 522.01 342.34 P
+(v) 319.5 328.34 T
+(aries across systems.) 325.2 328.34 T
+2 14 Q
+(4. Comparison of SMP Systems) 319.5 297.01 T
+0 12 Q
+9.22 (T) 355.5 274.34 P
+9.22 (able 1 sho) 361.87 274.34 P
+9.22 (ws results for our) 428.68 274.34 P
+1.5 (benchmark suite on four dif) 319.5 260.34 P
+1.5 (ferent platforms.) 458.52 260.34 P
+4.41 (Our Digital results are from a cluster of) 319.5 246.34 P
+6.01 (AlphaServ) 319.5 232.34 P
+6.01 (er 4100\325) 370.64 232.34 P
+6.01 (s running OSF1 V4.0.) 416.31 232.34 P
+0.79 (Each node of this machine has four 533MHz) 319.5 218.34 P
+1.64 (Alpha e) 319.5 204.34 P
+1.64 (v5 CPUs. Our IBM results are from) 358.5 204.34 P
+3.85 (La) 319.5 190.34 P
+3.85 (wrence Li) 331.98 190.34 P
+3.85 (v) 383.84 190.34 P
+3.85 (ermore National Laboratory\325) 389.66 190.34 P
+3.85 (s) 535.33 190.34 P
+9.68 (\050LLNL\051 Combined T) 319.5 176.34 P
+9.68 (echnology Refresh) 440.01 176.34 P
+1.2 (\050CTR\051 SP2, running AIX V4.3.2. Each node) 319.5 162.34 P
+1.12 (of this machine has four 332 MHz Po) 319.5 148.34 P
+1.12 (werPC) 507.34 148.34 P
+2.84 (604e CPUs. Our SGI results are from Los) 319.5 134.34 P
+1.12 (Alamos National Laboratory\325) 319.5 120.34 P
+1.12 (s Nirv) 463.06 120.34 P
+1.12 (ana Blue.) 493.55 120.34 P
+-0.13 (Each Origin 2000 in this system has up to 128) 319.5 106.34 P
+4.19 (250 MHz R10000 processors. Finally) 319.5 92.34 P
+4.19 (, we) 515.82 92.34 P
+6.39 (ha) 319.5 78.34 P
+6.39 (v) 330.59 78.34 P
+6.39 (e obtained initial numbers for Sun\325) 336.41 78.34 P
+6.39 (s) 535.33 78.34 P
+72 560.34 540 720 C
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+3 12 Q
+0 X
+0 0 0 1 0 0 0 K
+(Figure 1: Mute) 118.72 583.13 T
+(x Ping-P) 200.55 583.13 T
+(ong Actions \050arr) 248.08 583.13 T
+(o) 340.52 583.13 T
+(ws sho) 347.67 583.13 T
+(w operation or) 388.17 583.13 T
+(der\051) 470.61 583.13 T
+4 10 Q
+(pthread_mutex_unlock \050lock[0]\051) 81 713.33 T
+(pthread_mutex_lock \050lock[1]\051) 81 701.33 T
+(pthread_mutex_unlock \050lock[2]\051) 81 689.33 T
+(pthread_mutex_lock \050lock[3]\051) 81 677.33 T
+(pthread_mutex_unlock \050lock[1]\051) 81 665.33 T
+(pthread_mutex_lock \050lock[0]\051) 81 653.33 T
+(pthread_mutex_unlock \050lock[3]\051) 81 641.33 T
+(pthread_mutex_lock \050lock[2]\051) 81 629.33 T
+2 12 Q
+(Main Thr) 145.94 609 T
+(ead) 196.06 609 T
+4 10 Q
+(pthread_mutex_lock \050lock[0]\051) 315 713.33 T
+(pthread_mutex_unlock \050lock[1]\051) 315 701.33 T
+(pthread_mutex_lock \050lock[2]\051) 315 689.33 T
+(pthread_mutex_unlock \050lock[3]\051) 315 677.33 T
+(pthread_mutex_lock \050lock[1]\051) 315 665.33 T
+(pthread_mutex_unlock \050lock[0]\051) 315 653.33 T
+(pthread_mutex_lock \050lock[3]\051) 315 641.33 T
+(pthread_mutex_unlock \050lock[2]\051) 315 629.33 T
+2 12 Q
+(Client Thr) 377.94 609 T
+(ead) 432.06 609 T
+300.23 715.71 300.23 718.69 310.61 715.71 300.23 712.74 4 Y
+0.5 H
+0 Z
+N
+300.23 715.71 300.23 718.69 310.61 715.71 300.23 712.74 4 Y
+V
+274.29 715.71 299.98 715.71 2 L
+2 Z
+N
+285.57 704.14 285.57 701.17 275.19 704.14 285.57 707.12 4 Y
+0 Z
+N
+285.57 704.14 285.57 701.17 275.19 704.14 285.57 707.12 4 Y
+V
+311.52 704.14 285.82 704.14 2 L
+2 Z
+N
+300.23 690.57 300.23 693.55 310.61 690.57 300.23 687.6 4 Y
+0 Z
+N
+300.23 690.57 300.23 693.55 310.61 690.57 300.23 687.6 4 Y
+V
+274.29 690.57 299.98 690.57 2 L
+2 Z
+N
+285.57 679 285.57 676.02 275.19 679 285.57 681.98 4 Y
+0 Z
+N
+285.57 679 285.57 676.02 275.19 679 285.57 681.98 4 Y
+V
+311.52 679 285.82 679 2 L
+2 Z
+N
+300.23 667.57 300.23 670.55 310.61 667.57 300.23 664.59 4 Y
+0 Z
+N
+300.23 667.57 300.23 670.55 310.61 667.57 300.23 664.59 4 Y
+V
+274.29 667.57 299.98 667.57 2 L
+2 Z
+N
+285.57 656 285.57 653.02 275.19 656 285.57 658.98 4 Y
+0 Z
+N
+285.57 656 285.57 653.02 275.19 656 285.57 658.98 4 Y
+V
+311.52 656 285.82 656 2 L
+2 Z
+N
+300.23 643.86 300.23 646.83 310.61 643.86 300.23 640.88 4 Y
+0 Z
+N
+300.23 643.86 300.23 646.83 310.61 643.86 300.23 640.88 4 Y
+V
+274.29 643.86 299.98 643.86 2 L
+2 Z
+N
+285.57 632.29 285.57 629.31 275.19 632.29 285.57 635.26 4 Y
+0 Z
+N
+285.57 632.29 285.57 629.31 275.19 632.29 285.57 635.26 4 Y
+V
+311.52 632.29 285.82 632.29 2 L
+2 Z
+N
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 612 792 C
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "4" 4
+%%Page: "5" 5
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+0 X
+0 0 0 1 0 0 0 K
+10.38 (implementation of Pthreads. The Sun) 72 242 P
+2.87 (numbers are from an Enterprise 4000 with) 72 228 P
+3.81 (eight 168 MHz UltraSparc Is CPUs. This) 72 214 P
+2.71 (general purpose interacti) 72 200 P
+2.71 (v) 195.76 200 P
+2.71 (e serv) 201.58 200 P
+2.71 (er at LLNL) 232.43 200 P
+1.96 (supports man) 72 186 P
+1.96 (y users and can be quite b) 138.11 186 P
+1.96 (usy) 273.61 186 P
+1.96 (.) 289.5 186 P
+2.57 (Ho) 72 172 P
+2.57 (we) 86.36 172 P
+2.57 (v) 100.06 172 P
+2.57 (er) 105.88 172 P
+2.57 (, it w) 114.72 172 P
+2.57 (as relati) 144.07 172 P
+2.57 (v) 183.99 172 P
+2.57 (ely quiet during our) 189.81 172 P
+1.04 (measurements. Nonetheless we are unable to) 72 158 P
+-0.13 (perform the time slice test reliably since it is a) 72 144 P
+5.04 (shared resource. The nodes on the DEC) 72 130 P
+-0.01 (cluster are also shared, although we were able) 72 116 P
+1.13 (to run most of our tests when no other users) 72 102 P
+2.72 (were acti) 72 88 P
+2.72 (v) 118.07 88 P
+2.72 (e. Our IBM numbers are from a) 123.89 88 P
+1.08 (dedicated node. W) 319.5 242 P
+1.08 (e used dedicated CPUs on) 410.35 242 P
+3.64 (the SGI machine although portions of the) 319.5 228 P
+(memory system were shared.) 319.5 214 T
+0.39 (Dif) 355.5 200 P
+0.39 (ferences in the binding f) 371.2 200 P
+0.39 (acilities of) 489.28 200 P
+0.36 (the machines signi\336cantly af) 319.5 186 P
+0.36 (fect the tests that) 457.93 186 P
+2.96 (we are able to run. OSF1 only pro) 319.5 172 P
+2.96 (vides a) 503.38 172 P
+-0.11 (f) 319.5 158 P
+-0.11 (acility to bind all of a process\325) 323.38 158 P
+-0.11 (s threads to the) 468.02 158 P
+3.55 (same CPU; thus we do not report Digital) 319.5 144 P
+1.86 (results for threads bound to dif) 319.5 130 P
+1.86 (ferent CPUs.) 476.15 130 P
+1.9 (The situation on the SGI machine is w) 319.5 116 P
+1.9 (orse.) 517.01 116 P
+4.75 (The man pages indicate that the binding) 319.5 102 P
+1.42 (f) 319.5 88 P
+1.42 (acility w) 323.38 88 P
+1.42 (orks at the process le) 366.34 88 P
+1.42 (v) 472.37 88 P
+1.42 (el. Ho) 478.19 88 P
+1.42 (we) 508.64 88 P
+1.42 (v) 522.34 88 P
+1.42 (er) 528.16 88 P
+1.42 (,) 537 88 P
+2 F
+(T) 216.21 712 T
+(able 1: Benchmark Results \050in) 223.11 712 T
+5 F
+(m) 380.78 712 T
+2 F
+(s\051) 387.69 712 T
+(T) 188.99 686 T
+(est) 195.89 686 T
+(Digital) 336.25 686 T
+(IBM) 395.01 686 T
+(SGI) 450.1 686 T
+(Sun) 503.85 686 T
+0 F
+(Thread Create) 78 629 T
+(Detached, system scope) 191.79 662 T
+(N/A) 332.87 662 T
+(265.9) 386.3 662 T
+(N/A) 439.72 662 T
+(211.0) 493.14 662 T
+(Detached, process scope) 191.79 640 T
+(N/A) 332.87 640 T
+(265.5) 386.3 640 T
+(30.6) 439.72 640 T
+(51.7) 493.14 640 T
+(Undetached, system scope) 191.79 618 T
+(N/A) 332.87 618 T
+(312.7) 386.3 618 T
+(N/A) 439.72 618 T
+(491.5) 493.14 618 T
+-0.27 (Undetached, process scope) 191.79 596 P
+(N/A) 332.87 596 T
+(305.1) 386.3 596 T
+(68.9) 439.72 596 T
+(343.1) 493.14 596 T
+(Thread Y) 78 574 T
+(ield) 122.99 574 T
+(1.6) 332.87 574 T
+(4.3) 386.3 574 T
+(N/A) 439.72 574 T
+(9.5) 493.14 574 T
+(T) 78 552 T
+(ime Slice) 84.91 552 T
+(10013) 332.87 552 T
+(10001) 386.3 552 T
+(N/A) 439.72 552 T
+(N/A) 493.14 552 T
+(Condition Ping-pong) 78 515 T
+(\050round trip time\051) 78 501 T
+(Unbound) 191.79 530 T
+(59.5) 332.87 530 T
+(48.9) 386.3 530 T
+(9.5) 439.72 530 T
+(25.0) 493.14 530 T
+(Same CPU) 191.79 508 T
+(12.4) 332.87 508 T
+(29.2) 386.3 508 T
+(N/A) 439.72 508 T
+(25.7) 493.14 508 T
+(Dif) 191.79 486 T
+(ferent CPUs) 207.49 486 T
+(N/A) 332.87 486 T
+(74.3) 386.3 486 T
+(N/A) 439.72 486 T
+(25.1) 493.14 486 T
+(Condition Signal) 78 464 T
+(0.0383) 332.87 464 T
+(0.606) 386.3 464 T
+(0.634) 439.72 464 T
+(0.125) 493.14 464 T
+(Condition W) 78 442 T
+(ait) 139.38 442 T
+(25.3) 332.87 442 T
+(45.7) 386.3 442 T
+(N/A) 439.72 442 T
+(N/A) 493.14 442 T
+(Mute) 78 394 T
+(x Ping-pong) 103.15 394 T
+(\050round trip time\051) 78 380 T
+(Unbound) 191.79 420 T
+(58.8) 332.87 420 T
+(3.7) 386.3 420 T
+(9.4) 439.72 420 T
+(24.3) 493.14 420 T
+(Same CPU) 191.79 398 T
+(13.4) 332.87 398 T
+(37.8) 386.3 398 T
+(N/A) 439.72 398 T
+(24.2) 493.14 398 T
+(Dif) 191.79 376 T
+(ferent CPUs) 207.49 376 T
+(N/A) 332.87 376 T
+(3.7) 386.3 376 T
+(N/A) 439.72 376 T
+(24.2) 493.14 376 T
+(No contention) 191.79 354 T
+(0.274) 332.87 354 T
+(0.638) 386.3 354 T
+(0.434) 439.72 354 T
+(0.448) 493.14 354 T
+(Mute) 78 332 T
+(x Lock and Unlock) 103.15 332 T
+(0.273) 332.87 332 T
+(0.726) 386.3 332 T
+(0.540) 439.72 332 T
+(0.714) 493.14 332 T
+(Mute) 78 310 T
+(x Lock) 103.15 310 T
+(0.483) 332.87 310 T
+(0.343) 386.3 310 T
+(0.251) 439.72 310 T
+(0.321) 493.14 310 T
+(Mute) 78 288 T
+(x Unlock) 103.15 288 T
+(0.495) 332.87 288 T
+(0.478) 386.3 288 T
+(0.296) 439.72 288 T
+(0.417) 493.14 288 T
+72 701.75 72 280.25 2 L
+V
+0.5 H
+0 Z
+N
+185.79 674.5 185.79 587.75 2 L
+V
+N
+185.79 544.25 185.79 477.75 2 L
+V
+N
+185.79 434.25 185.79 345.75 2 L
+V
+N
+326.87 702.25 326.87 279.75 2 L
+V
+N
+380.3 702.25 380.3 279.75 2 L
+V
+N
+433.72 702.25 433.72 279.75 2 L
+V
+N
+487.14 702.25 487.14 279.75 2 L
+V
+N
+540.57 701.75 540.57 280.25 2 L
+V
+N
+71.75 702 540.82 702 2 L
+V
+N
+72.25 677.25 540.32 677.25 2 L
+V
+N
+72.25 674.75 540.32 674.75 2 L
+V
+N
+185.54 654 540.82 654 2 L
+V
+N
+185.54 632 540.82 632 2 L
+V
+N
+185.54 610 540.82 610 2 L
+V
+N
+71.75 588 540.82 588 2 L
+V
+N
+71.75 566 540.82 566 2 L
+V
+N
+71.75 544 540.82 544 2 L
+V
+N
+185.54 522 540.82 522 2 L
+V
+N
+185.54 500 540.82 500 2 L
+V
+N
+71.75 478 540.82 478 2 L
+V
+N
+71.75 456 540.82 456 2 L
+V
+N
+71.75 434 540.82 434 2 L
+V
+N
+185.54 412 540.82 412 2 L
+V
+N
+185.54 390 540.82 390 2 L
+V
+N
+185.54 368 540.82 368 2 L
+V
+N
+71.75 346 540.82 346 2 L
+V
+N
+71.75 324 540.82 324 2 L
+V
+N
+71.75 302 540.82 302 2 L
+V
+N
+71.75 280 540.82 280 2 L
+V
+N
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "5" 5
+%%Page: "6" 6
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 12 Q
+0 X
+0 0 0 1 0 0 0 K
+7.53 (testing indicates that it does apply to) 72 712 P
+0.4 (indi) 72 698 P
+0.4 (vidual threads. Unfortunately) 90.37 698 P
+0.4 (, testing also) 231.37 698 P
+0.23 (re) 72 684 P
+0.23 (v) 81.02 684 P
+0.23 (eals that the operating system can o) 86.84 684 P
+0.23 (v) 258.7 684 P
+0.23 (erride) 264.52 684 P
+0.44 (the CPU binding after a small period of time,) 72 670 P
+0.03 (particularly when the threads are bound to the) 72 656 P
+0.98 (same CPU. Thus, we report SGI results only) 72 642 P
+(for the tests that use unbound threads.) 72 628 T
+9.17 (Our numbers indicate signi\336cant) 108 614 P
+-0.28 (dif) 72 600 P
+-0.28 (ferences between the Pthreads implementa-) 85.03 600 P
+0.84 (tions. The SGI machine has e) 72 586 P
+0.84 (xcellent perfor-) 217.35 586 P
+-0.13 (mance for creating threads with process scope) 72 572 P
+7.25 (\320 although its has the second slo) 72 558 P
+7.25 (west) 270.5 558 P
+4.24 (processors. The Sun machine also creates) 72 544 P
+2.44 (process scope threads quickly \320 if the) 72 530 P
+2.44 (y are) 266.41 530 P
+3.71 (detached. Creating a thread as undetached) 72 516 P
+0.24 (allo) 72 502 P
+0.24 (ws the creating process to recei) 89.7 502 P
+0.24 (v) 240.89 502 P
+0.24 (e a return) 246.71 502 P
+2.95 (status when the created thread e) 72 488 P
+2.95 (xits. Since) 239.54 488 P
+5.01 (this capability requires e) 72 474 P
+5.01 (xtra thread table) 204.5 474 P
+0.91 (state, undetached threads are more e) 72 460 P
+0.91 (xpensi) 250.32 460 P
+0.91 (v) 281.35 460 P
+0.91 (e) 287.17 460 P
+2.76 (to create, particularly on the Sun platform.) 72 446 P
+0.98 (Our tests with system scope threads hung on) 72 432 P
+(the SGI machine.) 72 418 T
+3.64 (Although the Alphas are easily the) 108 404 P
+4.94 (f) 72 390 P
+4.94 (astest CPUs, the Digital machine is the) 75.88 390 P
+3.17 (slo) 72 376 P
+3.17 (west for our mute) 85.7 376 P
+3.17 (x and condition ping-) 180.01 376 P
+4.3 (pong tests with unbound threads. W) 72 362 P
+4.3 (e are) 265.22 362 P
+0.79 (designing tests to determine the cause of this) 72 348 P
+-0.22 (result. W) 72 334 P
+-0.22 (e e) 114.81 334 P
+-0.22 (xpect unbound threads usually run) 128.07 334 P
+0.8 (on dif) 72 320 P
+0.8 (ferent CPUs. Thus, this result indicates) 100.83 320 P
+11.4 (either a hardw) 72 306 P
+11.4 (are limitation of the) 163.32 306 P
+12.27 (AlphaServ) 72 292 P
+12.27 (ers, perhaps due to cache) 123.14 292 P
+5.92 (coherence o) 72 278 P
+5.92 (v) 135.37 278 P
+5.92 (erheads, or that the Digital) 141.19 278 P
+2.7 (Pthreads implementation needs to be better) 72 264 P
+3.7 (optimized for threads running on dif) 72 250 P
+3.7 (ferent) 264.52 250 P
+4.02 (CPUs. W) 72 236 P
+4.02 (e plan to use either lmbench or) 120.4 236 P
+-0.12 (hbench:OS to e) 72 222 P
+-0.12 (xplore dif) 145.56 222 P
+-0.12 (ferences between the) 192.13 222 P
+(memory systems further [4, 1].) 72 208 T
+3.09 (A comparison of the IBM and Sun) 108 194 P
+1.93 (results is more conclusi) 72 180 P
+1.93 (v) 190.48 180 P
+1.93 (e. Sun signi\336cantly) 196.3 180 P
+0.17 (outperforms IBM for the condition ping-pong) 72 166 P
+3.58 (test with threads bound to dif) 72 152 P
+3.58 (ferent CPUs) 229.93 152 P
+-0.07 (although the IBM runs at essentially twice the) 72 138 P
+4.61 (clock speed. This result is not due to a) 72 124 P
+7.16 (hardw) 72 110 P
+7.16 (are limitation since IBM\325) 101.87 110 P
+7.16 (s perfor-) 244.36 110 P
+4.56 (mance on the mute) 72 96 P
+4.56 (x ping-pong test with) 176.48 96 P
+1.39 (threads bound to dif) 319.5 712 P
+1.39 (ferent CPUs is e) 419.69 712 P
+1.39 (xcellent) 502.01 712 P
+1.08 (and signi\336cantly better than that of the other) 319.5 698 P
+4.84 (machines. Thus, we conclude that IBM\325) 319.5 684 P
+4.84 (s) 535.33 684 P
+2.87 (condition v) 319.5 670 P
+2.87 (ariable implementation could be) 376.41 670 P
+2.79 (optimized further) 319.5 656 P
+2.79 (. Ho) 405.28 656 P
+2.79 (we) 428.44 656 P
+2.79 (v) 442.13 656 P
+2.79 (er) 447.95 656 P
+2.79 (, we belie) 456.79 656 P
+2.79 (v) 508.4 656 P
+2.79 (e the) 514.22 656 P
+-0.21 (dif) 319.5 642 P
+-0.21 (ferences in our results primarily arise in the) 332.53 642 P
+(Pthreads implementations.) 319.5 628 T
+2 14 Q
+(5. Conclusions and Futur) 319.5 596.67 T
+(e W) 470.17 596.67 T
+(ork) 492.83 596.67 T
+0 12 Q
+14.51 (No Pthreads benchmark suite) 355.5 574 P
+-0.07 (currently e) 319.5 560 P
+-0.07 (xists; we ha) 370.9 560 P
+-0.07 (v) 427.18 560 P
+-0.07 (e be) 433 560 P
+-0.07 (gun implementing) 452.4 560 P
+2.55 (a set of benchmarks to \336ll this v) 319.5 546 P
+2.55 (oid. After) 490.79 546 P
+1.28 (further testing and re\336nement, we will mak) 319.5 532 P
+1.28 (e) 534.67 532 P
+8.63 (this Pthreads benchmark suite publicly) 319.5 518 P
+0.39 (a) 319.5 504 P
+0.39 (v) 324.59 504 P
+0.39 (ailable. Our initial results sho) 330.29 504 P
+0.39 (w that system) 473.22 504 P
+7.58 (hardw) 319.5 490 P
+7.58 (are dif) 349.37 490 P
+7.58 (ferences do not completely) 387.63 490 P
+11.12 (e) 319.5 476 P
+11.12 (xplain signi\336cant dif) 324.65 476 P
+11.12 (ferences between) 445.92 476 P
+(e) 319.5 462 T
+(xisting Pthreads implementations.) 324.65 462 T
+6.5 (W) 355.5 448 P
+6.5 (e plan to e) 365.87 448 P
+6.5 (xpand our tests of) 434.84 448 P
+1.11 (Pthreads functionality to measure the perfor-) 319.5 434 P
+7.91 (mance of additional functions such as) 319.5 420 P
+4 F
+100.25 (pthread_cond_broadcast) 319.5 406 P
+0 F
+41.77 ( and) 477.9 406 P
+4 F
+-0.58 (pthread_cancel) 319.5 392 P
+0 F
+-0.24 (. W) 420.3 392 P
+-0.24 (e are also considering) 436.42 392 P
+2.39 (tests that e) 319.5 378 P
+2.39 (v) 374.64 378 P
+2.39 (aluate higher le) 380.34 378 P
+2.39 (v) 458.8 378 P
+2.39 (el functionality) 464.62 378 P
+1.31 (that can easily be synthesized from Pthreads) 319.5 364 P
+3.2 (primiti) 319.5 350 P
+3.2 (v) 351.88 350 P
+3.2 (es, such as semaphores or barriers.) 357.7 350 P
+1.64 (W) 319.5 336 P
+1.64 (e are also interested in the ef) 329.87 336 P
+1.64 (fect of using) 476.72 336 P
+5.38 (dif) 319.5 322 P
+5.38 (ferent mute) 332.53 322 P
+5.38 (x protocols, although man) 392.71 322 P
+5.38 (y) 534 322 P
+3.29 (implementations currently support only the) 319.5 308 P
+(def) 319.5 294 T
+(ault protocol.) 334.7 294 T
+1 (This w) 355.5 280 P
+1 (ork has arisen during a project) 389.38 280 P
+4.06 (e) 319.5 266 P
+4.06 (v) 324.53 266 P
+4.06 (aluating the use of mix) 330.23 266 P
+4.06 (ed programming) 456.28 266 P
+0.31 (models on clusters of SMPs. Our o) 319.5 252 P
+0.31 (v) 488.88 252 P
+0.31 (erall goal) 494.7 252 P
+4.24 (is to pro) 319.5 238 P
+4.24 (vide a benchmark suite that can) 367.14 238 P
+2.88 (measure important aspects of mix) 319.5 224 P
+2.88 (ed model) 492.8 224 P
+3.22 (performance, such as the cost of a barrier) 319.5 210 P
+2.21 (across all threads in all MPI processes. W) 319.5 196 P
+2.21 (e) 534.67 196 P
+16.95 (anticipate e) 319.5 182 P
+16.95 (v) 391.13 182 P
+16.95 (entually e) 396.95 182 P
+16.95 (xtending this) 460.71 182 P
+0.98 (benchmark suite to measure the performance) 319.5 168 P
+2.09 (of OpenMP and other SMP compiler direc-) 319.5 154 P
+2.1 (ti) 319.5 140 P
+2.1 (v) 325.87 140 P
+2.1 (es. Similarly to lmbench\325) 331.69 140 P
+2.1 (s conte) 458.66 140 P
+2.1 (xt switch) 494.23 140 P
+9.05 (test, these tests will require a w) 319.5 126 P
+9.05 (ork) 524 126 P
+2.24 (mechanism that we also e) 319.5 112 P
+2.24 (xpect to use with) 451.61 112 P
+(additional Pthreads tests.) 319.5 98 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "6" 6
+%%Page: "7" 7
+612 792 0 FMBEGINPAGE
+[0 0 0 1 0 0 0]
+[ 0 1 1 0 1 0 0]
+[ 1 0 1 0 0 1 0]
+[ 1 1 0 0 0 0 1]
+[ 1 0 0 0 0 1 1]
+[ 0 1 0 0 1 0 1]
+[ 0 0 1 0 1 1 0]
+ 7 FrameSetSepColors
+FrameNoSep
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+0 0 0 1 0 0 0 K
+2 14 Q
+0 X
+0 0 0 1 0 0 0 K
+(6. Refer) 72 710.67 T
+(ences) 119.17 710.67 T
+0 12 Q
+([1] A.B. Bro) 72 688 T
+(wn and M.I. Seltzer) 132.36 688 T
+(, \322Operating) 226.86 688 T
+(System Benchmarking in the w) 72 674 T
+(ak) 222.54 674 T
+(e of) 233.75 674 T
+1 F
+(Lmbenc) 72 660 T
+0 F
+(h: A Case Study of the Performance) 109.99 660 T
+(of NetBSD on the Intel x86 Architecture,) 72 646 T
+(\323) 269.46 646 T
+1 F
+(Pr) 72 632 T
+(oc. of the 1997 A) 83.46 632 T
+(CM SIGMETRICS Conf) 164.76 632 T
+(.) 279.91 632 T
+(on Measur) 72 618 T
+(ement and Modeling of Computer) 123.22 618 T
+(Systems) 72 604 T
+0 F
+(, 1997, pp.) 109.99 604 T
+(214-224.) 163.99 604 T
+([2] D.E. Culler) 72 575 T
+(, R.M. Karp, D.A. P) 143.51 575 T
+(atterson,) 239.99 575 T
+(A. Sahay) 72 561 T
+(, K.E. Schauser) 115.21 561 T
+(, E. Santos, R. Subra-) 189.05 561 T
+-0.12 (monian and T) 72 547 P
+-0.12 (.) 137.53 547 P
+-0.12 (v) 143.53 547 P
+-0.12 (on Eick) 149.29 547 P
+-0.12 (en, \322LogP: T) 186.05 547 P
+-0.12 (o) 247.18 547 P
+-0.12 (w) 252.88 547 P
+-0.12 (ards a) 261.42 547 P
+(Realistic Model of P) 72 533 T
+(arallel Computation,) 170.82 533 T
+(\323) 268.64 533 T
+1 F
+(Pr) 72 519 T
+(oc. of the 4th A) 83.46 519 T
+(CM SIGPLAN Symp. on) 156.1 519 T
+(Principles and Pr) 72 505 T
+(actice of P) 157.15 505 T
+(ar) 207.52 505 T
+(allel Pr) 218 505 T
+(o) 253.8 505 T
+(gr) 259.68 505 T
+(am-) 270.17 505 T
+(ming) 72 491 T
+0 F
+(, 1993, pp.) 96 491 T
+(1-12.) 150 491 T
+([3] D.E. Culler) 72 462 T
+(, L.T) 143.51 462 T
+(. Liu, R.P) 166.28 462 T
+(. Martin and) 211.3 462 T
+(C.O. Y) 72 448 T
+(oshika) 105.01 448 T
+(w) 136.16 448 T
+(a, \322) 144.71 448 T
+(Assessing F) 160.4 448 T
+(ast Netw) 217.9 448 T
+(ork) 260.1 448 T
+-0.68 (Interf) 72 434 P
+-0.68 (aces,) 98.53 434 P
+-0.68 (\323) 121.34 434 P
+1 F
+-0.68 (IEEE Micr) 128.99 434 P
+-0.68 (o) 180.1 434 P
+0 F
+-0.68 (, 1996, V) 186.1 434 P
+-0.68 (ol.) 227.86 434 P
+-0.68 (16, No.) 243.19 434 P
+-0.68 (1,) 281.18 434 P
+(pp.) 72 420 T
+(35-43.) 90 420 T
+([4] L. McV) 72 391 T
+(o) 125.44 391 T
+(y and C. Staelin, \322lmbench: Por-) 131.32 391 T
+-0.44 (table tools for performance analysis,) 72 377 P
+-0.44 (\323) 244.36 377 P
+1 F
+-0.44 (Pr) 252.25 377 P
+-0.44 (oc. of) 263.71 377 P
+(the 1996 USENIX T) 72 363 T
+(ec) 166.56 363 T
+(hnical Conf) 177.04 363 T
+(.) 233.2 363 T
+0 F
+(, 1996,) 236.2 363 T
+(pp.) 72 349 T
+(279-295.) 90 349 T
+-0.27 ([5] J. May and B.R. de Supinski, \322Experience) 72 320 P
+(with Mix) 72 306 T
+(ed MPI/Threaded Programming) 116.16 306 T
+(Models,) 72 292 T
+(\323) 110.16 292 T
+1 F
+(High P) 118.49 292 T
+(erformance Scienti\336c Com-) 151.86 292 T
+-0.18 (putation with Applications, T) 72 278 P
+-0.18 (ec) 210.38 278 P
+-0.18 (hnical Session) 220.86 278 P
+(of the 1999 Intl. Conf) 72 264 T
+(. on P) 174.83 264 T
+(ar) 202.2 264 T
+(allel and Dis-) 212.69 264 T
+(trib) 72 250 T
+(uted Pr) 89.1 250 T
+(ocessing T) 124.22 250 T
+(ec) 174.12 250 T
+(hniques and Applica-) 184.6 250 T
+(tions) 72 236 T
+0 F
+(, 1999, to appear) 95.34 236 T
+(.) 175 236 T
+([6] F) 72 207 T
+(. Mueller) 94.7 207 T
+(, \322) 138.22 207 T
+(A Library Implementation of) 148.58 207 T
+(POSIX Threads under UNIX,) 72 193 T
+(\323) 213.79 193 T
+1 F
+(Pr) 222.12 193 T
+(oc. of the) 233.58 193 T
+(1993 W) 72 179 T
+(inter USENIX Conf) 108.34 179 T
+(.) 201.49 179 T
+0 F
+(, 1993, pp.) 204.49 179 T
+(29-42.) 258.49 179 T
+-0.47 ([7] R.H. Reussner) 72 150 P
+-0.47 (, \322User Manual of SKaMPI,) 157.23 150 P
+(Special Karlsruher MPI-Benchmark,) 72 136 T
+(\323) 247.45 136 T
+1 F
+(T) 255.78 136 T
+(ec) 261.35 136 T
+(h.) 271.82 136 T
+(Report) 72 122 T
+0 F
+(, Uni) 104.66 122 T
+(v) 128.36 122 T
+(ersity of Karlsruhe, 1998.) 134.18 122 T
+0 0 0 1 0 0 0 K
+FMENDPAGE
+%%EndPage: "7" 7
+%%Trailer
+%%BoundingBox: 0 0 612 792
+%%PageOrder: Ascend
+%%Pages: 7
+%%DocumentFonts: Times-Roman
+%%+ Times-Italic
+%%+ Times-Bold
+%%+ Helvetica-Bold
+%%+ Courier
+%%+ Symbol
+%%EOF

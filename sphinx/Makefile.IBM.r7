@@ -1,0 +1,66 @@
+#
+# $Log: Makefile.IBM.r7,v $
+# Revision 1.5  1999/09/21 15:59:50  bronis
+# Added make unmeasured; fixed call_*_prologue bug
+#
+# Revision 1.4  1999/09/07 17:24:37  bronis
+# Defined MPILIB_NAME in Makefile's
+#
+# Revision 1.3  1999/08/20 22:55:45  bronis
+# Added PDPTA paper, beta_email.txt
+#
+# Revision 1.2  1999/07/27 16:32:40  srtaylor
+# Moved -D flags to top level Makefile
+#
+# Revision 1.1.1.1  1999/05/11 16:50:02  srtaylor
+# CVS repository setup for sphinx
+#
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .ibm.r7.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = mpcc_r7
+CLINKER     = mpcc_r7
+OPTFLAGS    = -g
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS = $(OPTFLAGS) -DIBM -DBUILD_MPILIB_NAME=\"IBM_threaded_MPI\" ${C_FLAGS}
+
+LIBS = -lm
+
+IBM_R7_OBJS = ${SOURCE_FILES:.c=.ibm.r7.o}
+
+EXECS = ibm_r7_sphinx ibm_r7_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+ibm_r7_sphinx: $(IBM_R7_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o ibm_r7_sphinx $(IBM_R7_OBJS) $(LIBS)
+
+ibm_r7_yieldtest: yieldtest.ibm.r7.o
+	$(CLINKER) $(OPTFLAGS) -o ibm_r7_yieldtest yieldtest.ibm.r7.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.ibm.r7.o *~ PI* $(EXECS) core
+
+.c.ibm.r7.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

@@ -1,0 +1,152 @@
+@COMMENT
+
+Input file for Milepost point to point tests on snow
+
+@MACHINE
+
+8-way SMP, IBM Power3 
+ 
+@NODE 
+@NETWORK 
+
+@USER 
+@MEMORY 8192
+@MAXSTEPSDEFAULT 5
+@MAXREPDEFAULT 30
+@MINREPDEFAULT 8
+@STANDARDDEVIATIONDEFAULT 0.03
+@ITERSPERREPDEFAULT 30
+@CHUNKS 10
+@MINDIST 2
+@MAXDIST 512
+@STEPWIDTH 256
+@START 512
+@MEASUREMENTS
+
+MPI_Barrier-nodes
+{
+  Type = 18;
+  Variation = Nodes;  
+}  
+
+MPI_Barrier_barrier-nodes
+{
+  Type = 57;
+  Variation = Nodes;  
+}  
+
+MPI_Reduce-nodes
+{
+  Type = 19;
+  Variation = Nodes;  
+  Default_Message_length = 8;
+}
+
+MPI_Reduce_upper_bound-nodes
+{
+  Type = 58;
+  Variation = Nodes;  
+  Default_Message_length = 8;
+}
+
+MPI_Alltoall-nodes-short
+{
+  Type = 20;
+  Variation = Nodes;  
+  Default_Message_length = 8;
+}
+
+MPI_Scan-nodes
+{
+  Type = 21;
+  Variation = Nodes;  
+  Default_Message_length = 8;
+}  
+
+MPI_Gather-nodes-short
+{
+  Type = 33;
+  Variation = Nodes;  
+}
+
+MPI_Gather_upper_bound-nodes-short
+{
+  Type = 48;
+  Variation = Nodes;  
+}
+
+MPI_Allgather-nodes-short
+{
+  Type = 35;
+  Variation = Nodes;  
+}
+
+MPI_Allgather_barrier-nodes-short
+{
+  Type = 50;
+  Variation = Nodes;  
+}
+
+MPI_Allreduce-nodes-short
+{
+  Type = 36;
+  Variation = Nodes;  
+  Default_Message_length = 8;
+}
+
+MPI_Allreduce_barrier-nodes-short
+{
+  Type = 51;
+  Variation = Nodes;  
+  Default_Message_length = 8;
+}
+
+MPI_Gatherv-nodes-short
+{
+  Type = 37;
+  Variation = Nodes;  
+}
+
+MPI_Gatherv_upper_bound-nodes-short
+{
+  Type = 52;
+  Variation = Nodes;  
+}
+
+MPI_Allgatherv-nodes-short
+{
+  Type = 39;
+  Variation = Nodes;  
+}
+
+MPI_Allgatherv_barrier-nodes-short
+{
+  Type = 54;
+  Variation = Nodes;  
+}
+
+MPI_Alltoallv-nodes-short
+{
+  Type = 40;
+  Variation = Nodes;  
+}
+
+MPI_Alltoallv_barrier-nodes-short
+{
+  Type = 55;
+  Variation = Nodes;  
+}
+
+MPI_Reduce_scatter-nodes-short
+{
+  Type = 41;
+  Variation = Nodes;  
+}
+
+MPI_Reduce_scatter_barrier-nodes-short
+{
+  Type = 56;
+  Variation = Nodes;  
+}
+
+

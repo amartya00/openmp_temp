@@ -1,0 +1,102 @@
+This file describes the basics of using Sphinx. It focuses on the
+Pthreads tests that were the topic of a PDPTA'99 paper. The ARCH
+list is slightly dated; see the Makefile for a current list.
+
+The test suite is fairly simple to compile and run. To compile use: 
+make ARCH  where ARCH is one of: DEC, IBM, IBM_R7, SGI, SUN, or SUN_MPICH. 
+This will make two executables: xxxx_sphinx and xxxx_yieldtest, where xxxx 
+is one of: dec, ibm, ibm_r7, sgi, sun or sun_mpich. The Makefiles are 
+designed so that you can compile multiple architectures in a single directory.
+
+Most of the architecture options are self explanatory - DEC for DEC/Compaq 
+Alpha systems; SGI for SGI Origin 2000's; SUN for Sun Wildfire platforms; 
+SUN_MPICH for an MPICH version that works on other Solaris platforms in 
+addition to the Wildfire systems. IBM and IBM_R7 are versions for IBM SP2's 
+- IBM_R7 uses revision 7 of the Pthreads standard instead of the current 
+revision 10. IBM and IBM_R7 use compiler scripts available at LLNL that 
+link in the necessary libraries; similar scripts may not be available at 
+your site or may have different names. Change the compiler definition in 
+Makefile.IBM or Makefile.IBM_R7 to reflect this. We plan to add a configure 
+script to the official version that will eliminate this difficulty. 
+
+The xxxx_yieldtest program is a simple test to determine if sched_yield 
+(thr_yield on Sun platforms) works as one would naturally expect. As 
+described in the paper, it does on Sun and DEC/Compaq systems, but not on 
+the IBM. This is only important for the time slice test. The time slice 
+test using a proxy compensates for this problem on IBM systems.
+
+The xxxx_sphinx executables are the actual benchmark suite. As described 
+in the paper, our suite extends SKaMPI to measure Pthreads performance. 
+Although we have made several changes to the code and a new release of 
+SKaMPI has come out, the SKaMPI documentation is still largely applicable. 
+In particular, their Users Guide describes most of the MPI tests in Sphinx, 
+while their technical report serves as a good starting point for adding 
+tests to Sphinx. For these and other information see: 
+http://wwwipd.ira.uka.de/~skampi/welcome.html 
+
+We have included several input files; unlike SKaMPI the input file name is a 
+command line argument to Sphinx. We have substantially reduced the amount of 
+information required in the input file. Test input files that demonstrate 
+this change are:
+         
+   MPI measurements:
+         test.sphinx.old
+         test.sphinx
+         
+   Pthreads measurements:
+         test.sphinx.threads.old
+         test.sphinx.threads
+
+The * files use our new input format; the *.old files consist of the same 
+tests and are included to show how the full range of measurement input 
+options are specified. The stdout output of old.* and * should be identical. 
+Those input files are an exhaustive list of the measurements currently 
+available. However, they use few, short timings for their measurements with 
+a high STANDARDERRORDEFAULT setting, the standard error percentage of mean 
+acceptance. Thus, they do not produce reliable timings and so only 
+demonstrate that the code runs on your system. By increasing 
+ITERSPERREPDEFAULT, the iterations per timing, and MAXREPDEFAULT, the 
+number of iterations, you should be able to get timings which achieve 
+the cutoff for any of the tests. However, I recommend only using selected 
+tests in an input file for real MPI timings since the full complement can 
+take an extremely long run-time.
+
+The other input files correspond to the table in our paper:
+
+         test.sphinx.pdpta.dec
+         test.sphinx.pdpta.dec.timeslice
+         test.sphinx.pdpta.ibm
+         test.sphinx.pdpta.sgi
+         test.sphinx.pdpta.sun
+
+Note that we split the time slice test off from the other tests on the 
+DEC/Compaq systems. Our implementation of higher resolution clocks on these 
+systems is not ready for release, so most of the tests require a large number
+of iterations per timing to get reliable measurements. However, that number 
+of iterations is intolerably long for the time slice test. Our IBM numbers 
+used the IBM_R7 architecture; results are similar under revision 10 if you 
+default to system threads (using process threads causes incorrect behavior 
+for the current binding interface). Our numbers on the Sun platform used 
+the MPICH version.
+
+To run the Sun MPICH tests you would use:
+
+mpirun -np 4 sun_mpich_sphinx old.test.sphinx
+mpirun -np 4 sun_mpich_sphinx test.sphinx
+mpirun -np 1 sun_mpich_sphinx old.test.sphinx.threads
+mpirun -np 1 sun_mpich_sphinx test.sphinx.threads
+mpirun -np 1 sun_mpich_sphinx test.sphinx.pdpta.sun
+
+The command will usually vary for other architectures (poe, dmpirun, etc.).
+
+Note that you can use more tasks with the threads tests (extra tasks 
+essentially spin) and thus can mix and match MPI and threads tests. Be 
+careful about where your system locates the extra tasks. Since they spin, 
+they could interfere with your threads measurements (on our IBM systems, 
+we can get a separate node for each task and thus no interference).
+
+Please let us know what results you get. If you have a system not included in 
+our architecture list, let us know and we will try to add it (possibly with 
+your assistance). If you have any questions or difficulties or find any bugs,
+feel free to email me (bronis@llnl.gov).
+

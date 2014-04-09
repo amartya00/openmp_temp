@@ -1,0 +1,150 @@
+
+%------------------------------------------------------------------------------%
+%------------------------------ SETUP DOCUMENT --------------------------------%
+%------------------------------------------------------------------------------%
+
+\documentclass [letterpaper, 10pt, notitlepage, fleqn, oneside, 
+  landscape] {article}
+
+\makeatletter
+\newcommand{\removelatexerror}{\let\@latex@error\@gobble}
+\makeatother
+
+%----------------------------- PACKAGE INCLUSION ------------------------------%
+\usepackage[T1]{fontenc}
+\usepackage{tabularx}
+\usepackage{lipsum}
+\usepackage[compact]{titlesec}
+
+\usepackage[top=1.0cm, bottom=2.0cm, outer=1.5cm, inner=1.5cm,
+  heightrounded, marginparwidth=4.0cm, marginparsep=0.5cm]{geometry}
+
+%----------------------------- SET UP TITLE TEXT ------------------------------%
+\usepackage{titlesec}
+\usepackage{multicol}
+\titleformat*{\section}{\Large \bf}
+\titleformat*{\subsection}{\large \bf}
+\titleformat*{\subsubsection}{\large}
+\titleformat*{\paragraph}{\large}
+\titleformat*{\subparagraph}{\large}
+
+\usepackage{enumitem}
+\setlist{nolistsep}
+
+\newenvironment{Figure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+%------------------------------ PARAGRAPH SETUP -------------------------------%
+\usepackage{setspace}
+\onehalfspacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4ex}
+\setlength{\columnsep}{2.5ex}
+\expandafter\def\expandafter\normalsize\expandafter{%
+    \normalsize
+    \setlength\abovedisplayskip{1.5ex}
+    \setlength\belowdisplayskip{1.5ex}
+    \setlength\abovedisplayshortskip{1.5ex}
+    \setlength\belowdisplayshortskip{1.5ex}
+}
+
+%-------------------------- DEFINE TITLE AND AUTHOR ---------------------------%
+\title{\vspace{-5.0ex} \huge \bf \textsc{
+    Using the Provided Benchmarks
+    } \vspace{-1.5ex} }
+\author{\large \bf \textsc{Dylan Rudolph - \today} }
+\date{\vspace{-6.6ex}}
+
+
+%------------------------------------------------------------------------------%
+%------------------------------ START DOCUMENT --------------------------------%
+%------------------------------------------------------------------------------%
+
+\begin{document}
+
+\setlength{\pdfpagewidth}{11in}
+\setlength{\pdfpageheight}{8.5in}
+
+\maketitle
+\rule{\textwidth}{1pt}
+\vspace{-0.50cm}
+\begin{multicols}{2}
+
+\section{Summary}
+
+The goal of the files in this set is do automate the benchmark-gathering process
+for any architecture which supports Python 2, has a fairly recent version of GCC, 
+and runs a GNU/Linux or popular Unix-like operating system. Provided that the 
+system is set up properly, only one command line call will be necessary to 
+compile, run, and save the results of, all of the benchmarks.
+
+\section{Dependencies} 
+
+The following are necessary for proper operation:
+\begin{itemize}[leftmargin=0.6cm]
+  \item A recent version of GCC.
+  \item A version of the OpenMP standard, which may come bundled with GCC.
+  \item The FFTW library and development headers (Version 3), along with 
+    the FFTW support for OpenMP.
+  \item Some version of Python 2, where 2.7 is preferred.
+  \item An operating system which supports GNU's Make functionality.
+\end{itemize}
+
+\section{Directory Map}
+
+The main directory contains (1) the Python file \texttt{dylanbench.py} which 
+does most of the automation process, (2) a set of Python scripts which call 
+\texttt{dylanbench.py} to perform each benchmark, and (3) a shell script 
+\texttt{do\_everything.sh} which calls each of the individual Python scripts.
+
+The folder \texttt{Benchmarks} contains all of the relevant benchmarks. 
+Inside of this folder there is a makefile which builds all of the benchmarks.
+Inside of each of the individual benchmark folders there is also an 
+individual makefile, along with the source code. If you do not want to compile 
+all of the benchmarks, the individual makefiles can be called.
+
+The folder \texttt{Savefiles} contains the \texttt{.bmark} files and a 
+subfolder called \texttt{CSVs} which contains the output \texttt{.csv} 
+files.
+
+\section{Usage}
+
+If all is well on the system, you need only call \texttt{sh do\_everything.sh} .
+
+Alternatively, individual benchmarks can be compiled 
+by calling \texttt{make} in the folder containing the benchmark. Also, 
+individual benchmarks can be run by calling \texttt{python nameofbenchmark.py}.
+
+\subsection{Notes}
+
+\begin{itemize}[leftmargin=0.6cm]
+  \item Make sure to change the number of threads for each of the OpenMP 
+    benchmarks to match it for the platform.
+  \item Ensure that the compiler optimization flags do not optimize out 
+    blocks of code for the system of interest. 
+\end{itemize}
+
+\section{Benchmark Terminology}
+
+Any benchmark appended with ``naive'' is a benchmark which has no compiler 
+optimizations and is implemented in the most intuitive way. Any benchmark 
+appended with ``OneThread'' is one which has been optimized (by compiler or 
+algorithm) to make the best use of a single core on a host system. Finally, 
+any benchmark labeled ``OMP'' is one which has been optimized and made parallel 
+with OpenMP. 
+
+\section{Save Files}
+
+The \texttt{.bmark} format is specified by the \texttt{dylanbench.py} 
+file, and contains most any important information about a benchmarking run. 
+Some of the data from the \texttt{.bmark} format can be exported to a 
+\texttt{.csv} file. This is done automatically by the accompanying 
+Python scripts. Note that the \texttt{.csv} files contain less information 
+than the \texttt{.bmark} files, so the \texttt{.bmark} should be considered 
+the primary storage. Exporting from \texttt{.bmark} to \texttt{.csv} can be done 
+by calling the relevant function from \texttt{dylanbench.py}.
+
+\end{multicols}
+\end{document}
+

@@ -1,0 +1,316 @@
+(dp0
+S'os'
+p1
+S'Linux-3.7.10-1.16-desktop-x86_64-with-SuSE-12.3-x86_64'
+p2
+sS'data'
+p3
+(dp4
+S'DOT-OneThread'
+p5
+(dp6
+S'items'
+p7
+(lp8
+S'RunF64'
+p9
+aS'RunF32'
+p10
+aS'RunI64'
+p11
+aS'RunI32'
+p12
+asS'ticks'
+p13
+(lp14
+I4
+aI8
+aI16
+aI32
+aI64
+aI128
+aI256
+aI512
+aI1024
+aI2048
+aI4096
+aI8192
+aI16384
+aI32768
+aI65536
+aI131072
+aI262144
+asS'call strings'
+p15
+(lp16
+S'Benchmarks/DOT-OneThread/dot_onethread 4'
+p17
+aS'Benchmarks/DOT-OneThread/dot_onethread 8'
+p18
+aS'Benchmarks/DOT-OneThread/dot_onethread 16'
+p19
+aS'Benchmarks/DOT-OneThread/dot_onethread 32'
+p20
+aS'Benchmarks/DOT-OneThread/dot_onethread 64'
+p21
+aS'Benchmarks/DOT-OneThread/dot_onethread 128'
+p22
+aS'Benchmarks/DOT-OneThread/dot_onethread 256'
+p23
+aS'Benchmarks/DOT-OneThread/dot_onethread 512'
+p24
+aS'Benchmarks/DOT-OneThread/dot_onethread 1024'
+p25
+aS'Benchmarks/DOT-OneThread/dot_onethread 2048'
+p26
+aS'Benchmarks/DOT-OneThread/dot_onethread 4096'
+p27
+aS'Benchmarks/DOT-OneThread/dot_onethread 8192'
+p28
+aS'Benchmarks/DOT-OneThread/dot_onethread 16384'
+p29
+aS'Benchmarks/DOT-OneThread/dot_onethread 32768'
+p30
+aS'Benchmarks/DOT-OneThread/dot_onethread 65536'
+p31
+aS'Benchmarks/DOT-OneThread/dot_onethread 131072'
+p32
+aS'Benchmarks/DOT-OneThread/dot_onethread 262144'
+p33
+asS'times'
+p34
+(lp35
+(lp36
+F0.0
+aF0.0
+aF0.0
+aF0.0
+aa(lp37
+F1e-08
+aF1e-08
+aF1e-08
+aF1e-08
+aa(lp38
+F1e-08
+aF1e-08
+aF1e-08
+aF1e-08
+aa(lp39
+F3e-08
+aF3e-08
+aF3e-08
+aF3e-08
+aa(lp40
+F5e-08
+aF5e-08
+aF5e-08
+aF5e-08
+aa(lp41
+F1e-07
+aF1e-07
+aF9e-08
+aF9e-08
+aa(lp42
+F2e-07
+aF2e-07
+aF1.6e-07
+aF1.7e-07
+aa(lp43
+F4.2e-07
+aF4e-07
+aF3e-07
+aF3.7e-07
+aa(lp44
+F8.3e-07
+aF8.1e-07
+aF6e-07
+aF6.6e-07
+aa(lp45
+F1.68e-06
+aF1.65e-06
+aF1.22e-06
+aF1.32e-06
+aa(lp46
+F3.39e-06
+aF3.28e-06
+aF2.48e-06
+aF2.64e-06
+aa(lp47
+F6.9e-06
+aF6.51e-06
+aF4.92e-06
+aF5.22e-06
+aa(lp48
+F1.371e-05
+aF1.313e-05
+aF1.004e-05
+aF1.052e-05
+aa(lp49
+F2.735e-05
+aF2.644e-05
+aF2.088e-05
+aF2.114e-05
+aa(lp50
+F5.459e-05
+aF5.242e-05
+aF4.184e-05
+aF4.247e-05
+aa(lp51
+F0.00010672
+aF0.00010951
+aF8.368e-05
+aF8.436e-05
+aa(lp52
+F0.00021839
+aF0.00021031
+aF0.00017301
+aF0.00017029
+aassS'DOT-Naive'
+p53
+(dp54
+g7
+g8
+sg13
+g14
+sg15
+(lp55
+S'Benchmarks/DOT-Naive/dot_naive 4'
+p56
+aS'Benchmarks/DOT-Naive/dot_naive 8'
+p57
+aS'Benchmarks/DOT-Naive/dot_naive 16'
+p58
+aS'Benchmarks/DOT-Naive/dot_naive 32'
+p59
+aS'Benchmarks/DOT-Naive/dot_naive 64'
+p60
+aS'Benchmarks/DOT-Naive/dot_naive 128'
+p61
+aS'Benchmarks/DOT-Naive/dot_naive 256'
+p62
+aS'Benchmarks/DOT-Naive/dot_naive 512'
+p63
+aS'Benchmarks/DOT-Naive/dot_naive 1024'
+p64
+aS'Benchmarks/DOT-Naive/dot_naive 2048'
+p65
+aS'Benchmarks/DOT-Naive/dot_naive 4096'
+p66
+aS'Benchmarks/DOT-Naive/dot_naive 8192'
+p67
+aS'Benchmarks/DOT-Naive/dot_naive 16384'
+p68
+aS'Benchmarks/DOT-Naive/dot_naive 32768'
+p69
+aS'Benchmarks/DOT-Naive/dot_naive 65536'
+p70
+aS'Benchmarks/DOT-Naive/dot_naive 131072'
+p71
+aS'Benchmarks/DOT-Naive/dot_naive 262144'
+p72
+asg34
+(lp73
+(lp74
+F2e-08
+aF2e-08
+aF1e-08
+aF1e-08
+aa(lp75
+F2e-08
+aF2e-08
+aF2e-08
+aF2e-08
+aa(lp76
+F4e-08
+aF4e-08
+aF4e-08
+aF4e-08
+aa(lp77
+F9e-08
+aF8e-08
+aF8e-08
+aF8e-08
+aa(lp78
+F1.7e-07
+aF1.7e-07
+aF1.7e-07
+aF1.7e-07
+aa(lp79
+F3.3e-07
+aF3.2e-07
+aF3.2e-07
+aF3.2e-07
+aa(lp80
+F6.5e-07
+aF6.4e-07
+aF6.2e-07
+aF6.2e-07
+aa(lp81
+F1.27e-06
+aF1.23e-06
+aF1.22e-06
+aF1.21e-06
+aa(lp82
+F2.52e-06
+aF2.48e-06
+aF2.52e-06
+aF2.42e-06
+aa(lp83
+F5.1e-06
+aF4.91e-06
+aF4.89e-06
+aF4.86e-06
+aa(lp84
+F1.022e-05
+aF1.013e-05
+aF9.82e-06
+aF9.72e-06
+aa(lp85
+F2.002e-05
+aF1.972e-05
+aF1.95e-05
+aF1.936e-05
+aa(lp86
+F4.047e-05
+aF4.01e-05
+aF3.986e-05
+aF3.944e-05
+aa(lp87
+F8.283e-05
+aF7.98e-05
+aF7.868e-05
+aF7.819e-05
+aa(lp88
+F0.00016197
+aF0.00015956
+aF0.00015753
+aF0.0001566
+aa(lp89
+F0.00032177
+aF0.0003172
+aF0.00031825
+aF0.00031062
+aa(lp90
+F0.00065127
+aF0.00063593
+aF0.00063308
+aF0.00062247
+aasssS'month'
+p91
+I9
+sS'names'
+p92
+(lp93
+g53
+ag5
+asS'year'
+p94
+I2013
+sS'arch'
+p95
+S'x86_64'
+p96
+sS'day'
+p97
+I9
+s.

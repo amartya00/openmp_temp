@@ -1,0 +1,914 @@
+@COMMENT
+You can place any comments here...
+
+The following three fields are like comments but are included in the output...
+
+Input file to debug MPI tests
+
+@MACHINE 
+@NODE 
+@NETWORK 
+@USER 
+
+Your name and email address...
+
+@MEMORY 256 
+@MAXSTEPSDEFAULT 5
+@MAXREPDEFAULT 10
+@MINREPDEFAULT 4
+@STANDARDDEVIATIONDEFAULT 0.50
+@ITERSPERREPDEFAULT 3
+@CHUNKS 10
+@MINDIST 2
+@MAXDIST 512
+@MAXOVERLAP 500
+@MEASUREMENTS
+
+MPI_Send-MPI_Recv
+{
+  Type = 1;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Send-MPI_Iprobe_Recv
+{
+  Type = 2;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Send-MPI_Irecv
+{
+  Type = 3;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Send-MPI_Recv_with_Any_Tag
+{
+  Type = 4;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Ssend-MPI_Recv
+{
+  Type = 5;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Isend-MPI_Recv
+{
+  Type = 6;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Bsend-MPI_Recv
+{
+  Type = 7;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Sendrecv
+{
+  Type = 8;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Sendrecv_replace
+{
+  Type = 9;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Waitsome-nodes
+{
+  Type = 10;
+  Variation = Nodes;  
+}
+
+MPI_Waitsome-chunks
+{
+  Type = 10;
+  Variation = Chunks;  
+  Start_Argument = 1;   
+  End_Argument = 40;  
+  Stepwidth = 2.0; 
+  Min_Distance = 1;  
+  Max_Distance = 2;  
+}
+
+MPI_Waitsome-length
+{
+  Type = 10;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Waitany-length
+{
+  Type = 11;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Recv_Any_Source-length
+{
+  Type = 12;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Send-length
+{
+  Type = 13;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+ 
+MPI_Ssend-length
+{ 
+  Type = 14;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}  
+
+MPI_Isend-length
+{
+  Type = 15;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Bsend-length
+{
+  Type = 16;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Default_Chunks = 1;
+  Stepwidth = 1.414213562; 
+}
+
+MPI_Isend_Recv_overlap-length
+{
+  Type = 61;
+  Variation = Overlap;  
+  Scale = Fixed_linear;  
+  Start = 10;
+  End = 100;
+  Stepwidth = 10; 
+}
+
+MPI_Isend_Recv_both_overlaps-length
+{
+  Type = 62;
+  Variation = Second_Overlap;  
+  Scale = Fixed_linear;  
+  Start = 10;
+  End = 100;
+  Stepwidth = 10; 
+}
+
+MPI_Irecv_Send_overlap-length
+{
+  Type = 63;
+  Variation = Overlap;  
+  Scale = Fixed_linear;  
+  Start = 10;
+  End = 100;
+  Stepwidth = 10; 
+}
+
+MPI_Bcast-nodes-short
+{
+  Type = 17;
+  Variation = Nodes;  
+}
+
+MPI_Bcast-nodes-long
+{
+  Type = 17;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+
+MPI_Bcast-length
+{
+  Type = 17;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Bcast_with_Acker-ACKer-short
+{
+  Type = 46;
+  Variation = Nodes ACKer;  
+}
+
+MPI_Bcast_with_Acker-ACKer-long
+{
+  Type = 46;
+  Variation = Nodes ACKer;  
+  Default_Message_length = 65536;
+}
+
+MPI_Bcast_barrier-nodes-short
+{
+  Type = 42;
+  Variation = Nodes;  
+}
+
+MPI_Bcast_barrier-nodes-long
+{
+  Type = 42;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Bcast_round-nodes-short
+{
+  Type = 44;
+  Variation = Nodes;  
+}
+
+MPI_Bcast_round-nodes-long
+{
+  Type = 44;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Bcast_with_acks-nodes-short
+{
+  Type = 45;
+  Variation = Nodes;  
+}
+
+MPI_Bcast_with_acks-nodes-long
+{
+  Type = 45;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Barrier-nodes
+{
+  Type = 18;
+  Variation = Nodes;  
+}  
+
+MPI_Barrier_barrier-nodes
+{
+  Type = 57;
+  Variation = Nodes;  
+}  
+
+MPI_Reduce_scale-nodes
+{
+  Type = 64;
+  Variation = Nodes;  
+}
+
+MPI_Reduce_scale-length
+{
+  Type = 64;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Reduce-nodes
+{
+  Type = 19;
+  Variation = Nodes;  
+}
+
+MPI_Reduce-length
+{
+  Type = 19;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Reduce_upper_bound-nodes
+{
+  Type = 58;
+  Variation = Nodes;  
+}
+
+MPI_Reduce_upper_bound-length
+{
+  Type = 58;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Alltoall-nodes-short
+{
+  Type = 20;
+  Variation = Nodes;  
+}
+
+MPI_Alltoall-nodes-long
+{
+  Type = 20;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Alltoall-length
+{
+  Type = 20;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;   
+}
+
+MPI_Alltoall_barrier-nodes-short
+{
+  Type = 47;
+  Variation = Nodes;  
+}
+
+MPI_Alltoall_barrier-nodes-long
+{
+  Type = 47;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Alltoall_barrier-length
+{
+  Type = 47;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;   
+}
+
+MPI_Scan_with_Acker-ACKer-short
+{
+  Type = 70;
+  Variation = Nodes ACKer;  
+}
+
+MPI_Scan_with_Acker-ACKer-short-sufficient
+{
+  Type = 70;
+  Variation = Nodes ACKer;  
+  Max_Steps = Default_value 1;
+}
+
+MPI_Scan-nodes
+{
+  Type = 21;
+  Variation = Nodes;  
+}  
+
+MPI_Scan-length
+{
+  Type = 21;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Gather_scale-nodes-short
+{
+  Type = 65;
+  Variation = Nodes;  
+}
+
+MPI_Gather_scale-nodes-long
+{
+  Type = 65;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Gather_scale-length
+{
+  Type = 65;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Gather-nodes-short
+{
+  Type = 33;
+  Variation = Nodes;  
+}
+
+MPI_Gather-nodes-long
+{
+  Type = 33;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Gather-length
+{
+  Type = 33;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Gather_upper_bound-nodes-short
+{
+  Type = 48;
+  Variation = Nodes;  
+}
+
+MPI_Gather_upper_bound-nodes-long
+{
+  Type = 48;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Gather_upper_bound-length
+{
+  Type = 48;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Scatter-nodes-short
+{
+  Type = 34;
+  Variation = Nodes;  
+}
+
+MPI_Scatter-nodes-long
+{
+  Type = 34;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Scatter-length
+{
+  Type = 34;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Scatter_with_Acker-ACKer-short
+{
+  Type = 49;
+  Variation = Nodes ACKer;  
+}
+
+MPI_Scatter_with_Acker-ACKer-long
+{
+  Type = 49;
+  Variation = Nodes ACKer;  
+  Default_Message_length = 65536;
+}
+
+MPI_Allgather-nodes-short
+{
+  Type = 35;
+  Variation = Nodes;  
+}
+
+MPI_Allgather-nodes-long
+{
+  Type = 35;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Allgather-length
+{
+  Type = 35;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Allgather_barrier-nodes-short
+{
+  Type = 50;
+  Variation = Nodes;  
+}
+
+MPI_Allgather_barrier-nodes-long
+{
+  Type = 50;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Allgather_barrier-length
+{
+  Type = 50;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Allreduce-nodes-short
+{
+  Type = 36;
+  Variation = Nodes;  
+}
+
+MPI_Allreduce-nodes-long
+{
+  Type = 36;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Allreduce-length
+{
+  Type = 36;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Allreduce_barrier-nodes-short
+{
+  Type = 51;
+  Variation = Nodes;  
+}
+
+MPI_Allreduce_barrier-nodes-long
+{
+  Type = 51;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Allreduce_barrier-length
+{
+  Type = 51;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Gatherv_scale-nodes-short
+{
+  Type = 66;
+  Variation = Nodes;  
+}
+
+MPI_Gatherv_scale-nodes-long
+{
+  Type = 66;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Gatherv_scale-length
+{
+  Type = 66;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Gatherv-nodes-short
+{
+  Type = 37;
+  Variation = Nodes;  
+}
+
+MPI_Gatherv-nodes-long
+{
+  Type = 37;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Gatherv-length
+{
+  Type = 37;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Gatherv_upper_bound-nodes-short
+{
+  Type = 52;
+  Variation = Nodes;  
+}
+
+MPI_Gatherv-nodes_upper_bound-long
+{
+  Type = 52;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Gatherv_upper_bound-length
+{
+  Type = 52;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Scatterv-nodes-short
+{
+  Type = 38;
+  Variation = Nodes;  
+}
+
+MPI_Scatterv-nodes-long
+{
+  Type = 38;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Scatterv-length
+{
+  Type = 38;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Scatterv_with_Acker-ACKer-short
+{
+  Type = 53;
+  Variation = Nodes ACKer;  
+}
+
+MPI_Scatterv_with_Acker-ACKer-long
+{
+  Type = 53;
+  Variation = Nodes ACKer;  
+  Default_Message_length = 65536;
+}
+
+MPI_Allgatherv-nodes-short
+{
+  Type = 39;
+  Variation = Nodes;  
+}
+
+MPI_Allgatherv-nodes-long
+{
+  Type = 39;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Allgatherv-length
+{
+  Type = 39;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Allgatherv_barrier-nodes-short
+{
+  Type = 54;
+  Variation = Nodes;  
+}
+
+MPI_Allgatherv_barrier-nodes-long
+{
+  Type = 54;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Allgatherv_barrier-length
+{
+  Type = 54;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Alltoallv-nodes-short
+{
+  Type = 40;
+  Variation = Nodes;  
+}
+
+MPI_Alltoallv-nodes-long
+{
+  Type = 40;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Alltoallv-length
+{
+  Type = 40;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Alltoallv_barrier-nodes-short
+{
+  Type = 55;
+  Variation = Nodes;  
+}
+
+MPI_Alltoallv_barrier-nodes-long
+{
+  Type = 55;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Alltoallv_barrier-length
+{
+  Type = 55;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Reduce_scatter-nodes-short
+{
+  Type = 41;
+  Variation = Nodes;  
+}
+
+MPI_Reduce_scatter-nodes-long
+{
+  Type = 41;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Reduce_scatter-length
+{
+  Type = 41;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Reduce_scatter_barrier-nodes-short
+{
+  Type = 56;
+  Variation = Nodes;  
+}
+
+MPI_Reduce_scatter_barrier-nodes-long
+{
+  Type = 56;
+  Variation = Nodes;  
+  Default_Message_length = 65536;
+}
+
+MPI_Reduce_scatter_barrier-length
+{
+  Type = 56;
+  Variation = Length;  
+  Scale = Dynamic_log;  
+  Stepwidth = 1.414213562;    
+}
+
+MPI_Comm_split_scale-nodes
+{
+  Type = 67;
+  Variation = Nodes;  
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+}
+
+MPI_Comm_split-nodes
+{
+  Type = 22;
+  Variation = Nodes;  
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+}
+
+MPI_Comm_dup_scale-nodes
+{
+  Type = 68;
+  Variation = Nodes;  
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+}
+
+MPI_Comm_dup-nodes
+{
+  Type = 69;
+  Variation = Nodes;  
+  Max_Steps = 1;   
+  Min_Distance = 0;  
+  Max_Distance = 0;      
+}
+
+MPI_Wtime
+{
+  Type = 24;
+}
+
+MPI_Commrank 
+{
+  Type = 25;
+}
+
+MPI_Commsize
+{
+  Type = 26;
+}
+
+MPI_Iprobe 
+{
+  Type = 27;
+}
+
+MPI_attach
+{ 
+  Type = 28;
+}
+
+p2p_dummy
+{ 
+  Type = 29;
+}
+
+mw_dummy
+{ 
+  Type = 30;
+}
+
+col_dummy
+{ 
+  Type = 31;
+}
+
+col_over_nodes_dummy
+{ 
+  Type = 59;
+  Variation = Nodes;
+}
+
+simple_dummy
+{ 
+  Type = 32;
+}
+
+simple_inside_dummy
+{ 
+  Type = 131;
+}
+
+p2p_overlap
+{ 
+  Type = 60;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

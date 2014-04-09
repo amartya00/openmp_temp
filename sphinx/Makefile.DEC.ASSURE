@@ -1,0 +1,57 @@
+#
+# $log$
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .dec.assure.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = newassurec
+CLINKER     = newassurec
+#OPTFLAGS    = -O3
+OPTFLAGS    = -g +K0 -WApname=sphinx_assure_dec
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  =  $(OPTFLAGS) -DDEC -DBUILD_MPILIB_NAME=\"DEC_MPI\" \
+                                                -D_HAVE_OMP_ $(C_FLAGS)
+
+
+LIBS = -lm -lmpi -lrt -pthread -lmach
+
+DEC_ASSURE_OBJS = ${SOURCE_FILES:.c=.dec.assure.o}
+
+EXECS = dec_assure_sphinx dec_assure_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+dec_assure_sphinx: $(DEC_ASSURE_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o dec_assure_sphinx $(DEC_ASSURE_OBJS) $(LIBS)
+
+dec_assure_yieldtest: yieldtest.dec.assure.o
+	$(CLINKER) $(OPTFLAGS) -o dec_assure_yieldtest \
+                                         yieldtest.dec.assure.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.dec.assure.o *~ PI* $(EXECS) core \
+                    sphinx_assure_dec.prj sphinx_assure_dec.agi \
+                         sphinx_assure_dec.sav.kdd sphinx_assure_dec.kdd
+
+.c.dec.assure.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

@@ -1,0 +1,50 @@
+@COMMENT
+
+Input file for Milepost point to point tests on snow
+
+@MACHINE
+
+8-way SMP, IBM Power3 
+ 
+@NODE 
+@NETWORK 
+
+@USER 
+@MEMORY 8192
+@MAXSTEPSDEFAULT 32
+@MAXREPDEFAULT 30
+@MINREPDEFAULT 8
+@STANDARDDEVIATIONDEFAULT 0.03
+@ITERSPERREPDEFAULT 30
+@CHUNKS 10
+@MINDIST 2
+@MAXDIST 512
+@STEPWIDTH 3
+@START 3
+@CORRECT yes
+@MEASUREMENTS
+
+MPI_Reduce_scale-nodes
+{
+  Type = 64;
+  Variation = Nodes;  
+}
+
+MPI_Scan_with_Acker-ACKer-short-sufficient
+{
+  Type = 70;
+  Variation = Nodes ACKer;  
+  Max_Steps = Default_value 1;
+}
+
+MPI_Gather_scale-nodes-short
+{
+  Type = 65;
+  Variation = Nodes;  
+}
+
+MPI_Gatherv_scale-nodes-short
+{
+  Type = 66;
+  Variation = Nodes;  
+}

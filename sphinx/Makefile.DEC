@@ -1,0 +1,51 @@
+#
+# $log$
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .dec.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = cc
+CLINKER     = cc
+OPTFLAGS    = -g
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  =  $(OPTFLAGS) -DDEC -DBUILD_MPILIB_NAME=\"DEC_MPI\" $(C_FLAGS)
+
+LIBS = -lm -lmpi -lrt -pthread -lmach
+
+DEC_OBJS = ${SOURCE_FILES:.c=.dec.o}
+
+EXECS = dec_sphinx dec_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+dec_sphinx: $(DEC_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o dec_sphinx $(DEC_OBJS) $(LIBS)
+
+dec_yieldtest: yieldtest.dec.o
+	$(CLINKER) $(OPTFLAGS) -o dec_yieldtest yieldtest.dec.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.dec.o *~ PI* $(EXECS) core
+
+.c.dec.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+import dylanbench
+
+Prof = dylanbench.Profiler(things_to_time=['RunF64','RunF32','RunI64','RunI32'],
+                           time_units='seconds')
+
+Args = [[str(2**i)] for i in range(2, 11)]
+Ticks = [2**i for i in range(2, 11)]
+
+Prof.run("MM-Naive", "Benchmarks/MM-Naive/mm_naive", Args, Ticks, n=1)
+Prof.run("MM-OneThread", "Benchmarks/MM-OneThread/mm_onethread", Args, Ticks, n=1)
+Prof.run("MM-OpenMP", "Benchmarks/MM-OMP/mm_omp", Args, Ticks, n=1)
+
+Prof.saveToFile("Savefiles/MM.bmark")
+FILE = Prof.openFile("Savefiles/MM.bmark")
+
+Prof.exportToCSV(FILE, "MM-OpenMP", "Savefiles/CSVs/mm-omp.csv")
+Prof.exportToCSV(FILE, "MM-OneThread", "Savefiles/CSVs/mm-onethread.csv")
+Prof.exportToCSV(FILE, "MM-Naive", "Savefiles/CSVs/mm-naive.csv")

@@ -1,0 +1,69 @@
+#
+# $log$
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .dec.prun.omp.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = cc
+CLINKER     = cc
+OPTFLAGS    = -g -omp
+#OPTFLAGS    = -O3 -omp
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  =  $(OPTFLAGS) -DDEC -DBUILD_MPILIB_NAME=\"DEC_PRUN_MPI\" \
+                                                -D_HAVE_OMP_ $(C_FLAGS)
+
+LIBS = -lm -lmpi -lelan -lelan3 -lrmscall -lmach
+
+DEC_PRUN_OMP_OBJS = ${SOURCE_FILES:.c=.dec.prun.omp.o}
+
+EXECS = dec_prun_omp_sphinx dec_prun_omp_yieldtest dec_prun_omp_bug
+
+#for now, prun has 16 character executable name limit...
+CPEXECS = dpo_sphinx dpo_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+dec_prun_omp_sphinx: real_dec_prun_omp_sphinx
+	@-/bin/cp -f dec_prun_omp_sphinx dpo_sphinx
+
+real_dec_prun_omp_sphinx: $(DEC_PRUN_OMP_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o dec_prun_omp_sphinx \
+                                               $(DEC_PRUN_OMP_OBJS) $(LIBS)
+
+dec_prun_omp_yieldtest: real_dec_prun_omp_yieldtest
+	@-/bin/cp -f dec_prun_omp_yieldtest dpo_yieldtest
+
+real_dec_prun_omp_yieldtest: yieldtest.dec.prun.omp.o
+	$(CLINKER) $(OPTFLAGS) -o dec_prun_omp_yieldtest \
+                                           yieldtest.dec.prun.omp.o $(LIBS)
+
+dec_prun_omp_bug: dec_omp_bug.dec.prun.omp.o
+	$(CLINKER) $(OPTFLAGS) -o dec_prun_omp_bug \
+                                         dec_omp_bug.dec.prun.omp.o $(LIBS)
+
+
+clean:
+	@-/bin/rm -f *.dec.prun.omp.o *~ PI* $(EXECS) $(CPEXECS) core
+
+.c.dec.prun.omp.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

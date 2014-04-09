@@ -1,0 +1,55 @@
+#
+# $log$
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .dec.guide.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = guidec
+CLINKER     = guidec
+#OPTFLAGS    = -O3
+OPTFLAGS    = -g +K0
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  =  $(OPTFLAGS) -DDEC -DBUILD_MPILIB_NAME=\"DEC_MPI\" \
+                                                -D_HAVE_OMP_ $(C_FLAGS)
+
+
+LIBS = -lm -lmpi -lrt -pthread -lmach
+
+DEC_GUIDE_OBJS = ${SOURCE_FILES:.c=.dec.guide.o}
+
+EXECS = dec_guide_sphinx dec_guide_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+dec_guide_sphinx: $(DEC_GUIDE_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o dec_guide_sphinx $(DEC_GUIDE_OBJS) $(LIBS)
+
+dec_guide_yieldtest: yieldtest.dec.guide.o
+	$(CLINKER) $(OPTFLAGS) -o dec_guide_yieldtest \
+                                         yieldtest.dec.guide.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.dec.guide.o *~ PI* $(EXECS) core
+
+.c.dec.guide.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+

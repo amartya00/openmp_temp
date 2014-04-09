@@ -1,0 +1,30 @@
+@COMMENT
+Input file for PDPTA Digital Pthreads tests
+
+@MACHINE 
+Digital/Compaq AlphaServer 4100 cluster
+@NODE 
+4-way SMP, Alpha ev5 533 MHz
+@NETWORK 
+@USER 
+
+Your name and email address...
+
+@MEMORY 256
+@MAXSTEPSDEFAULT 2
+@MAXREPDEFAULT 15
+@MINREPDEFAULT 8
+@STANDARDDEVIATIONDEFAULT 0.03
+@CORRECT_FOR_OVERHEAD yes
+@ITERSPERREPDEFAULT 1000
+@MEASUREMENTS
+
+simple_dummy
+{ 
+  Type = 32;
+}
+
+Pthread_timeslice
+{
+  Type = 108;
+}

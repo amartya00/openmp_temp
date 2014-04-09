@@ -1,0 +1,58 @@
+#
+# $log$
+#
+
+.SUFFIXES:
+.SUFFIXES: .c .f .dec.prun.o
+ 
+srcdir = .
+ 
+ALL: default
+
+CC          = cc
+CLINKER     = cc
+OPTFLAGS    = -g
+
+MAKE        = make
+
+SHELL = /bin/sh
+
+CFLAGS  =  $(OPTFLAGS) -DDEC -DBUILD_MPILIB_NAME=\"DEC_PRUN_MPI\" $(C_FLAGS)
+
+LIBS = -lm -lmpi -lelan -lelan3 -lrmscall -lmach -pthread
+
+DEC_PRUN_OBJS = ${SOURCE_FILES:.c=.dec.prun.o}
+
+EXECS = dec_prun_sphinx dec_prun_yieldtest
+
+#for now, prun has 16 character executable name limit...
+CPEXECS = dp_yieldtest
+
+default: $(EXECS)
+
+linktest: default clean
+
+all: default
+
+dec_prun_sphinx: $(DEC_PRUN_OBJS)
+	$(CLINKER) $(OPTFLAGS) -o dec_prun_sphinx $(DEC_PRUN_OBJS) $(LIBS)
+
+dec_prun_yieldtest: real_dec_prun_yieldtest
+	@-/bin/cp -f dec_prun_yieldtest dp_yieldtest
+
+real_dec_prun_yieldtest: yieldtest.dec.prun.o
+	$(CLINKER) $(OPTFLAGS) -o dec_prun_yieldtest \
+                                              yieldtest.dec.prun.o $(LIBS)
+
+clean:
+	@-/bin/rm -f *.dec.prun.o *~ PI* $(EXECS) $(CPEXECS) core
+
+.c.dec.prun.o:
+	$(CC) $(CFLAGS) -o $@ -c $*.c
+
+
+
+
+
+
+
