@@ -1,0 +1,38 @@
+c6678_omp.zip: Platform.xdc
+Platform.xdc:
+c6678_omp.zip: Platform.xs
+Platform.xs:
+c6678_omp.zip: config.bld
+config.bld:
+c6678_omp.zip: package/.vers_b150
+package/.vers_b150:
+c6678_omp.zip: package/.vers_g180
+package/.vers_g180:
+c6678_omp.zip: package/.vers_r170
+package/.vers_r170:
+c6678_omp.zip: package/.xdc-y30
+package/.xdc-y30:
+c6678_omp.zip: package/build.cfg
+package/build.cfg:
+c6678_omp.zip: package/c6678.omp.ccs
+package/c6678.omp.ccs:
+c6678_omp.zip: package/c6678.omp.sch
+package/c6678.omp.sch:
+c6678_omp.zip: package/c6678_omp.class
+package/c6678_omp.class:
+c6678_omp.zip: package/c6678_omp.java
+package/c6678_omp.java:
+c6678_omp.zip: package/package.bld.xml
+package/package.bld.xml:
+c6678_omp.zip: package/package.defs.h
+package/package.defs.h:
+c6678_omp.zip: package/package.ext.xml
+package/package.ext.xml:
+c6678_omp.zip: package/package.rel.dot
+package/package.rel.dot:
+c6678_omp.zip: package/package_c6678.omp.c
+package/package_c6678.omp.c:
+c6678_omp.zip: package.bld
+package.bld:
+c6678_omp.zip: package.xdc
+package.xdc:

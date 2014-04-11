@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./src/corner_turn.obj" -l"libc.a" 

@@ -1,0 +1,11 @@
+nthreads 8
+fft1d_1
+fft1d_2
+fft1d_3
+fft1d_4
+fft1d_5
+fft2d_1
+fft2d_2
+fft2d_3
+fft2d_4
+fft2d_5

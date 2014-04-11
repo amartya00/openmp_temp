@@ -1,0 +1,132 @@
+strsm L U N N 32 8 1.9
+strsm L U N n 64 16 1.9
+strsm L U N N  256 1024 1.9
+strsm l U N N 512 1016 1.9
+strsm L u n U 1024 1024 0.6  1.0
+strsm l U N N 992 32 1.9
+strsm L U N u 32 992 1.9
+strsm l u N N 1024 1024 1.9
+strsm L U n u 1024 256 1.9
+strsm L U N N 256 1024 1.9
+
+strsm L L T n 32 8 1.9
+strsm l l T N 64 16 1.9
+strsm L L T N  256 1024 1.9
+strsm L l T u 512 1016 1.9
+strsm L L T N 1024 1024 0.6  1.0
+strsm L L t u 992 32 1.9
+strsm L L T N 32 992 1.9
+strsm l L t U 1024 1024 1.9
+strsm L L T N 1024 256 1.9
+strsm L L T N 256 1024 1.9
+
+strsm L L C N 32 8 1.9
+strsm l L C n 64 16 1.9
+strsm L L C N  256 1024 1.9
+strsm L l c N 512 1016 1.9
+strsm l L C N 1024 1024 0.6  1.0
+strsm L L C N 992 32 1.9
+strsm l l C N 32 992 1.9
+strsm L L c U 1024 1024 1.9
+strsm L L C N 1024 256 1.9
+strsm L L C u 256 1024 1.9
+
+strsm r L N N 32 8 1.9
+strsm r L N u 64 16 1.9
+strsm R l N N  256 1024 1.9
+strsm R l N u 512 1016 1.9
+strsm R L n n 1024 1024 0.6  1.0
+strsm R L N N 992 32 1.9
+strsm R L n U 32 992 1.9
+strsm R L N N 1024 1024 1.9
+strsm R L N N 1024 256 1.9
+strsm R L N N 256 1024 1.9
+
+strsm r U T N 32 8 1.9
+strsm R u t n 64 16 1.9
+strsm r U T N  256 1024 1.9
+strsm R U T u 512 1016 1.9
+strsm r u T U 1024 1024 0.6  1.0
+strsm R U t n 992 32 1.9
+strsm R U T N 32 992 1.9
+strsm R U T N 1024 1024 1.9
+strsm R U T N 1024 256 1.9
+strsm R U T N 256 1024 1.9
+
+strsm R U C N 32 8 1.9
+strsm r U C N 64 16 1.9
+strsm R U c u  256 1024 1.9
+strsm R u c n 512 1016 1.9
+strsm R U C N 1024 1024 0.6  1.0
+strsm r u C N 992 32 1.9
+strsm R U C U 32 992 1.9
+strsm R U C N 1024 1024 1.9
+strsm R U C N 1024 256 1.9
+strsm R U C N 256 1024 1.9
+
+strsm L L N N 32 8 1.9
+strsm L L N u 64 16 1.9
+strsm L l n N  256 1024 1.9
+strsm L L N N 512 1016 1.9
+strsm L L n U 1024 1024 0.6  1.0
+strsm L L N N 992 32 1.9
+strsm L l N N 32 992 1.9
+strsm l L N N 1024 1024 1.9
+strsm L L N n 1024 256 1.9
+strsm L L N N 256 1024 1.9
+
+strsm l U T N 32 8 1.9
+strsm L u t N 64 16 1.9
+strsm l U T N  256 1024 1.9
+strsm L U T N 512 1016 1.9
+strsm l u T N 1024 1024 0.6  1.0
+strsm L U t N 992 32 1.9
+strsm L U T n 32 992 1.9
+strsm L U T u 1024 1024 1.9
+strsm L U T U 1024 256 1.9
+strsm L U T N 256 1024 1.9
+strsm L U C n 32 8 1.9
+strsm l U C N 64 16 1.9
+strsm L U C N  256 1024 1.9
+strsm L u c N 512 1016 1.9
+strsm l u C N 1024 1024 0.6  1.0
+strsm L U C N 992 32 1.9
+strsm L U C N 32 992 1.9
+strsm L U c N 1024 1024 1.9
+strsm L U C u 1024 256 1.9
+strsm L U C U 256 1024 1.9
+
+strsm r L T N 32 8 1.9
+strsm R L T N 64 16 1.9
+strsm r L t N  256 1024 1.9
+strsm R l T N 512 1016 1.9
+strsm r l T N 1024 1024 0.6  1.0
+strsm R L T N 992 32 1.9
+strsm R L t N 32 992 1.9
+strsm R L T u 1024 1024 1.9
+strsm R L T U 1024 256 1.9
+strsm R L T n 256 1024 1.9
+
+strsm r L C n 32 8 1.9
+strsm r L C N 64 16 1.9
+strsm R l C N  256 1024 1.9
+strsm R l C u 512 1016 1.9
+strsm R L C N 1024 1024 0.6  1.0
+strsm R L C U 992 32 1.9
+strsm R L c N 32 992 1.9
+strsm R L C N 1024 1024 1.9
+strsm R L C N 1024 256 1.9
+strsm R L C N 256 1024 1.9
+
+strsm r U N N 32 8 1.9
+strsm R U N N 64 16 1.9
+strsm r u n N  256 1024 1.9
+strsm R u N N 512 1016 1.9
+strsm R U N n 1024 1024 0.6  1.0
+strsm R U n N 992 32 1.9
+strsm R U n N 32 992 1.9
+strsm R U N u 1024 1024 1.9
+strsm R U N U 1024 256 1.9
+strsm R U N N 256 1024 1.9
+
+

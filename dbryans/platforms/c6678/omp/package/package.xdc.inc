@@ -1,0 +1,13 @@
+package.xdc
+Platform.xdc
+Platform.xs
+package/c6678.omp.sch
+package/.vers_g180
+package/.vers_r170
+package/.vers_b150
+package/.xdc-y30
+package/c6678_omp.java
+package/c6678_omp.class
+package/package_c6678.omp.c
+package/package.defs.h
+package/c6678.omp.ccs

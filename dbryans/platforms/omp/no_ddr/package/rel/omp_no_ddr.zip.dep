@@ -1,0 +1,38 @@
+omp_no_ddr.zip: Platform.xdc
+Platform.xdc:
+omp_no_ddr.zip: Platform.xs
+Platform.xs:
+omp_no_ddr.zip: config.bld
+config.bld:
+omp_no_ddr.zip: package/.vers_b150
+package/.vers_b150:
+omp_no_ddr.zip: package/.vers_g180
+package/.vers_g180:
+omp_no_ddr.zip: package/.vers_r170
+package/.vers_r170:
+omp_no_ddr.zip: package/.xdc-y30
+package/.xdc-y30:
+omp_no_ddr.zip: package/build.cfg
+package/build.cfg:
+omp_no_ddr.zip: package/omp.no_ddr.ccs
+package/omp.no_ddr.ccs:
+omp_no_ddr.zip: package/omp.no_ddr.sch
+package/omp.no_ddr.sch:
+omp_no_ddr.zip: package/omp_no_ddr.class
+package/omp_no_ddr.class:
+omp_no_ddr.zip: package/omp_no_ddr.java
+package/omp_no_ddr.java:
+omp_no_ddr.zip: package/package.bld.xml
+package/package.bld.xml:
+omp_no_ddr.zip: package/package.defs.h
+package/package.defs.h:
+omp_no_ddr.zip: package/package.ext.xml
+package/package.ext.xml:
+omp_no_ddr.zip: package/package.rel.dot
+package/package.rel.dot:
+omp_no_ddr.zip: package/package_omp.no_ddr.c
+package/package_omp.no_ddr.c:
+omp_no_ddr.zip: package.bld
+package.bld:
+omp_no_ddr.zip: package.xdc
+package.xdc:

@@ -1,0 +1,1 @@
+"./src/vector_add.obj" -l"libc.a" "../C6678.cmd" 

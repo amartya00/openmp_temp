@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./asm_report/no_intrin.obj" "./asm_report/intrin.obj" "./src/main.obj" -l"libc.a" 

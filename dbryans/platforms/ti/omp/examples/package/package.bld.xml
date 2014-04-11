@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="ti.omp.examples" version="2, 0, 0, 0" producerId="undefined">
+    <units>
+        <module name="Examples"/>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/release/omp_hello_pe66.c"/>
+        <srcFile name="package/cfg/release/omp_matvec_pe66.c"/>
+        <srcFile name="package/cfg/release/omp_uia_example_pe66.c"/>
+        <srcFile name="omp_hello.c"/>
+        <srcFile name="omp_matvec.c"/>
+        <srcFile name="omp_uia_example.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="omp_config.cfg"/>
+        <srcFile name="omp_uia_example.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/release/omp_hello_pe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/release/omp_hello_pe66.oe66.dep" src="package/cfg/release/omp_hello_pe66.c"/>
+        <srcFile name="package/cfg/release/omp_hello_pe66.dep" src="package/cfg/release/omp_hello_pe66.cfg"/>
+        <srcFile name="package/cfg/release/omp_matvec_pe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/release/omp_matvec_pe66.oe66.dep" src="package/cfg/release/omp_matvec_pe66.c"/>
+        <srcFile name="package/cfg/release/omp_matvec_pe66.dep" src="package/cfg/release/omp_matvec_pe66.cfg"/>
+        <srcFile name="package/cfg/release/omp_uia_example_pe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/release/omp_uia_example_pe66.oe66.dep" src="package/cfg/release/omp_uia_example_pe66.c"/>
+        <srcFile name="package/cfg/release/omp_uia_example_pe66.dep" src="package/cfg/release/omp_uia_example_pe66.cfg"/>
+        <srcFile name="package/cfg/release/omp_hello.xe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/release/omp_hello/omp_hello.oe66.dep" src="omp_hello.c"/>
+        <srcFile name="package/cfg/release/omp_matvec.xe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/release/omp_matvec/omp_matvec.oe66.dep" src="omp_matvec.c"/>
+        <srcFile name="package/cfg/release/omp_uia_example.xe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/release/omp_uia_example/omp_uia_example.oe66.dep" src="omp_uia_example.c"/>
+        <srcFile name="package/rel/ti_omp_examples.tar.dep" src="package/rel/ti_omp_examples.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C66"
+            version="ti.targets.elf.C66{1,0,7.4,0"
+            platform="ti.omp.examples.platforms.evm6678"
+            isa="66"
+            suffix="e66"
+            rootDir="/home/gtbldadm/ti/TI_CGT_C6000_7.4.0"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="release/omp_hello"
+        pname="release/omp_hello.pe66"
+        target="ti.targets.elf.C66"
+        platform="ti.omp.examples.platforms.evm6678"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/release/omp_hello_pe66.cfg"
+        xCfgPrefix="package/cfg/release/omp_hello_pe66"
+        cfgScript="omp_config.cfg"
+        />
+    <configuration name="release/omp_matvec"
+        pname="release/omp_matvec.pe66"
+        target="ti.targets.elf.C66"
+        platform="ti.omp.examples.platforms.evm6678"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/release/omp_matvec_pe66.cfg"
+        xCfgPrefix="package/cfg/release/omp_matvec_pe66"
+        cfgScript="omp_config.cfg"
+        />
+    <configuration name="release/omp_uia_example"
+        pname="release/omp_uia_example.pe66"
+        target="ti.targets.elf.C66"
+        platform="ti.omp.examples.platforms.evm6678"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/release/omp_uia_example_pe66.cfg"
+        xCfgPrefix="package/cfg/release/omp_uia_example_pe66"
+        cfgScript="omp_uia_example.cfg"
+        />
+    </configurations>
+    <executables>
+    <executable name="release/omp_hello"
+        pname="release/omp_hello.xe66"
+        target="ti.targets.elf.C66"
+        platform="ti.omp.examples.platforms.evm6678"
+        profile="release"
+        xCfgScript="package/cfg/release/omp_hello_pe66.cfg"
+        xCfgPrefix="package/cfg/release/omp_hello_pe66"
+        cfgScript="omp_config.cfg"
+        />
+    <executable name="release/omp_matvec"
+        pname="release/omp_matvec.xe66"
+        target="ti.targets.elf.C66"
+        platform="ti.omp.examples.platforms.evm6678"
+        profile="release"
+        xCfgScript="package/cfg/release/omp_matvec_pe66.cfg"
+        xCfgPrefix="package/cfg/release/omp_matvec_pe66"
+        cfgScript="omp_config.cfg"
+        />
+    <executable name="release/omp_uia_example"
+        pname="release/omp_uia_example.xe66"
+        target="ti.targets.elf.C66"
+        platform="ti.omp.examples.platforms.evm6678"
+        profile="release"
+        xCfgScript="package/cfg/release/omp_uia_example_pe66.cfg"
+        xCfgPrefix="package/cfg/release/omp_uia_example_pe66"
+        cfgScript="omp_uia_example.cfg"
+        />
+    </executables>
+    <tests>
+    <test exeName="release/omp_hello.xe66"
+        args=""
+        groupName="regress"
+        refOutput="golden/omp_hello.k"
+        refExitCode="0"
+        execArgs="-t%2060"
+        />
+    <test exeName="release/omp_hello.xe66"
+        args=""
+        groupName="release/omp_hello.xe66"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs="-t%2060"
+        />
+    <test exeName="release/omp_matvec.xe66"
+        args=""
+        groupName="regress"
+        refOutput="golden/omp_matvec.k"
+        refExitCode="0"
+        execArgs="-t%2060"
+        />
+    <test exeName="release/omp_matvec.xe66"
+        args=""
+        groupName="release/omp_matvec.xe66"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs="-t%2060"
+        />
+    <test exeName="release/omp_uia_example.xe66"
+        args=""
+        groupName="regress"
+        refOutput="golden/omp_uia_example.k"
+        refExitCode="0"
+        execArgs="-t%2060"
+        />
+    <test exeName="release/omp_uia_example.xe66"
+        args=""
+        groupName="release/omp_uia_example.xe66"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs="-t%2060"
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="ti_omp_examples"
+        pname="ti_omp_examples.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/package.rel.dot"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

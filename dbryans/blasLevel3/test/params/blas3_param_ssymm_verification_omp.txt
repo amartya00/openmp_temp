@@ -1,0 +1,43 @@
+ssymm L L 32 8 0.6  1.9
+ssymm L L 64 16 0.6  1.9
+ssymm L l  256 1024 0.6  1.9
+ssymm L L 512 1016 0.6  1.9
+ssymm L L 1024 1024 0.6  1.0
+ssymm L l 992 32 0.6  1.9
+ssymm l L 32 992 0.6  1.9
+ssymm L L 1024 1024 0.6  1.9
+ssymm L L 1024 256 0.6  1.9
+ssymm L l 256 1024 0.6  1.9
+
+ssymm L u 32 8 0.6  1.9
+ssymm L U 64 16 0.6  1.9
+ssymm L u  256 1024 0.6  1.9
+ssymm L U 512 1016 0.6  1.9
+ssymm L u 1024 1024 0.6  1.0
+ssymm L U 992 32 0.6  1.9
+ssymm l u 32 992 0.6  1.9
+ssymm L U 1024 1024 0.6  1.9
+ssymm L u 1024 256 0.6  1.9
+ssymm L U 256 1024 0.6  1.9
+
+ssymm r L 32 8 0.6  1.9
+ssymm R L 64 16 0.6  1.9
+ssymm R l  256 1024 0.6  1.9
+ssymm r L 512 1016 0.6  1.9
+ssymm r L 1024 1024 0.6  1.0
+ssymm R l 992 32 0.6  1.9
+ssymm R L 32 992 0.6  1.9
+ssymm r L 1024 1024 0.6  1.9
+ssymm r L 1024 256 0.6  1.9
+ssymm R l 256 1024 0.6  1.9
+
+ssymm R u 32 8 0.6  1.9
+ssymm r U 64 16 0.6  1.9
+ssymm R u  256 1024 0.6  1.9
+ssymm r U 512 1016 0.6  1.9
+ssymm R u 1024 1024 0.6  1.0
+ssymm r U 992 32 0.6  1.9
+ssymm R u 32 992 0.6  1.9
+ssymm R U 1024 1024 0.6  1.9
+ssymm r u 1024 256 0.6  1.9
+ssymm r U 256 1024 0.6  1.9

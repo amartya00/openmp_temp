@@ -1,0 +1,13 @@
+XDC_open() {
+    GEL_ProjectLoad("/home/barboza/workspace/omp_mm/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectLoad("/home/barboza/workspace/omp_mm/Debug/configPkg/package/cfg/omp_config_xe66.pjt");
+    GEL_ProjectSetActive("/home/barboza/workspace/omp_mm/Debug/configPkg/package/cfg/omp_config_xe66.pjt");
+}
+XDC_close() {
+    GEL_ProjectClose("/home/barboza/workspace/omp_mm/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectClose("/home/barboza/workspace/omp_mm/Debug/configPkg/package/cfg/omp_config_xe66.pjt");
+}
+menuitem "XDC Package"
+hotmenu load_executable () { GEL_Load("/home/barboza/workspace/omp_mm/Debug/configPkg/omp_config.xe66"); }
+hotmenu open_project () { XDC_open(); }
+hotmenu close_project () { XDC_close(); }

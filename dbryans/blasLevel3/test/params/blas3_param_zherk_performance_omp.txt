@@ -1,0 +1,23 @@
+zherk L N 256 256 0.6 1.9
+zherk L N 512 512 0.6 1.9
+zherk L N 1024 1024 0.6 1.9
+zherk L N 2048 2048 0.6 1.9
+zherk L N 3072 3072 0.6 1.9
+
+zherk L C 256 256 0.6 1.9
+zherk L C 512 512 0.6 1.9
+zherk L C 1024 1024 0.6 1.9
+zherk L C 2048 2048 0.6 1.9
+zherk L C 3072 3072 0.6 1.9
+
+zherk U C 256 256 0.6 1.9
+zherk U C 512 512 0.6 1.9
+zherk U C 1024 1024 0.6 1.9
+zherk U C 2048 2048 0.6 1.9
+zherk U C 3072 3072 0.6 1.9
+
+zherk U N 256 256 0.6 1.9
+zherk U N 512 512 0.6 1.9
+zherk U N 1024 1024 0.6 1.9
+zherk U N 2048 2048 0.6 1.9
+zherk U N 3072 3072 0.6 1.9

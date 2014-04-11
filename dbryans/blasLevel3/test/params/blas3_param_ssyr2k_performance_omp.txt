@@ -1,0 +1,35 @@
+ssyr2k L N 256 256 0.6 1.9
+ssyr2k L N 512 512 0.6 1.9
+ssyr2k L N 1024 1024 0.6 1.9
+ssyr2k L N 2048 2048 0.6 1.9
+ssyr2k L N 3072 3072 0.6 1.9
+ssyr2k L N 4096 4096 0.6 1.9
+ssyr2k L N 5120 5120 0.6 1.9
+ssyr2k L N  6144 6144 0.6 1.9
+
+ssyr2k L T 256 256 0.6 1.9
+ssyr2k L T 512 512 0.6 1.9
+ssyr2k L T 1024 1024 0.6 1.9
+ssyr2k L T 2048 2048 0.6 1.9
+ssyr2k L T 3072 3072 0.6 1.9
+ssyr2k L T 4096 4096 0.6 1.9
+ssyr2k L T 5120 5120 0.6 1.9
+ssyr2k L T  6144 6144 0.6 1.9
+
+ssyr2k U N 256 256 0.6 1.9
+ssyr2k U N 512 512 0.6 1.9
+ssyr2k U N 1024 1024 0.6 1.9
+ssyr2k U N 2048 2048 0.6 1.9
+ssyr2k U N 3072 3072 0.6 1.9
+ssyr2k U N 4096 4096 0.6 1.9
+ssyr2k U N 5120 5120 0.6 1.9
+ssyr2k U N  6144 6144 0.6 1.9
+
+ssyr2k U T 256 256 0.6 1.9
+ssyr2k U T 512 512 0.6 1.9
+ssyr2k U T 1024 1024 0.6 1.9
+ssyr2k U T 2048 2048 0.6 1.9
+ssyr2k U T 3072 3072 0.6 1.9
+ssyr2k U T 4096 4096 0.6 1.9
+ssyr2k U T 5120 5120 0.6 1.9
+ssyr2k U T 6144 6144 0.6 1.9

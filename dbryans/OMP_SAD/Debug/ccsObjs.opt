@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./omp_hello.obj" "./SAD_8x8_OMP.obj" "./SAD_32x32_OMP.obj" "./MAD_8x8_OMP.obj" "./MAD_32x32_OMP.obj" -l"libc.a" 

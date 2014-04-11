@@ -1,0 +1,209 @@
+******************************************************************************
+               TMS320C6x Linker PC v7.4.0                      
+******************************************************************************
+>> Linked Fri Aug 03 17:35:34 2012
+
+OUTPUT FILE NAME:   <SAD.out>
+ENTRY POINT SYMBOL: "_c_int00"  address: 0c0012e0
+
+
+MEMORY CONFIGURATION
+
+         name            origin    length      used     unused   attr    fill
+----------------------  --------  ---------  --------  --------  ----  --------
+  SHRAM                 0c000000   00400000  0000188c  003fe774  RWIX
+  CORE0_L2_SRAM         10800000   00080000  00000000  00080000  RWIX
+  CORE0_L1P_SRAM        10e00000   00008000  00000000  00008000  RWIX
+  CORE0_L1D_SRAM        10f00000   00008000  00000000  00008000  RWIX
+  CORE1_L2_SRAM         11800000   00080000  00000000  00080000  RWIX
+  CORE1_L1P_SRAM        11e00000   00008000  00000000  00008000  RWIX
+  CORE1_L1D_SRAM        11f00000   00008000  00000000  00008000  RWIX
+  CORE2_L2_SRAM         12800000   00080000  00000000  00080000  RWIX
+  CORE2_L1P_SRAM        12e00000   00008000  00000000  00008000  RWIX
+  CORE2_L1D_SRAM        12f00000   00008000  00000000  00008000  RWIX
+  CORE3_L2_SRAM         13800000   00080000  00000000  00080000  RWIX
+  CORE3_L1P_SRAM        13e00000   00008000  00000000  00008000  RWIX
+  CORE3_L1D_SRAM        13f00000   00008000  00000000  00008000  RWIX
+  CORE4_L2_SRAM         14800000   00080000  00000000  00080000  RWIX
+  CORE4_L1P_SRAM        14e00000   00008000  00000000  00008000  RWIX
+  CORE4_L1D_SRAM        14f00000   00008000  00000000  00008000  RWIX
+  CORE5_L2_SRAM         15800000   00080000  00000000  00080000  RWIX
+  CORE5_L1P_SRAM        15e00000   00008000  00000000  00008000  RWIX
+  CORE5_L1D_SRAM        15f00000   00008000  00000000  00008000  RWIX
+  CORE6_L2_SRAM         16800000   00080000  00000000  00080000  RWIX
+  CORE6_L1P_SRAM        16e00000   00008000  00000000  00008000  RWIX
+  CORE6_L1D_SRAM        16f00000   00008000  00000000  00008000  RWIX
+  CORE7_L2_SRAM         17800000   00080000  00000000  00080000  RWIX
+  CORE7_L1P_SRAM        17e00000   00008000  00000000  00008000  RWIX
+  CORE7_L1D_SRAM        17f00000   00008000  00000000  00008000  RWIX
+  EMIF16_CS2            70000000   04000000  00000000  04000000  RWIX
+  EMIF16_CS3            74000000   04000000  00000000  04000000  RWIX
+  EMIF16_CS4            78000000   04000000  00000000  04000000  RWIX
+  EMIF16_CS5            7c000000   04000000  00000000  04000000  RWIX
+  CORE0_DDR3            80000000   10000000  00000000  10000000  RWIX
+  CORE1_DDR3            90000000   10000000  00000000  10000000  RWIX
+  CORE2_DDR3            a0000000   10000000  00000000  10000000  RWIX
+  CORE3_DDR3            b0000000   10000000  00000000  10000000  RWIX
+  CORE4_DDR3            c0000000   10000000  00000000  10000000  RWIX
+  CORE5_DDR3            d0000000   10000000  00000000  10000000  RWIX
+  CORE6_DDR3            e0000000   10000000  00000000  10000000  RWIX
+  CORE7_DDR3            f0000000   10000000  00000000  10000000  RWIX
+
+
+SEGMENT ALLOCATION MAP
+
+run origin  load origin   length   init length attrs members
+----------  ----------- ---------- ----------- ----- -------
+0c000000    0c000000    00001460   00001460    r-x
+  0c000000    0c000000    00001460   00001460    r-x .text
+0c001460    0c001460    00000400   00000000    rw-
+  0c001460    0c001460    00000400   00000000    rw- .stack
+0c001860    0c001860    0000000c   0000000c    rw-
+  0c001860    0c001860    0000000c   0000000c    rw- .fardata
+0c00186c    0c00186c    00000020   00000020    r--
+  0c00186c    0c00186c    00000020   00000020    r-- .cinit
+
+
+SECTION ALLOCATION MAP
+
+ output                                  attributes/
+section   page    origin      length       input sections
+--------  ----  ----------  ----------   ----------------
+.text      0    0c000000    00001460     
+                  0c000000    00000bc0     main.obj (.text)
+                  0c000bc0    00000180     rts6600_elf.lib : copy_decompress_rle.obj (.text:__TI_decompress_rle_core)
+                  0c000d40    00000100                     : autoinit.obj (.text:_auto_init_elf)
+                  0c000e40    00000100                     : cpy_tbl.obj (.text:copy_in)
+                  0c000f40    000000c0                     : exit.obj (.text:exit)
+                  0c001000    000000c0     imglib.ae66 : IMG_sad_16x16.obj (.text:optimized)
+                  0c0010c0    000000c0                 : IMG_sad_8x8.obj (.text:optimized)
+                  0c001180    000000c0     rts6600_elf.lib : tls.obj (.text:tls:init:__TI_tls_init)
+                  0c001240    000000a0                     : memcpy64.obj (.text:memcpy)
+                  0c0012e0    00000080                     : boot.obj (.text:_c_int00)
+                  0c001360    00000060                     : cpp_init.obj (.text:__TI_cpp_init)
+                  0c0013c0    00000040                     : args_main.obj (.text:_args_main)
+                  0c001400    00000020                     : exit.obj (.text:abort)
+                  0c001420    00000020                     : copy_decompress_none.obj (.text:decompress:none:__TI_decompress_none)
+                  0c001440    00000020                     : copy_decompress_rle.obj (.text:decompress:rle24:__TI_decompress_rle24)
+
+.stack     0    0c001460    00000400     UNINITIALIZED
+                  0c001460    00000008     rts6600_elf.lib : boot.obj (.stack)
+                  0c001468    000003f8     --HOLE--
+
+.fardata   0    0c001860    0000000c     
+                  0c001860    0000000c     rts6600_elf.lib : exit.obj (.fardata)
+
+.cinit     0    0c00186c    00000020     
+                  0c00186c    0000000d     (.cinit..fardata.load) [load image, compression = rle]
+                  0c001879    00000003     --HOLE-- [fill = 0]
+                  0c00187c    00000008     (__TI_handler_table)
+                  0c001884    00000008     (__TI_cinit_table)
+
+
+LINKER GENERATED COPY TABLES
+
+__TI_cinit_table @ 0c001884 records: 1, size/record: 8, table size: 8
+	.fardata: load addr=0c00186c, load size=0000000d bytes, run addr=0c001860, run size=0000000c bytes, compression=rle
+
+
+LINKER GENERATED HANDLER TABLE
+
+__TI_handler_table @ 0c00187c records: 2, size/record: 4, table size: 8
+	index: 0, handler: __TI_decompress_rle24
+	index: 1, handler: __TI_decompress_none
+
+
+GLOBAL SYMBOLS: SORTED ALPHABETICALLY BY Name 
+
+address    name
+--------   ----
+0c001400   C$$EXIT
+0c000880   IMG_mySad_16x16
+0c000924   IMG_mySad_8x8
+0c001000   IMG_sad_16x16
+0c000a94   IMG_sad_32x32
+0c0010c0   IMG_sad_8x8
+0c001884   __TI_CINIT_Base
+0c00188c   __TI_CINIT_Limit
+0c00187c   __TI_Handler_Table_Base
+0c001884   __TI_Handler_Table_Limit
+UNDEFED    __TI_INITARRAY_Base
+UNDEFED    __TI_INITARRAY_Limit
+0c001860   __TI_STACK_END
+00000400   __TI_STACK_SIZE
+00000000   __TI_STATIC_BASE
+UNDEFED    __TI_TLS_INIT_Base
+UNDEFED    __TI_TLS_INIT_Limit
+00000001   __TI_args_main
+0c001360   __TI_cpp_init
+0c001420   __TI_decompress_none
+0c001440   __TI_decompress_rle24
+0c001868   __TI_enable_exit_profile_output
+ffffffff   __TI_pprof_out_hndl
+ffffffff   __TI_prof_data_size
+ffffffff   __TI_prof_data_start
+0c001180   __TI_tls_init
+ffffffff   __binit__
+ffffffff   __c_args__
+0c0013c0   _args_main
+0c000d40   _auto_init_elf
+0c0012e0   _c_int00
+0c001860   _cleanup_ptr
+0c001864   _dtors_ptr
+0c001460   _stack
+0c001400   abort
+ffffffff   binit
+0c000e40   copy_in
+0c000f40   exit
+0c000994   main
+0c001240   memcpy
+0c000000   splitSAD_32x32
+
+
+GLOBAL SYMBOLS: SORTED BY Symbol Address 
+
+address    name
+--------   ----
+00000000   __TI_STATIC_BASE
+00000001   __TI_args_main
+00000400   __TI_STACK_SIZE
+0c000000   splitSAD_32x32
+0c000880   IMG_mySad_16x16
+0c000924   IMG_mySad_8x8
+0c000994   main
+0c000a94   IMG_sad_32x32
+0c000d40   _auto_init_elf
+0c000e40   copy_in
+0c000f40   exit
+0c001000   IMG_sad_16x16
+0c0010c0   IMG_sad_8x8
+0c001180   __TI_tls_init
+0c001240   memcpy
+0c0012e0   _c_int00
+0c001360   __TI_cpp_init
+0c0013c0   _args_main
+0c001400   C$$EXIT
+0c001400   abort
+0c001420   __TI_decompress_none
+0c001440   __TI_decompress_rle24
+0c001460   _stack
+0c001860   __TI_STACK_END
+0c001860   _cleanup_ptr
+0c001864   _dtors_ptr
+0c001868   __TI_enable_exit_profile_output
+0c00187c   __TI_Handler_Table_Base
+0c001884   __TI_CINIT_Base
+0c001884   __TI_Handler_Table_Limit
+0c00188c   __TI_CINIT_Limit
+ffffffff   __TI_pprof_out_hndl
+ffffffff   __TI_prof_data_size
+ffffffff   __TI_prof_data_start
+ffffffff   __binit__
+ffffffff   __c_args__
+ffffffff   binit
+UNDEFED    __TI_INITARRAY_Base
+UNDEFED    __TI_INITARRAY_Limit
+UNDEFED    __TI_TLS_INIT_Base
+UNDEFED    __TI_TLS_INIT_Limit
+
+[41 symbols]

@@ -1,0 +1,83 @@
+ctrmm L U N N 256 256 1.9 0.7
+ctrmm L U N N 512 512 1.9 0.7
+ctrmm L U N N 1024 1024 1.9 0.7
+ctrmm L U N N 2048 2048 1.9 0.7
+ctrmm L U N N 3072 3072 1.9 0.7
+ctrmm L U N N 4096 4096 1.9 0.7
+
+ctrmm L L T N 256 256 1.9 0.7
+ctrmm L L T N 512 512 1.9 0.7
+ctrmm L L T N 1024 1024 1.9 0.7
+ctrmm L L T N 2048 2048 1.9 0.7
+ctrmm L L T N 3072 3072 1.9 0.7
+ctrmm L L T N 4096 4096 1.9 0.7
+
+ctrmm L L C N 256 256 1.9 0.7
+ctrmm L L C N 512 512 1.9 0.7
+ctrmm L L C N 1024 1024 1.9 0.7
+ctrmm L L C N 2048 2048 1.9 0.7
+ctrmm L L C N 3072 3072 1.9 0.7
+ctrmm L L C N 4096 4096 1.9 0.7
+
+ctrmm R L N N 256 256 1.9 0.7
+ctrmm R L N N 512 512 1.9 0.7
+ctrmm R L N N 1024 1024 1.9 0.7
+ctrmm R L N N 2048 2048 1.9 0.7
+ctrmm R L N N 3072 3072 1.9 0.7
+ctrmm R L N N 4096 4096 1.9 0.7
+
+ctrmm R U T N 256 256 1.9 0.7
+ctrmm R U T N 512 512 1.9 0.7
+ctrmm R U T N 1024 1024 1.9 0.7
+ctrmm R U T N 2048 2048 1.9 0.7
+ctrmm R U T N 3072 3072 1.9 0.7
+ctrmm R U T N 4096 4096 1.9 0.7
+
+ctrmm R U C N 256 256 1.9 0.7
+ctrmm R U C N 512 512 1.9 0.7
+ctrmm R U C N 1024 1024 1.9 0.7
+ctrmm R U C N 2048 2048 1.9 0.7
+ctrmm R U C N 3072 3072 1.9 0.7
+ctrmm R U C N 4096 4096 1.9 0.7
+
+ctrmm L L N N 256 256 1.9 0.7
+ctrmm L L N N 512 512 1.9 0.7
+ctrmm L L N N 1024 1024 1.9 0.7
+ctrmm L L N N 2048 2048 1.9 0.7
+ctrmm L L N N 3072 3072 1.9 0.7
+ctrmm L L N N 4096 4096 1.9 0.7
+
+ctrmm L U T N 256 256 1.9 0.7
+ctrmm L U T N 512 512 1.9 0.7
+ctrmm L U T N 1024 1024 1.9 0.7
+ctrmm L U T N 2048 2048 1.9 0.7
+ctrmm L U T N 3072 3072 1.9 0.7
+ctrmm L U T N 4096 4096 1.9 0.7
+
+ctrmm L U C N 256 256 1.9 0.7
+ctrmm L U C N 512 512 1.9 0.7
+ctrmm L U C N 1024 1024 1.9 0.7
+ctrmm L U C N 2048 2048 1.9 0.7
+ctrmm L U C N 3072 3072 1.9 0.7
+ctrmm L U C N 4096 4096 1.9 0.7
+
+ctrmm R L T N 256 256 1.9 0.7
+ctrmm R L T N 512 512 1.9 0.7
+ctrmm R L T N 1024 1024 1.9 0.7
+ctrmm R L T N 2048 2048 1.9 0.7
+ctrmm R L T N 3072 3072 1.9 0.7
+ctrmm R L T N 4096 4096 1.9 0.7
+
+ctrmm R L C N 256 256 1.9 0.7
+ctrmm R L C N 512 512 1.9 0.7
+ctrmm R L C N 1024 1024 1.9 0.7
+ctrmm R L C N 2048 2048 1.9 0.7
+ctrmm R L C N 3072 3072 1.9 0.7
+ctrmm R L C N 4096 4096 1.9 0.7
+
+ctrmm R U N N 256 256 1.9 0.7
+ctrmm R U N N 512 512 1.9 0.7
+ctrmm R U N N 1024 1024 1.9 0.7
+ctrmm R U N N 2048 2048 1.9 0.7
+ctrmm R U N N 3072 3072 1.9 0.7
+ctrmm R U N N 4096 4096 1.9 0.7

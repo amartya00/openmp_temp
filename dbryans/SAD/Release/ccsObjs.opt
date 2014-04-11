@@ -1,0 +1,1 @@
+"./src/main.obj" -l"libc.a" -limglib.ae66 "../C6678.cmd" 

@@ -1,0 +1,38 @@
+evmc6678.zip: Platform.xdc
+Platform.xdc:
+evmc6678.zip: Platform.xs
+Platform.xs:
+evmc6678.zip: config.bld
+config.bld:
+evmc6678.zip: package/.vers_b150
+package/.vers_b150:
+evmc6678.zip: package/.vers_g180
+package/.vers_g180:
+evmc6678.zip: package/.vers_r170
+package/.vers_r170:
+evmc6678.zip: package/.xdc-x20
+package/.xdc-x20:
+evmc6678.zip: package/build.cfg
+package/build.cfg:
+evmc6678.zip: package/evmc6678.ccs
+package/evmc6678.ccs:
+evmc6678.zip: package/evmc6678.class
+package/evmc6678.class:
+evmc6678.zip: package/evmc6678.java
+package/evmc6678.java:
+evmc6678.zip: package/evmc6678.sch
+package/evmc6678.sch:
+evmc6678.zip: package/package.bld.xml
+package/package.bld.xml:
+evmc6678.zip: package/package.defs.h
+package/package.defs.h:
+evmc6678.zip: package/package.ext.xml
+package/package.ext.xml:
+evmc6678.zip: package/package.rel.dot
+package/package.rel.dot:
+evmc6678.zip: package/package_evmc6678.c
+package/package_evmc6678.c:
+evmc6678.zip: package.bld
+package.bld:
+evmc6678.zip: package.xdc
+package.xdc:

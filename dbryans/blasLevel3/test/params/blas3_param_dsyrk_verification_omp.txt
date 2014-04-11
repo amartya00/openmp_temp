@@ -1,0 +1,39 @@
+dsyrk L n 32 1 0.6 1.9
+dsyrk L n 32 10 0.6 1.9
+dsyrk L n 128 2048 0.6 1.9
+dsyrk L n 256 1024 0.6 1.9
+dsyrk L n 1024 10 0.6 1.9
+dsyrk L N 1024 1024 0.6 1.9
+dsyrk L N 1024 256 0.6 1.9
+dsyrk l N 256 1020 0.6 1.9
+dsyrk l N 256 1019 0.6 1.9
+
+dsyrk L t 32 1 0.6 1.9
+dsyrk L t 32 10 0.6 1.9
+dsyrk L T 128 2048 0.6 1.9
+dsyrk L C 256 1024 0.6 1.9
+dsyrk L c 1024 10 0.6 1.9
+dsyrk L t 1024 1024 0.6 1.9
+dsyrk L t 1024 256 0.6 1.9
+dsyrk l t 256 1020 0.6 1.9
+dsyrk l t 256 1019 0.6 1.9
+
+dsyrk u n 32 1 0.6 1.9
+dsyrk u n 32 10 0.6 1.9
+dsyrk U n 128 2048 0.6 1.9
+dsyrk U n 256 1024 0.6 1.9
+dsyrk U n 1024 10 0.6 1.9
+dsyrk U N 1024 1024 0.6 1.9
+dsyrk u N 1024 256 0.6 1.9
+dsyrk u N 256 1020 0.6 1.9
+dsyrk u N 256 1019 0.6 1.9
+
+dsyrk u t 32 1 0.6 1.9
+dsyrk u t 32 10 0.6 1.9
+dsyrk u T 128 2048 0.6 1.9
+dsyrk U C 256 1024 0.6 1.9
+dsyrk U c 1024 10 0.6 1.9
+dsyrk U t 1024 1024 0.6 1.9
+dsyrk U t 1024 256 0.6 1.9
+dsyrk u t 256 1020 0.6 1.9
+dsyrk u t 256 1019 0.6 1.9

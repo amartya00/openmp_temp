@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="xconfig_edma3_drv_bios6_c6678_st_sample" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/bilinear/edma3_drv_bios6_c6678_st_sample.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66.oe66.dep" src="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66.c"/>
+        <srcFile name="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66.dep" src="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66.cfg"/>
+        <srcFile name="package/cfg/edma3_drv_bios6_c6678_st_sample.xe66.mak" src="package.bld"/>
+        <srcFile name="package/rel/xconfig_edma3_drv_bios6_c6678_st_sample.tar.dep" src="package/rel/xconfig_edma3_drv_bios6_c6678_st_sample.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C66"
+            version="ti.targets.elf.C66{1,0,7.4,0,2"
+            platform="ti.platforms.simTCI6616"
+            isa="66"
+            suffix="e66"
+            rootDir="/opt/ti/C6000CGT7.4.0B2"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="edma3_drv_bios6_c6678_st_sample"
+        pname="edma3_drv_bios6_c6678_st_sample.pe66"
+        target="ti.targets.elf.C66"
+        platform="myBoard"
+        profile="release"
+        isPartial="false"
+        xCfgScript="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66.cfg"
+        xCfgPrefix="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66"
+        cfgScript="/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/bilinear/edma3_drv_bios6_c6678_st_sample.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="edma3_drv_bios6_c6678_st_sample"
+        pname="edma3_drv_bios6_c6678_st_sample.xe66"
+        target="ti.targets.elf.C66"
+        platform="myBoard"
+        profile="release"
+        xCfgScript="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66.cfg"
+        xCfgPrefix="package/cfg/edma3_drv_bios6_c6678_st_sample_pe66"
+        cfgScript="/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/bilinear/edma3_drv_bios6_c6678_st_sample.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="edma3_drv_bios6_c6678_st_sample.xe66"
+        args=""
+        groupName="edma3_drv_bios6_c6678_st_sample.xe66"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="xconfig_edma3_drv_bios6_c6678_st_sample"
+        pname="xconfig_edma3_drv_bios6_c6678_st_sample.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/package.rel.dot"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

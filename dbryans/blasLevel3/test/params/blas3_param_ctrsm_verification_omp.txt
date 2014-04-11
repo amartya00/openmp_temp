@@ -1,0 +1,132 @@
+ctrsm L U N N 32 8 0.7 1.9
+ctrsm L U N n 64 16 0.7 1.9
+ctrsm L U N N  256 1024 0.7 1.9
+ctrsm l U N N 512 1016 0.7 1.9
+ctrsm L u n U 1024 1024 0.6  1.0
+ctrsm l U N N 992 32 0.7 1.9
+ctrsm L U N u 32 992 0.7 1.9
+ctrsm l u N N 1024 1024 0.7 1.9
+ctrsm L U n u 1024 256 0.7 1.9
+ctrsm L U N N 256 1024 0.7 1.9
+
+ctrsm L L T n 32 8 0.7 1.9
+ctrsm l l T N 64 16 0.7 1.9
+ctrsm L L T N  256 1024 0.7 1.9
+ctrsm L l T u 512 1016 0.7 1.9
+ctrsm L L T N 1024 1024 0.6  1.0
+ctrsm L L t u 992 32 0.7 1.9
+ctrsm L L T N 32 992 0.7 1.9
+ctrsm l L t U 1024 1024 0.7 1.9
+ctrsm L L T N 1024 256 0.7 1.9
+ctrsm L L T N 256 1024 0.7 1.9
+
+ctrsm L L C N 32 8 0.7 1.9
+ctrsm l L C n 64 16 0.7 1.9
+ctrsm L L C N  256 1024 0.7 1.9
+ctrsm L l c N 512 1016 0.7 1.9
+ctrsm l L C N 1024 1024 0.6  1.0
+ctrsm L L C N 992 32 0.7 1.9
+ctrsm l l C N 32 992 0.7 1.9
+ctrsm L L c U 1024 1024 0.7 1.9
+ctrsm L L C N 1024 256 0.7 1.9
+ctrsm L L C u 256 1024 0.7 1.9
+
+ctrsm r L N N 32 8 0.7 1.9
+ctrsm r L N u 64 16 0.7 1.9
+ctrsm R l N N  256 1024 0.7 1.9
+ctrsm R l N u 512 1016 0.7 1.9
+ctrsm R L n n 1024 1024 0.6  1.0
+ctrsm R L N N 992 32 0.7 1.9
+ctrsm R L n U 32 992 0.7 1.9
+ctrsm R L N N 1024 1024 0.7 1.9
+ctrsm R L N N 1024 256 0.7 1.9
+ctrsm R L N N 256 1024 0.7 1.9
+
+ctrsm r U T N 32 8 0.7 1.9
+ctrsm R u t n 64 16 0.7 1.9
+ctrsm r U T N  256 1024 0.7 1.9
+ctrsm R U T u 512 1016 0.7 1.9
+ctrsm r u T U 1024 1024 0.6  1.0
+ctrsm R U t n 992 32 0.7 1.9
+ctrsm R U T N 32 992 0.7 1.9
+ctrsm R U T N 1024 1024 0.7 1.9
+ctrsm R U T N 1024 256 0.7 1.9
+ctrsm R U T N 256 1024 0.7 1.9
+
+ctrsm R U C N 32 8 0.7 1.9
+ctrsm r U C N 64 16 0.7 1.9
+ctrsm R U c u  256 1024 0.7 1.9
+ctrsm R u c n 512 1016 0.7 1.9
+ctrsm R U C N 1024 1024 0.6  1.0
+ctrsm r u C N 992 32 0.7 1.9
+ctrsm R U C U 32 992 0.7 1.9
+ctrsm R U C N 1024 1024 0.7 1.9
+ctrsm R U C N 1024 256 0.7 1.9
+ctrsm R U C N 256 1024 0.7 1.9
+
+ctrsm L L N N 32 8 0.7 1.9
+ctrsm L L N u 64 16 0.7 1.9
+ctrsm L l n N  256 1024 0.7 1.9
+ctrsm L L N N 512 1016 0.7 1.9
+ctrsm L L n U 1024 1024 0.6  1.0
+ctrsm L L N N 992 32 0.7 1.9
+ctrsm L l N N 32 992 0.7 1.9
+ctrsm l L N N 1024 1024 0.7 1.9
+ctrsm L L N n 1024 256 0.7 1.9
+ctrsm L L N N 256 1024 0.7 1.9
+
+ctrsm l U T N 32 8 0.7 1.9
+ctrsm L u t N 64 16 0.7 1.9
+ctrsm l U T N  256 1024 0.7 1.9
+ctrsm L U T N 512 1016 0.7 1.9
+ctrsm l u T N 1024 1024 0.6  1.0
+ctrsm L U t N 992 32 0.7 1.9
+ctrsm L U T n 32 992 0.7 1.9
+ctrsm L U T u 1024 1024 0.7 1.9
+ctrsm L U T U 1024 256 0.7 1.9
+ctrsm L U T N 256 1024 0.7 1.9
+ctrsm L U C n 32 8 0.7 1.9
+ctrsm l U C N 64 16 0.7 1.9
+ctrsm L U C N  256 1024 0.7 1.9
+ctrsm L u c N 512 1016 0.7 1.9
+ctrsm l u C N 1024 1024 0.6  1.0
+ctrsm L U C N 992 32 0.7 1.9
+ctrsm L U C N 32 992 0.7 1.9
+ctrsm L U c N 1024 1024 0.7 1.9
+ctrsm L U C u 1024 256 0.7 1.9
+ctrsm L U C U 256 1024 0.7 1.9
+
+ctrsm r L T N 32 8 0.7 1.9
+ctrsm R L T N 64 16 0.7 1.9
+ctrsm r L t N  256 1024 0.7 1.9
+ctrsm R l T N 512 1016 0.7 1.9
+ctrsm r l T N 1024 1024 0.6  1.0
+ctrsm R L T N 992 32 0.7 1.9
+ctrsm R L t N 32 992 0.7 1.9
+ctrsm R L T u 1024 1024 0.7 1.9
+ctrsm R L T U 1024 256 0.7 1.9
+ctrsm R L T n 256 1024 0.7 1.9
+
+ctrsm r L C n 32 8 0.7 1.9
+ctrsm r L C N 64 16 0.7 1.9
+ctrsm R l C N  256 1024 0.7 1.9
+ctrsm R l C u 512 1016 0.7 1.9
+ctrsm R L C N 1024 1024 0.6  1.0
+ctrsm R L C U 992 32 0.7 1.9
+ctrsm R L c N 32 992 0.7 1.9
+ctrsm R L C N 1024 1024 0.7 1.9
+ctrsm R L C N 1024 256 0.7 1.9
+ctrsm R L C N 256 1024 0.7 1.9
+
+ctrsm r U N N 32 8 0.7 1.9
+ctrsm R U N N 64 16 0.7 1.9
+ctrsm r u n N  256 1024 0.7 1.9
+ctrsm R u N N 512 1016 0.7 1.9
+ctrsm R U N n 1024 1024 0.6  1.0
+ctrsm R U n N 992 32 0.7 1.9
+ctrsm R U n N 32 992 0.7 1.9
+ctrsm R U N u 1024 1024 0.7 1.9
+ctrsm R U N U 1024 256 0.7 1.9
+ctrsm R U N N 256 1024 0.7 1.9
+
+

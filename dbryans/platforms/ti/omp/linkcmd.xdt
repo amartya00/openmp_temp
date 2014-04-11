@@ -1,0 +1,98 @@
+%%{ --COPYRIGHT--,BSD
+/*
+ * Copyright (c)  2012, Texas Instruments Incorporated
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions
+ * are met:
+ *
+ * *  Redistributions of source code must retain the above copyright
+ *    notice, this list of conditions and the following disclaimer.
+ *
+ * *  Redistributions in binary form must reproduce the above copyright
+ *    notice, this list of conditions and the following disclaimer in the
+ *    documentation and/or other materials provided with the distribution.
+ *
+ * *  Neither the name of Texas Instruments Incorporated nor the names of
+ *    its contributors may be used to endorse or promote products derived
+ *    from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO,
+ * THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+ * PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+ * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+ * PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+ * OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ * --/COPYRIGHT--
+ */
+%%}
+% var appname = Program.cfgBase + ".o" + Program.build.target.suffix;
+% /* appname is now similar to package/cfg/debug/myapp_pe66.oe66 */
+
+% var appname = appname.split('\/').pop();
+% /* appname is now similar to myapp_pe66.oe66 */
+
+SECTIONS
+{
+    /* 
+     *  If building on C66x devices and if the codeMemory and dataMemory aren't
+     *  the same segment we need to load the .neardata and .fardata (non-const
+     *  initialized near/far global variables) into codeMemory and run from
+     *  dataMemory.  This is because dataMemory isn't guaranteed to be writable
+     *  by the loader at boot-time: it could be a non-cached MSMC alias in
+     *  case it is made available only after the alias as been created at
+     *  startup-time. 
+     */
+
+% if (Program.build.target.$name.match(/C66/) && 
+%       (Program.platform.codeMemory != Program.platform.dataMemory)) {
+    GROUP: load > `Program.platform.codeMemory`, run > `Program.platform.dataMemory`, table(BINIT)
+    {
+        .neardata:
+        .fardata:
+    }
+   
+    .binit: load > `Program.platform.codeMemory`
+% }
+
+    /* 
+     *  The .far & .fardata sections of the RTSC genenerated 'C' file (appname)
+     *  and the RTS libraries (*rts*.lib) consist of global variables that must
+     *  be local to each core.  These sections are therefore placed in the
+     *  'Program.platform.stackMemory' segment which is required to be set to
+     *  memory local to each core.
+     */
+    .localfar :
+    {
+        "`appname`" (.far)
+        "*rts*.lib" (.far)
+% if (Program.build.target.$name.match(/elf/)) {        
+        "`appname`" (.fardata)
+        "*rts*.lib" (.fardata)
+% }
+    } > `Program.platform.stackMemory`
+
+
+    /*
+     * Place the TLS sections to avoid warnings from the linker related to
+     * defailt placement.
+     */
+    .TI.tls         >   `Program.platform.dataMemory`
+    .TI.tls_init    >   `Program.platform.dataMemory`
+
+}
+SECTIONS
+{
+    gomp_data                load       >> MSMCSRAM_NOCACHE
+    .Nav_init	     load 	>> L2SRAM	
+    .init_array: 	     load 	>> L2SRAM
+    .qmss: 		     load 	>> MSMCSRAM_NOCACHE
+    .shareddata:	     load	>> MSMCSRAM_NOCACHE
+    .cppi: 		     load 	>> MSMCSRAM
+}

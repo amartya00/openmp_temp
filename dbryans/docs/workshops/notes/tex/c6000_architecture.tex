@@ -1,0 +1,222 @@
+\documentclass{article}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{listings}
+\hypersetup{
+   colorlinks,
+   citecolor=black,
+   filecolor=black,
+   linkcolor=black,
+   urlcolor=black,
+   linktocpage
+ }
+%\hypersetup{linktocpage}
+\author{Barath Ramesh}
+\title{C6000 Architecture Specific Topics}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{Intro to C6000 Architecture}
+Solve Digital signal procssing
+problem. ADC-->DSP(Algorithm)-->DAC. Heart of DSP algo is a MAC (sum
+of products). Solve this problem efficiently, most of the DSP algo
+should run faster.
+\section{C6x CPU Architecture}
+Load store architecture, read values in section A or B. Exectuion unit
+(.M1, .M2, .L1, .L2). M-->Multiply, .L add(logical) together called
+MACs. Supports 8 MACs/cycle (8x8 and 16x16).D1 .D2
+load/store, .S1 .S2 shifts and other logical operations. 8 independent
+functions (8 independent functional units) or * instructions per
+cycle. Thus while MMACs speed math intensive algorithms, flexibility
+of 8 independent functional units allows comiler to perform other
+types fo processing. C6x CPU can dispatch up to eight parallel
+instructions each cycle. All C6x instruction are conditional allowing
+efficient hardware pipelining.
+\section{C6000 C compiler optimization}
+What does "Optimal Mean?"
+\begin{itemize}
+\item When my processing keeps up with my I/O (real time)
+\item When my algo acheives theoritical minumum (purple patch)
+\item After I have applied all known optmimization techniques
+\end{itemize}
+Real-time vs. CPU Min
+\begin{itemize}
+\item Typically, meeting real-time only requires setting a few compiler
+  options (easy)
+\item Acheiving "CPU Min" often requires extensive knowledge
+  of the architecture (harder, requires more time).
+\end{itemize}
+\section{Optimization - Intro}
+"Optimization is a continuous process of refinement in which code
+being optimized executes faster and takes fewer cycles, until a
+specific objective is acheived (real time execution). 
+\begin{itemize}
+\item Learn as many optimizations as possible and try them all if necessary
+\end{itemize}
+\section{Debug vs Optmized mode}
+Turn on the optimizer for better performance. See Table
+\ref{table:benchmarking} for few benchmarks with and without optimizations.
+\begin{table}
+\caption{Benchmarking}
+\centering
+\begin{tabular}{|c | c | c|}
+\hline \hline
+Alog & FIR(256, 64) & DOTP (256-term)\\
+\hline \hline
+Debug (no opt, -g) & 817K & 4109\\
+\hline
+Opt (-o3, no -g) & 18K & 42\\
+\hline
+Add'I pragmas & 7K & 42\\
+\hline
+(DSPLib) & 7K & 42\\
+\hline
+CPU Min & 4096 & 42\\
+\hline \hline
+\end{tabular}
+\label{table:benchmarking}
+\end{table}
+\section{Build Configurations}
+Two build configurations available debug and release (Set Active). Custom
+optimizations can be made by clicking manage.
+\begin{itemize}
+\item Debig no opt, -g
+\item Active -o3, no -g
+\end{itemize}
+Include paths are not copied from Debug to Active build
+configuration. 
+\section{Size Optimization}
+Code size -ms works in conjunction with -o. Table \ref{table:codeSize}
+\begin{table}
+\caption{Minimizing code Space}
+\centering
+\begin{tabular}{|c| c| c| }
+\hline \hline
+-ms level & Performance & Code Size\\
+\hline
+none & 100\% & 0\%\\
+\hline
+-ms0 & 90\%  & 10\%\\
+\hline
+-ms1 & 60\%  & 40\%\\
+\hline
+-ms2 & 20\%  & 80\%\\
+\hline
+-ms3 & 0\%   & 100\%\\
+\hline \hline
+\end{tabular}
+\label{table:codeSize}
+\end{table}
+\section{File and Function specific options}
+Use compiler directives:
+\begin{lstlisting}[language=C]
+#pragma FUNCTION_OPTINS()
+\end{lstlisting}
+\section{Viewing Options in CCSv5.2}
+Need to be done (how to set compiler optimization)
+\section{Coding Guideline}
+C, C++ source code --Compiler Optimizer--> 80\%-100\% efficiency with
+minumum effort. ASM --Hand Optimize--> 100\% with high effort. Linear
+ASM --Assembly Optimizer--> 95\%-100\% with medium effort.
+\subsection{Basic C coding guidelines}
+\begin{itemize}
+\item Keep code complexity simple
+\item No functions calls in tight loops
+\item Keep llops relatively small
+\item Look at the assembly file - SPLOOP, -k option to keep the
+  assembly file
+\end{itemize}
+\section{Data types and Alignment}
+\subsection{Supported Data types and format}
+Data types supported is as shown in table \ref{table:dataTypes}
+\begin{table}
+\caption{C6000 Data Types} 
+\centering
+\begin{tabular}{|c| c| c|}
+\hline \hline
+Type & Bits  & Representation\\
+\hline
+char & 8   & ASCII\\
+\hline
+short & 16   & Binary 2's complement\\
+\hline
+int & 32   & Binary 2's complement\\
+\hline
+long & 40   & Binary 2's complement\\
+\hline
+float & 32   & IEEE 32-bit\\
+\hline
+double & 64 & IEEE 64-bit\\
+\hline
+long double & 64 & IEEE 64-bit\\
+\hline
+pointers & 32 & Binary\\
+\hline \hline
+\end{tabular}
+\label{table:dataTypes}
+\end{table}
+\subsection{Data Alignment}
+\begin{lstlisting}[language=C]
+#pragma DATA_ALIGN(x, 4)
+short z;
+short x;
+\end{lstlisting}
+\section{Restricting memory dependence, Aliasing}
+
+\subsection{Aliasing}
+Two different ways of accessing a memory location:
+
+\begin{lstlisting}[language=C]
+int x;
+int *p;
+
+main(){
+
+p = &x;
+
+x=5;
+*p = 8;
+}
+\end{lstlisting}
+Such simple programs do not affect the compiler. To help the compiler
+for s/w pipelining tell the compiler that they are two different
+memory location (no aliasing) use \emph{restrict} key word.
+
+\subsection{Alias Solution}
+\begin{itemize}
+\item Program level opttimization (-pm -03)
+\item No bad Alisasing option (-mt), tell the compiler that there is
+  no bad aliasing in my entire project
+\item "Restrict" keyword (ANSI C) void fcn(short * in, short *
+  restrict out)
+\end{itemize}
+\section{Accessing H/W features}
+C code using intrinsics:
+\begin{lstlisting}[language=C]
+y = a * b;
+y = \_mpyh(a, b);
+\end{lstlisting}
+In-Line Assembly:
+\begin{lstlisting}[language=C]
+asm(" MPYH A0, A1, A2");
+\end{lstlisting}
+Assembly code
+\begin{lstlisting}[language=C]
+MPYH A0, A1, A2
+\end{lstlisting}
+Intrinsics:
+\begin{itemize}
+\item Can use C variable names instead of register names
+\item Are compatible with C environment
+\item Adhere to C's function call syntax
+\item Do not use in-line assembly
+\end{itemize}
+\section{Using Pragmas}
+\begin{itemize}
+\item \#pragma UNROLL(\# times to unroll)
+\item \#pragma MUST\_ITERATE(min, max ,\%factor)
+\end{itemize}
+\end{document}
+

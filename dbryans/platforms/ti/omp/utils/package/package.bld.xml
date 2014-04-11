@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="ti.omp.utils" version="2, 0, 0, 0" producerId="undefined">
+    <units>
+        <module name="ThreadLocal"/>
+        <module name="ThreadLocalStorage"/>
+        <module name="SemaphoreMP"/>
+        <module name="OpenMP"/>
+        <module name="HeapOMP"/>
+    </units>
+    <sources>
+        <srcFile name="package/package_ti.omp.utils.c"/>
+        <srcFile name="ThreadLocal.c"/>
+        <srcFile name="SemaphoreMP.c"/>
+        <srcFile name="OpenMP.c"/>
+        <srcFile name="ThreadLocalStorage.c"/>
+        <srcFile name="HeapOMP.c"/>
+        <srcFile name="tls_get_tp.asm"/>
+        <srcFile name="OpenMPDnldCore.c"/>
+    </sources>
+    <configscripts>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/package.cfg.dep" src="package.xdc"/>
+        <srcFile name="lib/release/ti.omp.utils.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils/package/package_ti.omp.utils.oe66.dep" src="package/package_ti.omp.utils.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils/ThreadLocal.oe66.dep" src="ThreadLocal.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils/SemaphoreMP.oe66.dep" src="SemaphoreMP.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils/OpenMP.oe66.dep" src="OpenMP.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils/ThreadLocalStorage.oe66.dep" src="ThreadLocalStorage.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils/HeapOMP.oe66.dep" src="HeapOMP.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils/tls_get_tp.oe66.dep" src="tls_get_tp.asm"/>
+        <srcFile name="lib/debug/ti.omp.utils.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils/package/package_ti.omp.utils.oe66.dep" src="package/package_ti.omp.utils.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils/ThreadLocal.oe66.dep" src="ThreadLocal.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils/SemaphoreMP.oe66.dep" src="SemaphoreMP.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils/OpenMP.oe66.dep" src="OpenMP.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils/ThreadLocalStorage.oe66.dep" src="ThreadLocalStorage.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils/HeapOMP.oe66.dep" src="HeapOMP.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils/tls_get_tp.oe66.dep" src="tls_get_tp.asm"/>
+        <srcFile name="lib/release/ti.omp.utils.C6678.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils.C6678/package/package_ti.omp.utils.oe66.dep" src="package/package_ti.omp.utils.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils.C6678/OpenMPDnldCore.oe66.dep" src="OpenMPDnldCore.c"/>
+        <srcFile name="lib/release/ti.omp.utils.C6670.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils.C6670/package/package_ti.omp.utils.oe66.dep" src="package/package_ti.omp.utils.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.utils.C6670/OpenMPDnldCore.oe66.dep" src="OpenMPDnldCore.c"/>
+        <srcFile name="lib/debug/ti.omp.utils.C6678.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils.C6678/package/package_ti.omp.utils.oe66.dep" src="package/package_ti.omp.utils.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils.C6678/OpenMPDnldCore.oe66.dep" src="OpenMPDnldCore.c"/>
+        <srcFile name="lib/debug/ti.omp.utils.C6670.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils.C6670/package/package_ti.omp.utils.oe66.dep" src="package/package_ti.omp.utils.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.utils.C6670/OpenMPDnldCore.oe66.dep" src="OpenMPDnldCore.c"/>
+        <srcFile name="package/rel/ti_omp_utils.tar.dep" src="package/rel/ti_omp_utils.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C66"
+            version="ti.targets.elf.C66{1,0,7.4,0"
+            platform="ti.omp.examples.platforms.evm6678"
+            isa="66"
+            suffix="e66"
+            rootDir="/home/gtbldadm/ti/TI_CGT_C6000_7.4.0"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    <library name="lib/release/ti.omp.utils"
+        pname="lib/release/ti.omp.utils.ae66"
+        profile="release"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/debug/ti.omp.utils"
+        pname="lib/debug/ti.omp.utils.ae66"
+        profile="debug"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/release/ti.omp.utils.C6678"
+        pname="lib/release/ti.omp.utils.C6678.ae66"
+        profile="release"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/release/ti.omp.utils.C6670"
+        pname="lib/release/ti.omp.utils.C6670.ae66"
+        profile="release"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/debug/ti.omp.utils.C6678"
+        pname="lib/debug/ti.omp.utils.C6678.ae66"
+        profile="debug"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/debug/ti.omp.utils.C6670"
+        pname="lib/debug/ti.omp.utils.C6670.ae66"
+        profile="debug"
+        target="ti.targets.elf.C66"/>
+    </libraries>
+    <configurations>
+    </configurations>
+    <executables>
+    </executables>
+    <tests>
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="ti_omp_utils"
+        pname="ti_omp_utils.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/package.rel.dot"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+        <file name="package.bld"/>
+        <file name="device_C6678.h"/>
+        <file name="device_C6670.h"/>
+        <file name="package/package.cfg.xdc.inc"/>
+        <file name="lib/release/ti.omp.utils.ae66"/>
+        <file name="package/package_ti.omp.utils.c"/>
+        <file name="ThreadLocal.c"/>
+        <file name="SemaphoreMP.c"/>
+        <file name="OpenMP.c"/>
+        <file name="ThreadLocalStorage.c"/>
+        <file name="HeapOMP.c"/>
+        <file name="tls_get_tp.asm"/>
+        <file name="lib/debug/ti.omp.utils.ae66"/>
+        <file name="lib/release/ti.omp.utils.C6678.ae66"/>
+        <file name="OpenMPDnldCore.c"/>
+        <file name="lib/release/ti.omp.utils.C6670.ae66"/>
+        <file name="lib/debug/ti.omp.utils.C6678.ae66"/>
+        <file name="lib/debug/ti.omp.utils.C6670.ae66"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

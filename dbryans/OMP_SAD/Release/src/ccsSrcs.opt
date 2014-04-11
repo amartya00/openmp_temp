@@ -1,0 +1,1 @@
+"../src/MAD_32x32_OMP.c" "../src/MAD_8x8_OMP.c" "../src/SAD_32x32_OMP.c" "../src/SAD_8x8_OMP.c" "../src/omp_hello.c" 

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="ti.omp" version="0, 0, 1" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/package_ti.omp.c"/>
+        <srcFile name="alloc.c"/>
+        <srcFile name="barrier.c"/>
+        <srcFile name="critical.c"/>
+        <srcFile name="env.c"/>
+        <srcFile name="error.c"/>
+        <srcFile name="iter.c"/>
+        <srcFile name="loop.c"/>
+        <srcFile name="loop_ull.c"/>
+        <srcFile name="ordered.c"/>
+        <srcFile name="parallel.c"/>
+        <srcFile name="sections.c"/>
+        <srcFile name="single.c"/>
+        <srcFile name="task.c"/>
+        <srcFile name="team.c"/>
+        <srcFile name="work.c"/>
+    </sources>
+    <configscripts>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/package.cfg.dep" src="package.xdc"/>
+        <srcFile name="lib/release/ti.omp.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/release/ti.omp/package/package_ti.omp.oe66.dep" src="package/package_ti.omp.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/alloc.oe66.dep" src="alloc.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/barrier.oe66.dep" src="barrier.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/critical.oe66.dep" src="critical.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/env.oe66.dep" src="env.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/error.oe66.dep" src="error.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/iter.oe66.dep" src="iter.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/loop.oe66.dep" src="loop.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/loop_ull.oe66.dep" src="loop_ull.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/ordered.oe66.dep" src="ordered.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/parallel.oe66.dep" src="parallel.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/sections.oe66.dep" src="sections.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/single.oe66.dep" src="single.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/task.oe66.dep" src="task.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/team.oe66.dep" src="team.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp/work.oe66.dep" src="work.c"/>
+        <srcFile name="lib/debug/ti.omp.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/package/package_ti.omp.oe66.dep" src="package/package_ti.omp.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/alloc.oe66.dep" src="alloc.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/barrier.oe66.dep" src="barrier.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/critical.oe66.dep" src="critical.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/env.oe66.dep" src="env.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/error.oe66.dep" src="error.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/iter.oe66.dep" src="iter.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/loop.oe66.dep" src="loop.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/loop_ull.oe66.dep" src="loop_ull.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/ordered.oe66.dep" src="ordered.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/parallel.oe66.dep" src="parallel.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/sections.oe66.dep" src="sections.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/single.oe66.dep" src="single.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/task.oe66.dep" src="task.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/team.oe66.dep" src="team.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp/work.oe66.dep" src="work.c"/>
+        <srcFile name="package/rel/ti_omp.tar.dep" src="package/rel/ti_omp.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C66"
+            version="ti.targets.elf.C66{1,0,7.4,0"
+            platform="ti.omp.examples.platforms.evm6678"
+            isa="66"
+            suffix="e66"
+            rootDir="/home/gtbldadm/ti/TI_CGT_C6000_7.4.0"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    <library name="lib/release/ti.omp"
+        pname="lib/release/ti.omp.ae66"
+        profile="release"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/debug/ti.omp"
+        pname="lib/debug/ti.omp.ae66"
+        profile="debug"
+        target="ti.targets.elf.C66"/>
+    </libraries>
+    <configurations>
+    </configurations>
+    <executables>
+    </executables>
+    <tests>
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="ti_omp"
+        pname="ti_omp.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/package.rel.dot"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+        <file name="config.h"/>
+        <file name="gstdint.h"/>
+        <file name="libgomp.h"/>
+        <file name="libgomp_f.h"/>
+        <file name="libgomp_g.h"/>
+        <file name="omp.h"/>
+        <file name="package.bld"/>
+        <file name="common.cfg.xs"/>
+        <file name="linkcmd.xdt"/>
+        <file name="COPYING.RUNTIME"/>
+        <file name="COPYING3.LIB"/>
+        <file name="package/package.cfg.xdc.inc"/>
+        <file name="lib/release/ti.omp.ae66"/>
+        <file name="package/package_ti.omp.c"/>
+        <file name="alloc.c"/>
+        <file name="barrier.c"/>
+        <file name="critical.c"/>
+        <file name="env.c"/>
+        <file name="error.c"/>
+        <file name="iter.c"/>
+        <file name="loop.c"/>
+        <file name="loop_ull.c"/>
+        <file name="ordered.c"/>
+        <file name="parallel.c"/>
+        <file name="sections.c"/>
+        <file name="single.c"/>
+        <file name="task.c"/>
+        <file name="team.c"/>
+        <file name="work.c"/>
+        <file name="lib/debug/ti.omp.ae66"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

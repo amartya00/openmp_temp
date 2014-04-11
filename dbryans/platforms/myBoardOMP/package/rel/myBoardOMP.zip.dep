@@ -1,0 +1,38 @@
+myBoardOMP.zip: Platform.xdc
+Platform.xdc:
+myBoardOMP.zip: Platform.xs
+Platform.xs:
+myBoardOMP.zip: config.bld
+config.bld:
+myBoardOMP.zip: package/.vers_b150
+package/.vers_b150:
+myBoardOMP.zip: package/.vers_g180
+package/.vers_g180:
+myBoardOMP.zip: package/.vers_r170
+package/.vers_r170:
+myBoardOMP.zip: package/.xdc-y30
+package/.xdc-y30:
+myBoardOMP.zip: package/build.cfg
+package/build.cfg:
+myBoardOMP.zip: package/myBoardOMP.ccs
+package/myBoardOMP.ccs:
+myBoardOMP.zip: package/myBoardOMP.class
+package/myBoardOMP.class:
+myBoardOMP.zip: package/myBoardOMP.java
+package/myBoardOMP.java:
+myBoardOMP.zip: package/myBoardOMP.sch
+package/myBoardOMP.sch:
+myBoardOMP.zip: package/package.bld.xml
+package/package.bld.xml:
+myBoardOMP.zip: package/package.defs.h
+package/package.defs.h:
+myBoardOMP.zip: package/package.ext.xml
+package/package.ext.xml:
+myBoardOMP.zip: package/package.rel.dot
+package/package.rel.dot:
+myBoardOMP.zip: package/package_myBoardOMP.c
+package/package_myBoardOMP.c:
+myBoardOMP.zip: package.bld
+package.bld:
+myBoardOMP.zip: package.xdc
+package.xdc:

@@ -1,0 +1,35 @@
+ssyrk L N 256 256 0.6 1.9
+ssyrk L N 512 512 0.6 1.9
+ssyrk L N 1024 1024 0.6 1.9
+ssyrk L N 2048 2048 0.6 1.9
+ssyrk L N 3072 3072 0.6 1.9
+ssyrk L N 4096 4096 0.6 1.9
+ssyrk L N 5120 5120 0.6 1.9
+ssyrk L N 6144 6144 0.6 1.9
+
+ssyrk L T 256 256 0.6 1.9
+ssyrk L T 512 512 0.6 1.9
+ssyrk L T 1024 1024 0.6 1.9
+ssyrk L T 2048 2048 0.6 1.9
+ssyrk L T 3072 3072 0.6 1.9
+ssyrk L T 4096 4096 0.6 1.9
+ssyrk L T 5120 5120 0.6 1.9
+ssyrk L T 6144 6144 0.6 1.9
+
+ssyrk U N 256 256 0.6 1.9
+ssyrk U N 512 512 0.6 1.9
+ssyrk U N 1024 1024 0.6 1.9
+ssyrk U N 2048 2048 0.6 1.9
+ssyrk U N 3072 3072 0.6 1.9
+ssyrk U N 4096 4096 0.6 1.9
+ssyrk U N 5120 5120 0.6 1.9
+ssyrk U N 6144 6144 0.6 1.9
+
+ssyrk U T 256 256 0.6 1.9
+ssyrk U T 512 512 0.6 1.9
+ssyrk U T 1024 1024 0.6 1.9
+ssyrk U T 2048 2048 0.6 1.9
+ssyrk U T 3072 3072 0.6 1.9
+ssyrk U T 4096 4096 0.6 1.9
+ssyrk U T 5120 5120 0.6 1.9
+ssyrk U T 6144 6144 0.6 1.9

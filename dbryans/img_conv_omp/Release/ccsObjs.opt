@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./src/main.obj" "./src/img_conv.obj" "./src/dotp.obj" -l"libc.a" 

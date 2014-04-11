@@ -1,0 +1,19 @@
+XDC_open() {
+    GEL_ProjectLoad("/opt/ti/edma3_lld_02_11_05_02/packages/ti/sdo/edma3/rm/package/ti.sdo.edma3.rm.pjt");
+    GEL_ProjectLoad("/opt/ti/edma3_lld_02_11_05_02/packages/ti/sdo/edma3/drv/package/ti.sdo.edma3.drv.pjt");
+    GEL_ProjectLoad("/opt/ti/edma3_lld_02_11_05_02/packages/ti/sdo/edma3/drv/sample/package/ti.sdo.edma3.drv.sample.pjt");
+    GEL_ProjectLoad("/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/bilinear/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectLoad("/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/bilinear/Debug/configPkg/package/cfg/bilinear_xe66.pjt");
+    GEL_ProjectSetActive("/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/bilinear/Debug/configPkg/package/cfg/bilinear_xe66.pjt");
+}
+XDC_close() {
+    GEL_ProjectClose("/opt/ti/edma3_lld_02_11_05_02/packages/ti/sdo/edma3/rm/package/ti.sdo.edma3.rm.pjt");
+    GEL_ProjectClose("/opt/ti/edma3_lld_02_11_05_02/packages/ti/sdo/edma3/drv/package/ti.sdo.edma3.drv.pjt");
+    GEL_ProjectClose("/opt/ti/edma3_lld_02_11_05_02/packages/ti/sdo/edma3/drv/sample/package/ti.sdo.edma3.drv.sample.pjt");
+    GEL_ProjectClose("/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/bilinear/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectClose("/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/bilinear/Debug/configPkg/package/cfg/bilinear_xe66.pjt");
+}
+menuitem "XDC Package"
+hotmenu load_executable () { GEL_Load("/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/bilinear/Debug/configPkg/bilinear.xe66"); }
+hotmenu open_project () { XDC_open(); }
+hotmenu close_project () { XDC_close(); }

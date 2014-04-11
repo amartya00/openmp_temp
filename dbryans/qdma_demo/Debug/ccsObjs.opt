@@ -1,0 +1,1 @@
+"./src/qdma_test.obj" "./src/main.obj" "./src/common.obj" -l"libc.a" -ledma3_lld_drv_sample.ae66 -ledma3_lld_drv.ae66 -ledma3_lld_rm.ae66 "../src/C6678.cmd" 

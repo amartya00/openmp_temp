@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./src/test.obj" "./src/main.obj" "./src/edma.obj" -l"libc.a" -limglib.ae66 

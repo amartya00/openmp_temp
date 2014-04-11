@@ -1,0 +1,27 @@
+dsymm L L 256 256 0.6  1.9
+dsymm L L 512 512 0.6  1.9
+dsymm L L 1024 1024 0.6  1.9
+dsymm L L 2048 2048 0.6  1.9
+dsymm L L 3072 3072 0.6  1.9
+dsymm L L 4096 4096 0.6  1.9
+
+dsymm L U 256 256 0.6  1.9
+dsymm L U 512 512 0.6  1.9
+dsymm L U 1024 1024 0.6  1.9
+dsymm L U 2048 2048 0.6  1.9
+dsymm L U 3072 3072 0.6  1.9
+dsymm L U 4096 4096 0.6  1.9
+
+dsymm R U 256 256 0.6  1.9
+dsymm R U 512 512 0.6  1.9
+dsymm R U 1024 1024 0.6  1.9
+dsymm R U 2048 2048 0.6  1.9
+dsymm R U 3072 3072 0.6  1.9
+dsymm R U 4096 4096 0.6  1.9
+
+dsymm R L 256 256 0.6  1.9
+dsymm R L 512 512 0.6  1.9
+dsymm R L 1024 1024 0.6  1.9
+dsymm R L 2048 2048 0.6  1.9
+dsymm R L 3072 3072 0.6  1.9
+dsymm R L 4096 4096 0.6  1.9

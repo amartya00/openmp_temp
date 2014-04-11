@@ -1,0 +1,107 @@
+strmm L U N N 256 256 1.9
+strmm L U N N 512 512 1.9
+strmm L U N N 1024 1024 1.9
+strmm L U N N 2048 2048 1.9
+strmm L U N N 3072 3072 1.9
+strmm L U N N 4096 4096 1.9
+strmm L U N N 5120 5120 1.9
+strmm L U N N 6144 6144 1.9
+
+strmm L L T N 256 256 1.9
+strmm L L T N 512 512 1.9
+strmm L L T N 1024 1024 1.9
+strmm L L T N 2048 2048 1.9
+strmm L L T N 3072 3072 1.9
+strmm L L T N 4096 4096 1.9
+strmm L L T N 5120 5120 1.9
+strmm L L T N 6144 6144 1.9
+
+strmm L L C N 256 256 1.9
+strmm L L C N 512 512 1.9
+strmm L L C N 1024 1024 1.9
+strmm L L C N 2048 2048 1.9
+strmm L L C N 3072 3072 1.9
+strmm L L C N 4096 4096 1.9
+strmm L L C N 5120 5120 1.9
+strmm L L C N 6144 6144 1.9
+
+strmm R L N N 256 256 1.9
+strmm R L N N 512 512 1.9
+strmm R L N N 1024 1024 1.9
+strmm R L N N 2048 2048 1.9
+strmm R L N N 3072 3072 1.9
+strmm R L N N 4096 4096 1.9
+strmm R L N N 5120 5120 1.9
+strmm R L N N 6144 6144 1.9
+
+strmm R U T N 256 256 1.9
+strmm R U T N 512 512 1.9
+strmm R U T N 1024 1024 1.9
+strmm R U T N 2048 2048 1.9
+strmm R U T N 3072 3072 1.9
+strmm R U T N 4096 4096 1.9
+strmm R U T N 5120 5120 1.9
+strmm R U T N 6144 6144 1.9
+
+strmm R U C N 256 256 1.9
+strmm R U C N 512 512 1.9
+strmm R U C N 1024 1024 1.9
+strmm R U C N 2048 2048 1.9
+strmm R U C N 3072 3072 1.9
+strmm R U C N 4096 4096 1.9
+strmm R U C N 5120 5120 1.9
+strmm R U C N 6144 6144 1.9
+
+strmm L L N N 256 256 1.9
+strmm L L N N 512 512 1.9
+strmm L L N N 1024 1024 1.9
+strmm L L N N 2048 2048 1.9
+strmm L L N N 3072 3072 1.9
+strmm L L N N 4096 4096 1.9
+strmm L L N N 5120 5120 1.9
+strmm L L N N 6144 6144 1.9
+
+strmm L U T N 256 256 1.9
+strmm L U T N 512 512 1.9
+strmm L U T N 1024 1024 1.9
+strmm L U T N 2048 2048 1.9
+strmm L U T N 3072 3072 1.9
+strmm L U T N 4096 4096 1.9
+strmm L U T N 5120 5120 1.9
+strmm L U T N 6144 6144 1.9
+
+strmm L U C N 256 256 1.9
+strmm L U C N 512 512 1.9
+strmm L U C N 1024 1024 1.9
+strmm L U C N 2048 2048 1.9
+strmm L U C N 3072 3072 1.9
+strmm L U C N 4096 4096 1.9
+strmm L U C N 5120 5120 1.9
+strmm L U C N 6144 6144 1.9
+
+strmm R L T N 256 256 1.9
+strmm R L T N 512 512 1.9
+strmm R L T N 1024 1024 1.9
+strmm R L T N 2048 2048 1.9
+strmm R L T N 3072 3072 1.9
+strmm R L T N 4096 4096 1.9
+strmm R L T N 5120 5120 1.9
+strmm R L T N 6144 6144 1.9
+
+strmm R L C N 256 256 1.9
+strmm R L C N 512 512 1.9
+strmm R L C N 1024 1024 1.9
+strmm R L C N 2048 2048 1.9
+strmm R L C N 3072 3072 1.9
+strmm R L C N 4096 4096 1.9
+strmm R L C N 5120 5120 1.9
+strmm R L C N 6144 6144 1.9
+
+strmm R U N N 256 256 1.9
+strmm R U N N 512 512 1.9
+strmm R U N N 1024 1024 1.9
+strmm R U N N 2048 2048 1.9
+strmm R U N N 3072 3072 1.9
+strmm R U N N 4096 4096 1.9
+strmm R U N N 5120 5120 1.9
+strmm R U N N 6144 6144 1.9

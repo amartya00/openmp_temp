@@ -1,0 +1,13 @@
+XDC_open() {
+    GEL_ProjectLoad("/media/work__/F5/TMS320C6678-Benchmarks/benchmarks/vector_stream/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectLoad("/media/work__/F5/TMS320C6678-Benchmarks/benchmarks/vector_stream/Debug/configPkg/package/cfg/vector_stream_xe66.pjt");
+    GEL_ProjectSetActive("/media/work__/F5/TMS320C6678-Benchmarks/benchmarks/vector_stream/Debug/configPkg/package/cfg/vector_stream_xe66.pjt");
+}
+XDC_close() {
+    GEL_ProjectClose("/media/work__/F5/TMS320C6678-Benchmarks/benchmarks/vector_stream/Debug/configPkg/package/configPkg.pjt");
+    GEL_ProjectClose("/media/work__/F5/TMS320C6678-Benchmarks/benchmarks/vector_stream/Debug/configPkg/package/cfg/vector_stream_xe66.pjt");
+}
+menuitem "XDC Package"
+hotmenu load_executable () { GEL_Load("/media/work__/F5/TMS320C6678-Benchmarks/benchmarks/vector_stream/Debug/configPkg/vector_stream.xe66"); }
+hotmenu open_project () { XDC_open(); }
+hotmenu close_project () { XDC_close(); }

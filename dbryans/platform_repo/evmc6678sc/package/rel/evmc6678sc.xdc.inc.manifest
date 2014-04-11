@@ -1,0 +1,17 @@
+evmc6678sc/Platform.xdc
+evmc6678sc/Platform.xs
+evmc6678sc/config.bld
+evmc6678sc/package/.vers_b150
+evmc6678sc/package/.vers_g180
+evmc6678sc/package/.vers_r170
+evmc6678sc/package/.xdc-y44
+evmc6678sc/package/build.cfg
+evmc6678sc/package/evmc6678sc.ccs
+evmc6678sc/package/evmc6678sc.class
+evmc6678sc/package/evmc6678sc.java
+evmc6678sc/package/evmc6678sc.sch
+evmc6678sc/package/package.bld.xml
+evmc6678sc/package/package.defs.h
+evmc6678sc/package/package_evmc6678sc.c
+evmc6678sc/package.bld
+evmc6678sc/package.xdc

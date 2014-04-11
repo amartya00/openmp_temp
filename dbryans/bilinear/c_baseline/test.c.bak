@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include "man.h"
+#include "img_write.h"
+#include "bilinear.h"
+#include "omp.h"
+#include <sys/time.h>
+#include <time.h>
+#include <math.h>
+
+#define NTHREADS  8
+
+double timerval () {
+    struct timeval st;
+    gettimeofday(&st, NULL);
+    return (st.tv_sec+st.tv_usec*1e-6);
+}
+
+double totaltimesec (double start, double stop) {
+    return (stop-start);
+}
+
+int main (void){
+  
+    int nthreads;
+    nthreads = NTHREADS;
+    omp_set_num_threads(nthreads);
+    double startTime = 0;
+    double endTime = 0;
+
+    unsigned int out[NUM_COLS * NUM_ROWS] = {0};
+    unsigned int out_omp[NUM_COLS * NUM_ROWS] = {0};
+
+    unsigned int i =0;
+    unsigned int j =0;
+
+    double itcos = 0;
+    double itsin = 0;
+    int it = 0;
+    int jt = 0;
+    double ir =0;
+    double jr = 0;
+    double sinTh = 0;
+    double cosTh = 0;
+
+    int si = 0;
+    int sj = 0;
+    
+    sinTh = sin(THETA);
+    cosTh = cos(THETA);
+
+    
+    startTime = timerval();
+#pragma omp parallel for shared(in, out_omp) private(i,j,jt, it, itcos, itsin, ir ,jr, si, sj)
+      for (i = 0; i < NUM_ROWS -1; i++){
+        for (j = 0; j < NUM_COLS -1; j++){
+	  it = (i - (NUM_ROWS)/2);
+	  itcos = it * cosTh;
+	  itsin = it * sinTh;
+	  jt = (j - (NUM_COLS)/2);
+	  ir = itcos - jt * sinTh;
+	  jr = itsin + jt * cosTh;
+            
+	  /* printf("\nj:%d",j); */
+	  /* printf("\nir:%f\njr:%f\n", ir, jr); */
+
+	  ir = ir + height/2 -1;
+	  jr = jr + width/2 -1;
+
+	  /* if (ir > height -1) ir = height - 1; */
+	  /* else if (ir < 0) ir = 0; */
+
+	  /* if (jr > width -1) jr = width -1 ; */
+	  /* else if (jr < 0) jr = 0; */
+            
+	  si = (ir);
+	  sj = (jr);
+
+	  if (si > 0 && si < NUM_ROWS -1){
+	    if(sj >0 && sj < NUM_COLS -1){
+	      out_omp[i * (NUM_COLS) + j] = in[si * (NUM_COLS) + sj];
+	    }
+	  }
+
+	  else{
+	    out_omp[i*NUM_COLS +j] = 0;
+	  }
+
+            
+	  //             printf("\nir:%f\njr:%f\n", ir, jr);
+	  // out[i * width + j] = in[si * width + sj] + in[(si+1) * width + sj] +
+	  //     in[si * width + sj +1] + in[(si+1) * width + sj +1];
+	  //out[i * width + j] = in[i * width +j];
+
+        }
+      }
+    endTime = timerval();
+    printf (" \nelapsed time OMP in seconds: %.8f\n", (endTime - startTime));
+
+    startTime = timerval();
+    bilinear(in, (unsigned int)(NUM_COLS), (unsigned int) (NUM_ROWS), (float)(THETA), out);
+    endTime = timerval();
+    printf (" \nelapsed time in seconds: %.8f\n", (endTime - startTime));
+
+    img_write(out_omp, 1024, 1024);
+    return 0;
+}
+

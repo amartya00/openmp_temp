@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="ti.omp.navigator" version="2, 0, 0, 0" producerId="undefined">
+    <units>
+        <module name="Navigator"/>
+    </units>
+    <sources>
+        <srcFile name="package/package_ti.omp.navigator.c"/>
+        <srcFile name="Navigator.c"/>
+        <srcFile name="Navigatorosal.c"/>
+        <srcFile name="cppi_device.c"/>
+        <srcFile name="qmss_device.c"/>
+    </sources>
+    <configscripts>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/package.cfg.dep" src="package.xdc"/>
+        <srcFile name="lib/release/ti.omp.navigator.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigator/package/package_ti.omp.navigator.oe66.dep" src="package/package_ti.omp.navigator.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigator/Navigator.oe66.dep" src="Navigator.c"/>
+        <srcFile name="lib/debug/ti.omp.navigator.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigator/package/package_ti.omp.navigator.oe66.dep" src="package/package_ti.omp.navigator.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigator/Navigator.oe66.dep" src="Navigator.c"/>
+        <srcFile name="lib/release/ti.omp.navigatorOsal.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigatorOsal/package/package_ti.omp.navigator.oe66.dep" src="package/package_ti.omp.navigator.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigatorOsal/Navigatorosal.oe66.dep" src="Navigatorosal.c"/>
+        <srcFile name="lib/debug/ti.omp.navigatorOsal.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigatorOsal/package/package_ti.omp.navigator.oe66.dep" src="package/package_ti.omp.navigator.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigatorOsal/Navigatorosal.oe66.dep" src="Navigatorosal.c"/>
+        <srcFile name="lib/release/ti.omp.navigator.C6678.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigator.C6678/package/package_ti.omp.navigator.oe66.dep" src="package/package_ti.omp.navigator.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigator.C6678/cppi_device.oe66.dep" src="cppi_device.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigator.C6678/qmss_device.oe66.dep" src="qmss_device.c"/>
+        <srcFile name="lib/release/ti.omp.navigator.C6670.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigator.C6670/package/package_ti.omp.navigator.oe66.dep" src="package/package_ti.omp.navigator.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigator.C6670/cppi_device.oe66.dep" src="cppi_device.c"/>
+        <srcFile name="package/lib/lib/release/ti.omp.navigator.C6670/qmss_device.oe66.dep" src="qmss_device.c"/>
+        <srcFile name="lib/debug/ti.omp.navigator.C6678.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigator.C6678/package/package_ti.omp.navigator.oe66.dep" src="package/package_ti.omp.navigator.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigator.C6678/cppi_device.oe66.dep" src="cppi_device.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigator.C6678/qmss_device.oe66.dep" src="qmss_device.c"/>
+        <srcFile name="lib/debug/ti.omp.navigator.C6670.ae66.mak" src="package.bld"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigator.C6670/package/package_ti.omp.navigator.oe66.dep" src="package/package_ti.omp.navigator.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigator.C6670/cppi_device.oe66.dep" src="cppi_device.c"/>
+        <srcFile name="package/lib/lib/debug/ti.omp.navigator.C6670/qmss_device.oe66.dep" src="qmss_device.c"/>
+        <srcFile name="package/rel/ti_omp_navigator.tar.dep" src="package/rel/ti_omp_navigator.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C66"
+            version="ti.targets.elf.C66{1,0,7.4,0"
+            platform="ti.omp.examples.platforms.evm6678"
+            isa="66"
+            suffix="e66"
+            rootDir="/home/gtbldadm/ti/TI_CGT_C6000_7.4.0"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    <library name="lib/release/ti.omp.navigator"
+        pname="lib/release/ti.omp.navigator.ae66"
+        profile="release"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/debug/ti.omp.navigator"
+        pname="lib/debug/ti.omp.navigator.ae66"
+        profile="debug"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/release/ti.omp.navigatorOsal"
+        pname="lib/release/ti.omp.navigatorOsal.ae66"
+        profile="release"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/debug/ti.omp.navigatorOsal"
+        pname="lib/debug/ti.omp.navigatorOsal.ae66"
+        profile="debug"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/release/ti.omp.navigator.C6678"
+        pname="lib/release/ti.omp.navigator.C6678.ae66"
+        profile="release"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/release/ti.omp.navigator.C6670"
+        pname="lib/release/ti.omp.navigator.C6670.ae66"
+        profile="release"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/debug/ti.omp.navigator.C6678"
+        pname="lib/debug/ti.omp.navigator.C6678.ae66"
+        profile="debug"
+        target="ti.targets.elf.C66"/>
+    <library name="lib/debug/ti.omp.navigator.C6670"
+        pname="lib/debug/ti.omp.navigator.C6670.ae66"
+        profile="debug"
+        target="ti.targets.elf.C66"/>
+    </libraries>
+    <configurations>
+    </configurations>
+    <executables>
+    </executables>
+    <tests>
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="ti_omp_navigator"
+        pname="ti_omp_navigator.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/package.rel.dot"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+        <file name="package.bld"/>
+        <file name="Navigator_barrier.h"/>
+        <file name="qmss_types.h"/>
+        <file name="cppi_types.h"/>
+        <file name="Navigator_h.h"/>
+        <file name="package/package.cfg.xdc.inc"/>
+        <file name="lib/release/ti.omp.navigator.ae66"/>
+        <file name="package/package_ti.omp.navigator.c"/>
+        <file name="Navigator.c"/>
+        <file name="lib/debug/ti.omp.navigator.ae66"/>
+        <file name="lib/release/ti.omp.navigatorOsal.ae66"/>
+        <file name="Navigatorosal.c"/>
+        <file name="lib/debug/ti.omp.navigatorOsal.ae66"/>
+        <file name="lib/release/ti.omp.navigator.C6678.ae66"/>
+        <file name="cppi_device.c"/>
+        <file name="qmss_device.c"/>
+        <file name="lib/release/ti.omp.navigator.C6670.ae66"/>
+        <file name="lib/debug/ti.omp.navigator.C6678.ae66"/>
+        <file name="lib/debug/ti.omp.navigator.C6670.ae66"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

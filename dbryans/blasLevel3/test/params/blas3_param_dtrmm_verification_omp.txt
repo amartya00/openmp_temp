@@ -1,0 +1,132 @@
+dtrmm L U N N 32 8 1.9
+dtrmm L U N n 64 16 1.9
+dtrmm L U N N  256 1024 1.9
+dtrmm l U N N 512 1016 1.9
+dtrmm L u n U 1024 1024 0.6  1.0
+dtrmm l U N N 992 32 1.9
+dtrmm L U N u 32 992 1.9
+dtrmm l u N N 1024 1024 1.9
+dtrmm L U n u 1024 256 1.9
+dtrmm L U N N 256 1024 1.9
+
+dtrmm L L T n 32 8 1.9
+dtrmm l l T N 64 16 1.9
+dtrmm L L T N  256 1024 1.9
+dtrmm L l T u 512 1016 1.9
+dtrmm L L T N 1024 1024 0.6  1.0
+dtrmm L L t u 992 32 1.9
+dtrmm L L T N 32 992 1.9
+dtrmm l L t U 1024 1024 1.9
+dtrmm L L T N 1024 256 1.9
+dtrmm L L T N 256 1024 1.9
+
+dtrmm L L C N 32 8 1.9
+dtrmm l L C n 64 16 1.9
+dtrmm L L C N  256 1024 1.9
+dtrmm L l c N 512 1016 1.9
+dtrmm l L C N 1024 1024 0.6  1.0
+dtrmm L L C N 992 32 1.9
+dtrmm l l C N 32 992 1.9
+dtrmm L L c U 1024 1024 1.9
+dtrmm L L C N 1024 256 1.9
+dtrmm L L C u 256 1024 1.9
+
+dtrmm r L N N 32 8 1.9
+dtrmm r L N u 64 16 1.9
+dtrmm R l N N  256 1024 1.9
+dtrmm R l N u 512 1016 1.9
+dtrmm R L n n 1024 1024 0.6  1.0
+dtrmm R L N N 992 32 1.9
+dtrmm R L n U 32 992 1.9
+dtrmm R L N N 1024 1024 1.9
+dtrmm R L N N 1024 256 1.9
+dtrmm R L N N 256 1024 1.9
+
+dtrmm r U T N 32 8 1.9
+dtrmm R u t n 64 16 1.9
+dtrmm r U T N  256 1024 1.9
+dtrmm R U T u 512 1016 1.9
+dtrmm r u T U 1024 1024 0.6  1.0
+dtrmm R U t n 992 32 1.9
+dtrmm R U T N 32 992 1.9
+dtrmm R U T N 1024 1024 1.9
+dtrmm R U T N 1024 256 1.9
+dtrmm R U T N 256 1024 1.9
+
+dtrmm R U C N 32 8 1.9
+dtrmm r U C N 64 16 1.9
+dtrmm R U c u  256 1024 1.9
+dtrmm R u c n 512 1016 1.9
+dtrmm R U C N 1024 1024 0.6  1.0
+dtrmm r u C N 992 32 1.9
+dtrmm R U C U 32 992 1.9
+dtrmm R U C N 1024 1024 1.9
+dtrmm R U C N 1024 256 1.9
+dtrmm R U C N 256 1024 1.9
+
+dtrmm L L N N 32 8 1.9
+dtrmm L L N u 64 16 1.9
+dtrmm L l n N  256 1024 1.9
+dtrmm L L N N 512 1016 1.9
+dtrmm L L n U 1024 1024 0.6  1.0
+dtrmm L L N N 992 32 1.9
+dtrmm L l N N 32 992 1.9
+dtrmm l L N N 1024 1024 1.9
+dtrmm L L N n 1024 256 1.9
+dtrmm L L N N 256 1024 1.9
+
+dtrmm l U T N 32 8 1.9
+dtrmm L u t N 64 16 1.9
+dtrmm l U T N  256 1024 1.9
+dtrmm L U T N 512 1016 1.9
+dtrmm l u T N 1024 1024 0.6  1.0
+dtrmm L U t N 992 32 1.9
+dtrmm L U T n 32 992 1.9
+dtrmm L U T u 1024 1024 1.9
+dtrmm L U T U 1024 256 1.9
+dtrmm L U T N 256 1024 1.9
+dtrmm L U C n 32 8 1.9
+dtrmm l U C N 64 16 1.9
+dtrmm L U C N  256 1024 1.9
+dtrmm L u c N 512 1016 1.9
+dtrmm l u C N 1024 1024 0.6  1.0
+dtrmm L U C N 992 32 1.9
+dtrmm L U C N 32 992 1.9
+dtrmm L U c N 1024 1024 1.9
+dtrmm L U C u 1024 256 1.9
+dtrmm L U C U 256 1024 1.9
+
+dtrmm r L T N 32 8 1.9
+dtrmm R L T N 64 16 1.9
+dtrmm r L t N  256 1024 1.9
+dtrmm R l T N 512 1016 1.9
+dtrmm r l T N 1024 1024 0.6  1.0
+dtrmm R L T N 992 32 1.9
+dtrmm R L t N 32 992 1.9
+dtrmm R L T u 1024 1024 1.9
+dtrmm R L T U 1024 256 1.9
+dtrmm R L T n 256 1024 1.9
+
+dtrmm r L C n 32 8 1.9
+dtrmm r L C N 64 16 1.9
+dtrmm R l C N  256 1024 1.9
+dtrmm R l C u 512 1016 1.9
+dtrmm R L C N 1024 1024 0.6  1.0
+dtrmm R L C U 992 32 1.9
+dtrmm R L c N 32 992 1.9
+dtrmm R L C N 1024 1024 1.9
+dtrmm R L C N 1024 256 1.9
+dtrmm R L C N 256 1024 1.9
+
+dtrmm r U N N 32 8 1.9
+dtrmm R U N N 64 16 1.9
+dtrmm r u n N  256 1024 1.9
+dtrmm R u N N 512 1016 1.9
+dtrmm R U N n 1024 1024 0.6  1.0
+dtrmm R U n N 992 32 1.9
+dtrmm R U n N 32 992 1.9
+dtrmm R U N u 1024 1024 1.9
+dtrmm R U N U 1024 256 1.9
+dtrmm R U N N 256 1024 1.9
+
+

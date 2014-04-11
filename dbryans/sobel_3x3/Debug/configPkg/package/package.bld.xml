@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/build.dtd -->
+<package name="configPkg" version="" producerId="undefined">
+    <units>
+    </units>
+    <sources>
+        <srcFile name="package/cfg/sobel_pe66.c"/>
+    </sources>
+    <configscripts>
+        <srcFile name="/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/sobel_3x3/sobel.cfg"/>
+    </configscripts>
+    <makefiles>
+        <srcFile name="package.mak" src="package.bld"/>
+        <srcFile name="package/package.xdc.dep" src="package.xdc"/>
+        <srcFile name="package/cfg/sobel_pe66.mak" src="package.bld"/>
+        <srcFile name="package/cfg/sobel_pe66.oe66.dep" src="package/cfg/sobel_pe66.c"/>
+        <srcFile name="package/cfg/sobel_pe66.dep" src="package/cfg/sobel_pe66.cfg"/>
+        <srcFile name="package/cfg/sobel.xe66.mak" src="package.bld"/>
+        <srcFile name="package/rel/configPkg.tar.dep" src="package/rel/configPkg.xdc.inc"/>
+    </makefiles>
+    <targets>
+        <target name="ti.targets.elf.C66"
+            version="ti.targets.elf.C66{1,0,7.4,0,2"
+            platform="ti.platforms.simTCI6616"
+            isa="66"
+            suffix="e66"
+            rootDir="/opt/ti/C6000CGT7.4.0B2"
+            os="undefined"
+            rts="ti.targets.rts6000">
+            <model endian="little"
+                codeModel="undefined"
+                dataModel="undefined"/>
+        </target>
+    </targets>
+    <libraries>
+    </libraries>
+    <configurations>
+    <configuration name="sobel"
+        pname="sobel.pe66"
+        target="ti.targets.elf.C66"
+        platform="myBoard"
+        profile="debug"
+        isPartial="false"
+        xCfgScript="package/cfg/sobel_pe66.cfg"
+        xCfgPrefix="package/cfg/sobel_pe66"
+        cfgScript="/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/sobel_3x3/sobel.cfg"
+        cfgArgs="null"
+        />
+    </configurations>
+    <executables>
+    <executable name="sobel"
+        pname="sobel.xe66"
+        target="ti.targets.elf.C66"
+        platform="myBoard"
+        profile="debug"
+        xCfgScript="package/cfg/sobel_pe66.cfg"
+        xCfgPrefix="package/cfg/sobel_pe66"
+        cfgScript="/media/work/F5/TMS320C6678-Benchmarks/c6678_benchmarks/sobel_3x3/sobel.cfg"
+        cfgArgs="null"
+        />
+    </executables>
+    <tests>
+    <test exeName="sobel.xe66"
+        args=""
+        groupName="sobel.xe66"
+        refOutput="undefined"
+        refExitCode="0"
+        execArgs=""
+        />
+    </tests>
+    <releases relDir="package/rel/">
+    <release name="configPkg"
+        pname="configPkg.tar"
+        label="default"
+    >
+        <file name="package/package.bld.xml"/>
+        <file name="package/package.ext.xml"/>
+        <file name="package/package.rel.dot"/>
+        <file name="package/build.cfg"/>
+        <file name="package/package.xdc.inc"/>
+    </release>
+    </releases>
+    <repositories>
+    </repositories>
+</package>

@@ -1,0 +1,132 @@
+dtrsm L U N N 32 8 1.9
+dtrsm L U N n 64 16 1.9
+dtrsm L U N N  256 1024 1.9
+dtrsm l U N N 512 1016 1.9
+dtrsm L u n U 1024 1024 0.6  1.0
+dtrsm l U N N 992 32 1.9
+dtrsm L U N u 32 992 1.9
+dtrsm l u N N 1024 1024 1.9
+dtrsm L U n u 1024 256 1.9
+dtrsm L U N N 256 1024 1.9
+
+dtrsm L L T n 32 8 1.9
+dtrsm l l T N 64 16 1.9
+dtrsm L L T N  256 1024 1.9
+dtrsm L l T u 512 1016 1.9
+dtrsm L L T N 1024 1024 0.6  1.0
+dtrsm L L t u 992 32 1.9
+dtrsm L L T N 32 992 1.9
+dtrsm l L t U 1024 1024 1.9
+dtrsm L L T N 1024 256 1.9
+dtrsm L L T N 256 1024 1.9
+
+dtrsm L L C N 32 8 1.9
+dtrsm l L C n 64 16 1.9
+dtrsm L L C N  256 1024 1.9
+dtrsm L l c N 512 1016 1.9
+dtrsm l L C N 1024 1024 0.6  1.0
+dtrsm L L C N 992 32 1.9
+dtrsm l l C N 32 992 1.9
+dtrsm L L c U 1024 1024 1.9
+dtrsm L L C N 1024 256 1.9
+dtrsm L L C u 256 1024 1.9
+
+dtrsm r L N N 32 8 1.9
+dtrsm r L N u 64 16 1.9
+dtrsm R l N N  256 1024 1.9
+dtrsm R l N u 512 1016 1.9
+dtrsm R L n n 1024 1024 0.6  1.0
+dtrsm R L N N 992 32 1.9
+dtrsm R L n U 32 992 1.9
+dtrsm R L N N 1024 1024 1.9
+dtrsm R L N N 1024 256 1.9
+dtrsm R L N N 256 1024 1.9
+
+dtrsm r U T N 32 8 1.9
+dtrsm R u t n 64 16 1.9
+dtrsm r U T N  256 1024 1.9
+dtrsm R U T u 512 1016 1.9
+dtrsm r u T U 1024 1024 0.6  1.0
+dtrsm R U t n 992 32 1.9
+dtrsm R U T N 32 992 1.9
+dtrsm R U T N 1024 1024 1.9
+dtrsm R U T N 1024 256 1.9
+dtrsm R U T N 256 1024 1.9
+
+dtrsm R U C N 32 8 1.9
+dtrsm r U C N 64 16 1.9
+dtrsm R U c u  256 1024 1.9
+dtrsm R u c n 512 1016 1.9
+dtrsm R U C N 1024 1024 0.6  1.0
+dtrsm r u C N 992 32 1.9
+dtrsm R U C U 32 992 1.9
+dtrsm R U C N 1024 1024 1.9
+dtrsm R U C N 1024 256 1.9
+dtrsm R U C N 256 1024 1.9
+
+dtrsm L L N N 32 8 1.9
+dtrsm L L N u 64 16 1.9
+dtrsm L l n N  256 1024 1.9
+dtrsm L L N N 512 1016 1.9
+dtrsm L L n U 1024 1024 0.6  1.0
+dtrsm L L N N 992 32 1.9
+dtrsm L l N N 32 992 1.9
+dtrsm l L N N 1024 1024 1.9
+dtrsm L L N n 1024 256 1.9
+dtrsm L L N N 256 1024 1.9
+
+dtrsm l U T N 32 8 1.9
+dtrsm L u t N 64 16 1.9
+dtrsm l U T N  256 1024 1.9
+dtrsm L U T N 512 1016 1.9
+dtrsm l u T N 1024 1024 0.6  1.0
+dtrsm L U t N 992 32 1.9
+dtrsm L U T n 32 992 1.9
+dtrsm L U T u 1024 1024 1.9
+dtrsm L U T U 1024 256 1.9
+dtrsm L U T N 256 1024 1.9
+dtrsm L U C n 32 8 1.9
+dtrsm l U C N 64 16 1.9
+dtrsm L U C N  256 1024 1.9
+dtrsm L u c N 512 1016 1.9
+dtrsm l u C N 1024 1024 0.6  1.0
+dtrsm L U C N 992 32 1.9
+dtrsm L U C N 32 992 1.9
+dtrsm L U c N 1024 1024 1.9
+dtrsm L U C u 1024 256 1.9
+dtrsm L U C U 256 1024 1.9
+
+dtrsm r L T N 32 8 1.9
+dtrsm R L T N 64 16 1.9
+dtrsm r L t N  256 1024 1.9
+dtrsm R l T N 512 1016 1.9
+dtrsm r l T N 1024 1024 0.6  1.0
+dtrsm R L T N 992 32 1.9
+dtrsm R L t N 32 992 1.9
+dtrsm R L T u 1024 1024 1.9
+dtrsm R L T U 1024 256 1.9
+dtrsm R L T n 256 1024 1.9
+
+dtrsm r L C n 32 8 1.9
+dtrsm r L C N 64 16 1.9
+dtrsm R l C N  256 1024 1.9
+dtrsm R l C u 512 1016 1.9
+dtrsm R L C N 1024 1024 0.6  1.0
+dtrsm R L C U 992 32 1.9
+dtrsm R L c N 32 992 1.9
+dtrsm R L C N 1024 1024 1.9
+dtrsm R L C N 1024 256 1.9
+dtrsm R L C N 256 1024 1.9
+
+dtrsm r U N N 32 8 1.9
+dtrsm R U N N 64 16 1.9
+dtrsm r u n N  256 1024 1.9
+dtrsm R u N N 512 1016 1.9
+dtrsm R U N n 1024 1024 0.6  1.0
+dtrsm R U n N 992 32 1.9
+dtrsm R U n N 32 992 1.9
+dtrsm R U N u 1024 1024 1.9
+dtrsm R U N U 1024 256 1.9
+dtrsm R U N N 256 1024 1.9
+
+

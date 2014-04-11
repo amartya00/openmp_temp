@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--  This file conforms to the DTD xdc/bld/release.dtd -->
+<release name="ti_omp_navigator" label="default" date="1352147139563" buildCount="1" producerId="undefined">
+<package name="ti.omp.navigator"
+    version="2, 0, 0, 0"/>
+<imports>
+    <package name="ti.omp"
+        version=""/>
+</imports>
+<references>
+    <package name="xdc"
+        version="1, 1, 1, 1340817876462"
+        providerId="xdccore">
+        <file name="IPackage.xdc"/>
+        <file name="IPackage.xs"/>
+        <file name="om2.xs"/>
+        <file name="package.xs"/>
+        <file name="std.h"/>
+        <file name="template.xs"/>
+        <file name="xdc.tci"/>
+        <file name="xmlgen.xs"/>
+        <file name="xmlgen2.xs"/>
+    </package>
+    <package name="xdc.services.global"
+        version="1, 0, 0, 1340817902737"
+        providerId="xdccore">
+        <file name="Clock.xs"/>
+        <file name="Trace.xs"/>
+        <file name="java/package.jar"/>
+    </package>
+    <package name="xdc.bld"
+        version="1, 0, 2, 1340817883203"
+        providerId="xdccore">
+        <file name="BuildEnvironment.xs"/>
+        <file name="Configuration.xs"/>
+        <file name="Executable.xs"/>
+        <file name="ITarget.xs"/>
+        <file name="ITarget2.xs"/>
+        <file name="ITargetFilter.xs"/>
+        <file name="Library.xs"/>
+        <file name="Manifest.xs"/>
+        <file name="PackageContents.xs"/>
+        <file name="Repository.xs"/>
+        <file name="Script.xs"/>
+        <file name="Utils.xs"/>
+        <file name="_gen.xs"/>
+        <file name="bld.js"/>
+        <file name="package.xs"/>
+    </package>
+    <package name="ti.targets"
+        version="1, 0, 3, 1341264611098"
+        providerId="xdccore">
+        <file name="C28_float.xs"/>
+        <file name="C28_large.xs"/>
+        <file name="ITarget.xs"/>
+        <file name="package.xs"/>
+        <file name="select.h"/>
+        <file name="std.h"/>
+    </package>
+    <package name="ti.targets.elf"
+        version="1, 0, 0, 1341264624314"
+        providerId="xdccore">
+        <file name="ITarget.xs"/>
+        <file name="TMS470.xs"/>
+        <file name="package.xs"/>
+        <file name="std.h"/>
+    </package>
+    <package name="ti.sysbios.build"
+        version="2, 0, 0, 0, 1341372968610"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="common.bld"/>
+    </package>
+    <package name="xdc.shelf"
+        version="1, 0, 0, 1340817922719"
+        providerId="xdccore">
+        <file name="java/antlr.jar"/>
+        <file name="java/ecj.jar"/>
+        <file name="java/js.jar"/>
+        <file name="java/tar.jar"/>
+    </package>
+    <package name="xdc.services.intern.cmd"
+        version="1, 0, 0, 0, 1340817906479"
+        providerId="xdccore">
+        <file name="java/package.jar"/>
+    </package>
+    <package name="xdc.services.spec"
+        version="1, 0, 0, 0, 1340817915472"
+        providerId="xdccore">
+        <file name="java/package.jar"/>
+    </package>
+    <package name="xdc.services.intern.xsr"
+        version="1, 0, 0, 1340817908153"
+        providerId="xdccore">
+        <file name="java/package.jar"/>
+    </package>
+    <package name="xdc.services.intern.gen"
+        version="1, 0, 0, 0, 1340817907115"
+        providerId="xdccore">
+        <file name="java/package.jar"/>
+    </package>
+    <targetRoot base="/home/gtbldadm/ti/TI_CGT_C6000_7.4.0/"
+        trgs="ti.targets.elf.C66">
+        <file name="include/_lock.h"/>
+        <file name="include/c6x.h"/>
+        <file name="include/linkage.h"/>
+        <file name="include/stdarg.h"/>
+        <file name="include/stdbool.h"/>
+        <file name="include/stddef.h"/>
+        <file name="include/stdint.h"/>
+        <file name="include/stdio.h"/>
+        <file name="include/stdlib.h"/>
+        <file name="include/vect.h"/>
+        <file name="include/yvals.h"/>
+    </targetRoot>
+    <package name="xdc.runtime"
+        version="2, 1, 0, 1340817898372"
+        providerId="xdccore">
+        <file name="Assert.h"/>
+        <file name="Assert__epilogue.h"/>
+        <file name="Assert__prologue.h"/>
+        <file name="Diags.h"/>
+        <file name="Diags__epilogue.h"/>
+        <file name="Diags__prologue.h"/>
+        <file name="Error.h"/>
+        <file name="Error__epilogue.h"/>
+        <file name="Error__prologue.h"/>
+        <file name="IGateProvider.h"/>
+        <file name="IHeap.h"/>
+        <file name="IInstance.h"/>
+        <file name="IModule.h"/>
+        <file name="ISystemSupport.h"/>
+        <file name="Log.h"/>
+        <file name="Log__epilogue.h"/>
+        <file name="Log__prologue.h"/>
+        <file name="Main.h"/>
+        <file name="Memory.h"/>
+        <file name="System.h"/>
+        <file name="Text.h"/>
+        <file name="Types.h"/>
+        <file name="Types__epilogue.h"/>
+        <file name="Types__prologue.h"/>
+        <file name="package/Main_Module_GateProxy.h"/>
+        <file name="package/Memory_HeapProxy.h"/>
+        <file name="package/System_Module_GateProxy.h"/>
+        <file name="package/System_SupportProxy.h"/>
+        <file name="package/package.defs.h"/>
+        <file name="xdc.h"/>
+    </package>
+    <package name="ti.ipc"
+        version="1, 0, 0, 0, 1337728560461"
+        providerId="/home/gtbldadm/ti/ipc_1_24_03_32/packages">
+        <file name="MultiProc.h"/>
+    </package>
+    <package name="ti.sysbios.family.c66"
+        version="2, 0, 0, 0, 1341373084254"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="Cache.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios.knl"
+        version="2, 0, 0, 0, 1341373138194"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="Clock.h"/>
+        <file name="Event.h"/>
+        <file name="Event__epilogue.h"/>
+        <file name="Event__prologue.h"/>
+        <file name="Queue.h"/>
+        <file name="Semaphore.h"/>
+        <file name="Swi.h"/>
+        <file name="Task.h"/>
+        <file name="Task__epilogue.h"/>
+        <file name="Task__prologue.h"/>
+        <file name="package/Task_SupportProxy.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.drv.qmss"
+        version="1, 0, 3, 12, 1352145128131"
+        providerId="/home/gtbldadm/ti/pdk_C6678_1_1_2_5/packages">
+        <file name="include/qmss_pvt.h"/>
+        <file name="qmss_acc.h"/>
+        <file name="qmss_drv.h"/>
+        <file name="qmss_mgmt.h"/>
+        <file name="qmss_osal.h"/>
+        <file name="qmss_qm.h"/>
+        <file name="qmss_qos.h"/>
+        <file name="qmssver.h"/>
+    </package>
+    <package name="ti.drv.cppi"
+        version="1, 0, 2, 2, 1352145121558"
+        providerId="/home/gtbldadm/ti/pdk_C6678_1_1_2_5/packages">
+        <file name="cppi_desc.h"/>
+        <file name="cppi_drv.h"/>
+        <file name="cppiver.h"/>
+    </package>
+    <package name="ti.csl"
+        version="1, 0, 1, 4, 1352145115418"
+        providerId="/home/gtbldadm/ti/pdk_C6678_1_1_2_5/packages">
+        <file name="csl.h"/>
+        <file name="csl_cache.h"/>
+        <file name="csl_cacheAux.h"/>
+        <file name="csl_chip.h"/>
+        <file name="csl_cppi.h"/>
+        <file name="csl_error.h"/>
+        <file name="csl_qm_queue.h"/>
+        <file name="csl_sem.h"/>
+        <file name="csl_semAux.h"/>
+        <file name="csl_types.h"/>
+        <file name="csl_xmc.h"/>
+        <file name="csl_xmcAux.h"/>
+        <file name="cslr.h"/>
+        <file name="cslr_cgem.h"/>
+        <file name="cslr_chip.h"/>
+        <file name="cslr_cp_timer16.h"/>
+        <file name="cslr_cppidma_global_config.h"/>
+        <file name="cslr_cppidma_rx_channel_config.h"/>
+        <file name="cslr_cppidma_rx_flow_config.h"/>
+        <file name="cslr_cppidma_tx_channel_config.h"/>
+        <file name="cslr_cppidma_tx_scheduler_config.h"/>
+        <file name="cslr_device.h"/>
+        <file name="cslr_mcdma.h"/>
+        <file name="cslr_pdsp.h"/>
+        <file name="cslr_qm_config.h"/>
+        <file name="cslr_qm_descriptor_region_config.h"/>
+        <file name="cslr_qm_intd.h"/>
+        <file name="cslr_qm_queue_management.h"/>
+        <file name="cslr_qm_queue_status_config.h"/>
+        <file name="cslr_sem.h"/>
+        <file name="cslr_xmc.h"/>
+        <file name="soc.h"/>
+        <file name="src/intc/csl_intc.h"/>
+        <file name="src/intc/csl_intcAux.h"/>
+        <file name="src/intc/cslr_intc.h"/>
+        <file name="tistdtypes.h"/>
+    </package>
+    <package name="ti.omp.utils"
+        version="2, 0, 0, 0, 1352146921000"
+        providerId="/home/gtbldadm/ti/omp/src">
+        <file name="OpenMP.h"/>
+        <file name="SemaphoreMP.h"/>
+        <file name="ThreadLocal.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios.interfaces"
+        version="2, 0, 0, 0, 1341373126720"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="ICache.h"/>
+        <file name="IHwi.h"/>
+        <file name="ITaskSupport.h"/>
+        <file name="ITimer.h"/>
+        <file name="ITimerSupport.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sdo.ipc"
+        version="1, 0, 0, 0, 1337728671713"
+        providerId="/home/gtbldadm/ti/ipc_1_24_03_32/packages">
+        <file name="GateMP.h"/>
+        <file name="Ipc.h"/>
+        <file name="ListMP.h"/>
+        <file name="MessageQ.h"/>
+        <file name="SharedRegion.h"/>
+        <file name="package/GateMP_RemoteCustom1Proxy.h"/>
+        <file name="package/GateMP_RemoteCustom2Proxy.h"/>
+        <file name="package/GateMP_RemoteSystemProxy.h"/>
+        <file name="package/MessageQ_SetupTransportProxy.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios.timers.timer64"
+        version="2, 0, 0, 0, 1341373162613"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="Timer.h"/>
+        <file name="package/Timer_TimerSupportProxy.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios.hal"
+        version="2, 0, 0, 0, 1341373118297"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="Hwi.h"/>
+        <file name="Hwi__epilogue.h"/>
+        <file name="Hwi__prologue.h"/>
+        <file name="Timer.h"/>
+        <file name="package/Hwi_HwiProxy.h"/>
+        <file name="package/Timer_TimerProxy.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sdo.ipc.interfaces"
+        version="1, 0, 0, 0, 1337728869119"
+        providerId="/home/gtbldadm/ti/ipc_1_24_03_32/packages">
+        <file name="IGateMPSupport.h"/>
+        <file name="IMessageQTransport.h"/>
+        <file name="ITransportSetup.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sdo.utils"
+        version="1, 0, 0, 0, 1337728937627"
+        providerId="/home/gtbldadm/ti/ipc_1_24_03_32/packages">
+        <file name="INameServerRemote.h"/>
+        <file name="List.h"/>
+        <file name="MultiProc.h"/>
+        <file name="NameServer.h"/>
+        <file name="package/NameServer_SetupProxy.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="xdc.runtime.knl"
+        version="1, 0, 0, 1340817899098"
+        providerId="xdccore">
+        <file name="ISync.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios.syncs"
+        version="2, 0, 0, 0, 1341373151009"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="SyncSem.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios.gates"
+        version="2, 0, 0, 0, 1341373109595"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="GateSwi.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios.family.arm.m3"
+        version="2, 0, 0, 0, 1341373042471"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="Hwi.h"/>
+        <file name="Hwi__epilogue.h"/>
+        <file name="Hwi__prologue.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios.family.c28"
+        version="2, 0, 0, 0, 1341373054210"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="Hwi.h"/>
+        <file name="Hwi__epilogue.h"/>
+        <file name="Hwi__prologue.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios"
+        version="2, 0, 0, 0, 1341372976280"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="BIOS.h"/>
+        <file name="BIOS__epilogue.h"/>
+        <file name="BIOS__prologue.h"/>
+        <file name="package/BIOS_RtsGateProxy.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="ti.sysbios.heaps"
+        version="2, 0, 0, 0, 1341373127576"
+        providerId="/home/gtbldadm/ti/bios_6_33_06_50/packages">
+        <file name="HeapBuf.h"/>
+        <file name="HeapMem.h"/>
+        <file name="package/HeapMem_Module_GateProxy.h"/>
+        <file name="package/package.defs.h"/>
+    </package>
+    <package name="xdc.cfg"
+        version="1, 0, 2, 0, 1340817884380"
+        providerId="xdccore">
+        <file name="global.h"/>
+    </package>
+    <xdcRoot base="/home/gtbldadm/ti/xdctools_3_23_04_60/">
+        <file name="/packages/xdc/package.xdc"/>
+        <file name="include/utils.tci"/>
+        <xdcCorePkg version="16, 0, 2, 0, 1340817885154" producerId="/db/ztree/library/trees/xdc/xdc-y30x/src/packages" buildCount="369" releaseName="xdc_corevers" label="default" date="1340817885154"/>
+    </xdcRoot>
+</references>
+<orphans>
+    <file name="/home/gtbldadm/ti/omp/src/config.bld"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/drv/cppi/cppi_drv.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_device.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_cppidma_global_config.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_cppidma_rx_channel_config.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_cppidma_rx_flow_config.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_cppidma_tx_channel_config.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_cppidma_tx_scheduler_config.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/csl_cppi.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/drv/cppi/cppiver.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/tistdtypes.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/csl.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/csl_types.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/csl_error.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/drv/qmss/qmss_qm.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_qm_config.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_qm_descriptor_region_config.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_qm_queue_management.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_qm_queue_status_config.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_qm_intd.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_pdsp.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/csl_qm_queue.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_mcdma.h"/>
+    <file name="/home/gtbldadm/ti/pdk_C6670_1_1_2_5/packages/ti/csl/cslr_cp_timer16.h"/>
+</orphans>
+</release>

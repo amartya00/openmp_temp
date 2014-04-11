@@ -1,0 +1,27 @@
+cherk L N 256 256 0.6 1.9
+cherk L N 512 512 0.6 1.9
+cherk L N 1024 1024 0.6 1.9
+cherk L N 2048 2048 0.6 1.9
+cherk L N 3072 3072 0.6 1.9
+cherk L N 4096 4096 0.6 1.9
+
+cherk L C 256 256 0.6 1.9
+cherk L C 512 512 0.6 1.9
+cherk L C 1024 1024 0.6 1.9
+cherk L C 2048 2048 0.6 1.9
+cherk L C 3072 3072 0.6 1.9
+cherk L C 4096 4096 0.6 1.9
+
+cherk U C 256 256 0.6 1.9
+cherk U C 512 512 0.6 1.9
+cherk U C 1024 1024 0.6 1.9
+cherk U C 2048 2048 0.6 1.9
+cherk U C 3072 3072 0.6 1.9
+cherk U C 4096 4096 0.6 1.9
+
+cherk U N 256 256 0.6 1.9
+cherk U N 512 512 0.6 1.9
+cherk U N 1024 1024 0.6 1.9
+cherk U N 2048 2048 0.6 1.9
+cherk U N 3072 3072 0.6 1.9
+cherk U N 4096 4096 0.6 1.9

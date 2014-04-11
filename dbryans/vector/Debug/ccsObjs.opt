@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./vector_stream_sp.obj" "./vector_stream_int16.obj" "./main.obj" -l"libc.a" 

@@ -1,0 +1,38 @@
+omp_MSMCRAM.zip: Platform.xdc
+Platform.xdc:
+omp_MSMCRAM.zip: Platform.xs
+Platform.xs:
+omp_MSMCRAM.zip: config.bld
+config.bld:
+omp_MSMCRAM.zip: package/.vers_b150
+package/.vers_b150:
+omp_MSMCRAM.zip: package/.vers_g180
+package/.vers_g180:
+omp_MSMCRAM.zip: package/.vers_r170
+package/.vers_r170:
+omp_MSMCRAM.zip: package/.xdc-y30
+package/.xdc-y30:
+omp_MSMCRAM.zip: package/build.cfg
+package/build.cfg:
+omp_MSMCRAM.zip: package/omp.MSMCRAM.ccs
+package/omp.MSMCRAM.ccs:
+omp_MSMCRAM.zip: package/omp.MSMCRAM.sch
+package/omp.MSMCRAM.sch:
+omp_MSMCRAM.zip: package/omp_MSMCRAM.class
+package/omp_MSMCRAM.class:
+omp_MSMCRAM.zip: package/omp_MSMCRAM.java
+package/omp_MSMCRAM.java:
+omp_MSMCRAM.zip: package/package.bld.xml
+package/package.bld.xml:
+omp_MSMCRAM.zip: package/package.defs.h
+package/package.defs.h:
+omp_MSMCRAM.zip: package/package.ext.xml
+package/package.ext.xml:
+omp_MSMCRAM.zip: package/package.rel.dot
+package/package.rel.dot:
+omp_MSMCRAM.zip: package/package_omp.MSMCRAM.c
+package/package_omp.MSMCRAM.c:
+omp_MSMCRAM.zip: package.bld
+package.bld:
+omp_MSMCRAM.zip: package.xdc
+package.xdc:

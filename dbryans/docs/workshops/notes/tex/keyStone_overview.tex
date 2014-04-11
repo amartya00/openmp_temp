@@ -1,0 +1,105 @@
+\documentclass{article}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\hypersetup{
+   colorlinks,
+   citecolor=black,
+   filecolor=black,
+   linkcolor=black,
+   urlcolor=black,
+   linktocpage
+ }
+%\hypersetup{linktocpage}
+\author{Barath Ramesh}
+\title{KeyStone Architecture Overview}
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+\section{KeyStone Architecture}
+\subsection{C66x CorePac}
+\begin{itemize}
+\item 1.25 GhZ clock, 1 to 8  C66x core. C6678 has 8 cores
+\item Fixed and floating point operations
+\item 16-/32 bit ISA, doubled MPY
+\end{itemize}
+
+\subsection{Memory Subsystem}
+\begin{itemize}
+\item 32KB L1 program memory, 32KB L1 data memory
+\item 1MB L2 cache per cores
+\item 2MB Multicore Shared Memory (MSM)
+\item DDR3-1600 Mhz (64-bit)
+\end{itemize}
+
+\subsection{Application specific Coprocessors}
+\begin{itemize}
+\item 2x TCP3d: Turbo Decoder
+\item TCP3e: Turbo Encoder
+\item 2x FFT (FFt/IFFT and DFT/IDFT) Coprocessor
+\item 4x VCP2 for voide channel decoding
+\item Security accelerator
+\item Packet accelerator 
+\end{itemize}
+
+\textbf{40nm High-Performance Process}
+
+\section{KeyStone Media Applications}
+\begin{itemize}
+\item Medical Imaging
+\begin{itemize}
+\item Digital Ultrasound
+\item Optical Coherence Tomography
+\end{itemize}
+\item Smart Grid
+\item Media and networking
+\end{itemize}
+
+\section{CorePac and Memory Subsystem}
+\subsection{CorePac}
+\begin{itemize}
+\item Clocked upto 1.25 GhZ clock, 1 to 8  C66x core. C6678 has 8 cores
+\item Fixed and floating point operations
+\end{itemize}
+\subsection{L1 Memory configured as cache}
+\begin{itemize}
+\item 32KB  L1P per core
+\item 32KB l1D per core
+\item Error detection for L1P
+\item Memory protection
+\end{itemize}
+\subsection{Dedicated and Shared L2 Memory}
+\begin{itemize}
+\item 512KB to 1MB L2 per core
+\item 2 to 4MB MSM
+\item Multicore Shared Memory Controller
+\item Error detection and correction for L2 memory
+\item MSM available to all cores and can be data or program
+\end{itemize}
+\textbf{Boot ROM}
+\section{Multicore Navigator}
+\begin{itemize}
+\item Data movement within the chip
+\item Effective inter processor communication
+\item 8KB hardware queues and 64 KB descriptors
+\item 10 Gbps pre-fetching capability
+\end{itemize}
+
+\section{Miscellaneous Elements}
+\begin{itemize}
+\item Semaphore2 provides atomic accesses to shared chip-level
+  resources
+\item Boot ROM 
+\item Power Management
+\item Eight 64 bit timers
+\item Three on-chip PLLs: PLL1 for CorePacs, PLL2 for DDR3 and PLL3
+  for packet Acceleration
+\item EDMA
+\end{itemize}
+\section{Application-Specific Coprocessors}
+\begin{itemize}
+\item FFTCx2
+\item TCP3E, TCP3D and 4 Viterbi Coprocessor (4xVCP2) all for wireless application
+\end{itemize}
+\end{document}

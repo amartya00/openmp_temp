@@ -1,0 +1,21 @@
+/*
+ *  ======== config.bld ========
+ *  Sample Build configuration script
+ */
+
+//Use CCS4.0
+
+var tools = java.lang.System.getenv("TOOLS"); 
+
+//Setup for c66 target
+var C66 = xdc.useModule('ti.targets.elf.C66');
+C66.rootDir = tools;
+C66.ccOpts.suffix += " -mi10 -mo --omp --gcc -D__TI_USE_TLS";
+C66.lnkOpts.prefix+=" --reread_libs ";
+C66.lnkOpts.suffix =" -c -m $(XDCCFGDIR)/$@.map -l $(rootDir)/lib/rts6600_elf_mt.lib";
+
+
+C66.platform = "ti.omp.examples.platforms.evm6678";
+
+//list interested targets in Build.targets array
+Build.targets = [   C66    ];

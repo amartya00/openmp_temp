@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./src/main.obj" "./src/edma_check.obj" "./src/edma.obj" "./test.obj" -l"libc.a" 

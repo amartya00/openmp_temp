@@ -1,0 +1,1 @@
+"../MAD_32x32_OMP.c" "../MAD_8x8_OMP.c" "../SAD_32x32_OMP.c" "../SAD_8x8_OMP.c" "../omp_config.cfg" "../omp_hello.c" 

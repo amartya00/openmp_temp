@@ -1,0 +1,38 @@
+evmc6678_omp.zip: Platform.xdc
+Platform.xdc:
+evmc6678_omp.zip: Platform.xs
+Platform.xs:
+evmc6678_omp.zip: config.bld
+config.bld:
+evmc6678_omp.zip: package/.vers_b150
+package/.vers_b150:
+evmc6678_omp.zip: package/.vers_g180
+package/.vers_g180:
+evmc6678_omp.zip: package/.vers_r170
+package/.vers_r170:
+evmc6678_omp.zip: package/.xdc-y30
+package/.xdc-y30:
+evmc6678_omp.zip: package/build.cfg
+package/build.cfg:
+evmc6678_omp.zip: package/evmc6678.omp.ccs
+package/evmc6678.omp.ccs:
+evmc6678_omp.zip: package/evmc6678.omp.sch
+package/evmc6678.omp.sch:
+evmc6678_omp.zip: package/evmc6678_omp.class
+package/evmc6678_omp.class:
+evmc6678_omp.zip: package/evmc6678_omp.java
+package/evmc6678_omp.java:
+evmc6678_omp.zip: package/package.bld.xml
+package/package.bld.xml:
+evmc6678_omp.zip: package/package.defs.h
+package/package.defs.h:
+evmc6678_omp.zip: package/package.ext.xml
+package/package.ext.xml:
+evmc6678_omp.zip: package/package.rel.dot
+package/package.rel.dot:
+evmc6678_omp.zip: package/package_evmc6678.omp.c
+package/package_evmc6678.omp.c:
+evmc6678_omp.zip: package.bld
+package.bld:
+evmc6678_omp.zip: package.xdc
+package.xdc:

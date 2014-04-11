@@ -1,0 +1,1 @@
+-l"./configPkg/linker.cmd" "./src/main.obj" "./src/img_pass_thru.obj" "./src/img_conv.obj" "./src/edma.obj" -l"libc.a" 

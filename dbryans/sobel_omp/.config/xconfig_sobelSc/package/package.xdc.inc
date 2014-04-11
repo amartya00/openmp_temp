@@ -1,0 +1,12 @@
+package.xdc
+package.xs
+package/xconfig_sobelSc.sch
+package/.vers_g180
+package/.vers_r170
+package/.vers_b150
+package/.xdc-y30
+package/xconfig_sobelSc.java
+package/xconfig_sobelSc.class
+package/package_xconfig_sobelSc.c
+package/package.defs.h
+package/xconfig_sobelSc.ccs
